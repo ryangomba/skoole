@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Skoole::Application.config.secret_token = '04eaf12d451f90632fc41d407a2d9a5eef79a972924cf099ef978d00219c1e653ce0f692d5dddd765c31bc07f988a808e8ba50c15f5e755273920cda63783845'
+Skoole::Application.config.secret_token = '871b3d8c70dc94a8c727425351116182006bdc2018a7e014a19a25ee1a788e1c25dffd8d3ade0d24ea5d15dc8c74958248b7bd41dd33cf5c3ca4c4c5c7b06969'

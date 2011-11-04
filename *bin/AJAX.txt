@@ -1,0 +1,14 @@
+<td><a href="/posts/2" class="delete_post" data-confirm="Are you sure?" data-method="delete" data-remote="true" rel="nofollow">Destroy</a></td>
+
+<td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete, :remote=>true, :class=>'delete_post' %></td>
+
+<%= form_for(@post) do |f| %>
+<%= form_for(@post, :remote => true) do |f| %>
+
+For callbacks:
+format.js { render :nothing => true }
+$('body').html("<h1><%= escape_javaScript(@post.title) %></h1>").append("<%= escape_javaScript(@post.content) %>");
+
+$('.delete_post').bind('ajax:success', function() {  
+    $(this).closest('tr').fadeOut();  
+});

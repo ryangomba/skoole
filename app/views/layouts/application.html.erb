@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Skoole</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Skoole</title>
+	<%= stylesheet_link_tag "application" %>
+	<%= stylesheet_link_tag "#{params[:controller]}" %>
+	<%= stylesheet_link_tag "#{params[:controller]}_#{params[:action]}" %>
+	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "#{params[:controller]}" %>
+	<%= javascript_include_tag "#{params[:controller]}_#{params[:action]}" %>
+	<%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%= params[:action] %>">
+<div id="wrapper">
 
+<!-- NAVIGATION -->
+
+<div class="header">
+	<div id="nav">
+		<div class="page">
+			<h1>Skoole <span class="subtitle"></span></h1>
+			<a href="/account"><div class="nav-item account right">Account</div></a>
+			<a href="/lists"><div class="nav-item lists">Your Lists</div></a>
+			<a href="/"><div class="nav-item index left">Welcome</div></a>
+		</div>
+	</div>
+</div>
+
+<!-- PAGE -->
+	
+<div id="main">
 <%= yield %>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div id="footer">
+	<div class="page">
+		Ryan Gomba, Doug Black, Nick McNutt
+	</div>
+</div>
 
 </body>
 </html>

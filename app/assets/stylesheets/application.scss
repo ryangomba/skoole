@@ -1,0 +1,170 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+*/
+
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+	min-height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/* CUSTOM RESET */
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* HELPERS */
+
+.fl { float:left; }
+.fr { float:right; }
+.clear { clear:both; }
+
+/* MIXINS */
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+@mixin border-radii($radius_tl, $radius_tr, $radius_br, $radius_bl) {
+	// tl
+    border-top-left-radius: $radius_tl;
+    -webkit-border-top-left-radius: $radius_tl;
+    -moz-border-top-left-radius: $radius_tl;
+    -o-border-top-left-radius: $radius_tl;
+	// tr
+	border-top-right-radius: $radius_tr;
+    -webkit-border-top-right-radius: $radius_tr;
+    -moz-border-top-right-radius: $radius_tr;
+    -o-border-top-right-radius: $radius_tr;
+	// br
+	border-bottom-right-radius: $radius_br;
+	-webkit-border-bottom-right-radius: $radius_br;
+	-moz-border-bottom-right-radius: $radius_br;
+	-o-border-bottom-right-radius: $radius_br;
+	// bl
+	border-bottom-left-radius: $radius_bl;
+	-webkit-border-bottom-left-radius: $radius_bl;
+	-moz-border-bottom-left-radius: $radius_bl;
+	-o-border-bottom-left-radius: $radius_bl;
+}
+@mixin drop-shadow($x, $y, $s, $c) {
+    box-shadow: $x $y $s $c;
+    -webkit-box-shadow: $x $y $s $c;
+    -moz-box-shadow: $x $y $s $c;
+    -o-box-shadow: $x $y $s $c;
+    box-shadow: $x $y $s $c;
+}
+@mixin inner-shadow($x, $y, $s, $c) {
+    box-shadow: inset $x $y $s $c;
+    -webkit-box-shadow: inset $x $y $s $c;
+    -moz-box-shadow: inset $x $y $s $c;
+    -o-box-shadow: inset $x $y $s $c;
+    box-shadow: inset $x $y $s $c;
+}
+@mixin gradient-2($c1, $p1, $c2, $p2) {
+    background: $c1; /* Old browsers */
+    background: -moz-linear-gradient(top, $c1 $p1, $c2 $p2); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom,
+        color-stop($p1,$c1), color-stop($p2,$c2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $c1 $p1, $c2 $p2); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $c1 $p1, $c2 $p2); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, $c1 $p1, $c2 $p2); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c2', 
+        GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, $c1 $p1, $c2 $p2); /* W3C */
+}
+@mixin gradient-3($c1, $p1, $c2, $p2, $c3, $p3) {
+    background: $c1; /* Old browsers */
+    background: -moz-linear-gradient(top, $c1 $p1, $c2 $p2, $c3 $p3); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom,
+        color-stop($p1,$c1), color-stop($p2,$c2), color-stop($p3,$c3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $c1 $p1, $c2 $p2, $c3 $p3); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $c1 $p1, $c2 $p2, $c3 $p3); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, $c1 $p1, $c2 $p2, $c3 $p3); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$c1', endColorstr='$c3', 
+        GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, $c1 $p1, $c2 $p2, $c3 $p3); /* W3C */
+}
+
+/* COLORS */
+
+$light-orange: #ff8d2d;
+$orange: #f0730b;
+
+/* GLOBAL */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+	height: 100%;
+	position: relative;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	background-image: url('white-bg.gif');
+	font-size: 16px;
+	color: #444;
+}
+
+/* WRAPPERS */
+
+div#wrapper {
+	min-height: 100%;
+}
+div#main {
+	overflow: auto;
+	padding-bottom: 80px;
+}
+div.page {
+	margin: auto;
+	width: 940px;
+}

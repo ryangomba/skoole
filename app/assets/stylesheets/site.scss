@@ -1,0 +1,151 @@
+/*
+ * Site styles
+*/
+
+@import 'application.scss';
+
+/* NAVBAR */
+
+#nav {
+	height: 40px;
+	padding: 22px;
+	color: #fff;
+	background-color: rgba(0,0,0,0.1);
+	border-bottom: solid 1px rgba(0,0,0,0.4);
+	h1 {
+		float: left;
+		font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, sans-serif;
+		text-shadow: 0px 1px 0px #000;
+		font-size: 40px;
+		span.subtitle {
+		    opacity: 0.7;
+		    font-size: 24px;
+		}
+	}
+	div.nav-item {
+		float: right;
+		padding: 10px 19px;
+		text-shadow: 0px 1px 0px #000;
+		border: solid 1px rgba(255, 255, 255, 0.1);
+		@include gradient-2(rgba(255, 255, 255, 0.2), 0%, rgba(255, 255, 255, 0.05), 100%);
+		@include inner-shadow(0px, -1px, 0px, rgba(0, 0, 0, 0.2));
+		&.left {
+			@include border-radii(6px, 0px, 0px, 6px);
+		}
+		&.right {
+		    @include border-radii(0px, 6px, 6px, 0px);
+			//border-left: solid 1px rgba(0, 0, 0, 0.2);
+		}
+		&:hover {
+		    cursor: pointer;
+			@include gradient-2(rgba(255, 255, 255, 0.25), 0%, rgba(255, 255, 255, 0.1), 100%);
+		}
+		/*&:active {
+		    @include inner-shadow(0px, 2px, 3px, rgba(0, 0, 0, 0.3));
+			@include gradient-2(rgba(255, 255, 255, 0.0), 0%, rgba(255, 255, 255, 0.1), 100%);
+		}*/
+	}
+}
+
+body#index #nav .nav-item.index,
+body#lists #nav .nav-item.lists,
+body#account #nav .nav-item.account {
+    background: none;
+	background-color: rgba(0, 0, 0, 0.2);
+	@include inner-shadow(0px, 2px, 3px, rgba(0,0,0,0.3));
+	border: solid 1px rgba(0,0,0,0.2);
+}
+
+/* SHARED */
+
+div.header {
+	background-image: url('blue-bg.png');
+}
+div.main-content {
+	width: 1040px;
+	margin: auto;
+	overflow: visible;
+	height: 180px;
+	background-image: url('white-bg.gif');
+	@include drop-shadow(0px, -1px, 2px, rgba(0, 0, 0, 0.2));
+	position: relative;
+	top: -62px;
+	div.page {
+		padding: 50px 0px;
+	}
+	h1 {
+		font-weight: bold;
+		font-size: 26px;
+		margin-bottom: 20px;
+	}
+}
+div.left-content {
+	float: left;
+	width: 580px;
+}
+div.right-content {
+	float: right;
+	width: 320px;
+}
+
+/* FOOTER */
+
+#footer {
+	position: relative;
+	margin-top: -81px;
+	clear: both;
+    padding: 30px 0px;
+	height: 20px;
+    border-top: solid 1px #ccc;
+	background-color: rgba(0, 0, 0, 0.05);
+    @include drop-shadow(0px, -1px, 2px, rgba(0,0,0,0.1));
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    text-shadow: 0px 1px 0px #fff;
+}
+
+/* ELEMENTS */
+
+.button {
+    float: left;
+    position: relative;
+    border-radius: 6px;
+    border: solid 1px #894c0c;
+    background-color: #f0730b;
+    text-shadow: 0px 1px 0px #000;
+    width: 320px;
+	.top {
+    	font-size: 24px;
+    	font-weight: bold;
+    	padding: 15px 20px;
+    	border-bottom: solid 1px #894c0c;
+    	@include border-radii(6px, 6px, 0px, 0px);
+		@include gradient-3(#fdcaa6, 0%, #ff8d2d, 3%, #f0730b, 100%);
+		&:hover {
+			cursor: pointer;
+			@include gradient-3(#fdcaa6, 0%, #ff9d3d, 3%, #ff831b, 100%);
+		}
+		&:active {
+		    cursor: pointer;
+			@include gradient-3(#ff9d3d, 0%, #ff6d0d, 3%, #f0831b, 100%);
+		}
+		img {
+			position: absolute;
+		    top: 12px;
+		    right: 20px;
+		}
+	}
+	.bottom {
+		font-size: 15px;
+	    font-weight: bold;
+	    padding: 10px 20px 13px 20px;
+	    border-top: solid 1px #f89145;
+	    background-color: #f69c46;
+		@include border-radii(0px, 0px, 6px, 6px);
+		&:hover {
+			cursor: pointer;
+		    background-color: #ffa850;
+		}
+	}	
+}
