@@ -3,7 +3,7 @@ require 'httparty'
 
 class TestRequest
   include HTTParty
-  def send
+  def self.send
       get('http://apple.com', :query => {
           :foo => 'bar'
       })
@@ -25,13 +25,11 @@ class SiteController < ApplicationController
     end
     
     def test_request
-        response = TestRequest.send()
-        puts sms_response.body, sms_response.code, sms_response.message, sms_response.headers.inspect
-        
-        @test ='haha'
+        response = TestRequest.send
+        @test = "haha"
         
         respond_to do |format|
-            format.js { render :nothing => true }
+            format.js
         end
     end
 

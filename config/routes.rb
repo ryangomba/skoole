@@ -5,7 +5,7 @@ Skoole::Application.routes.draw do
     match 'account' => 'site#account'
     
     match 'test' => 'site#test'
-    match 'test-request' => 'site#test_request'
+    match 'test_request' => 'site#test_request'
 
     # The priority is based upon order of creation:
     # first created -> highest priority.
