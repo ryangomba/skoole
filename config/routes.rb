@@ -3,6 +3,9 @@ Skoole::Application.routes.draw do
     root :to => 'site#index'
     match 'lists' => 'site#lists'
     match 'account' => 'site#account'
+    
+    match 'test' => 'site#test'
+    match 'test-request' => 'site#test_request'
 
     # The priority is based upon order of creation:
     # first created -> highest priority.
