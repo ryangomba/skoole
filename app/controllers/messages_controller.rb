@@ -36,12 +36,16 @@ end
 
 class MessagesController < ApplicationController
 
+{"msisdn"=>"18457026112", "to"=>"12064532171", "messageId"=>"05157E96", "text"=>"Respond!", "type"=>"text", "action"=>"in", "controller"=>"messages"}
+
     def in
         puts 'recieved'
-        puts params.inspect
+        from = params[:from]
+        to = params[:to]
+        text = params[:text]
+        puts from, to, text
         
-        respond_to do |format|
-        end
+        render :text => ""
     end
     
     def out
@@ -55,9 +59,7 @@ class MessagesController < ApplicationController
         email_response = Sendgrid.send(message)
         puts email_response.body, email_response.code, email_response.message, email_response.headers.inspect
         
-        respond_to do |format|
-        end
-        
+        render :text => ""
     end
 
 end
