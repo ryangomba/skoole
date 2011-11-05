@@ -7,8 +7,8 @@ Skoole::Application.routes.draw do
     resources :listings
 
     
-    match 'in' => 'messages#in'
-    match 'out' => 'messages#out'
+    match 'in' => 'listings#in'
+    #match 'out' => 'messages#out'
     
     match 'test' => 'site#test'
     match 'test_request' => 'site#test_request'

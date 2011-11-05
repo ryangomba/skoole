@@ -27,7 +27,7 @@
 		<div id="buying" class="section fl">
 			<div class="add" name="Buy">+</div>
 			<h1>Buying</h1>
-			<div class="list">
+			<div class="list" id="listBuy">
 				<% for l in @buying do %>
 				<div class="entry">
 					<%= image_tag l.book.thumbnail %>
@@ -42,7 +42,7 @@
 		<div id="selling" class="section fr">
 			<div class="add" name="Sell">+</div>
 			<h1>Selling</h1>
-			<div class="list">
+			<div class="list" id="listSell">
 				<% for l in @selling do %>
 				<div class="entry">
 					<%= image_tag l.book.thumbnail %>
@@ -62,7 +62,7 @@
 	<h2>Add a Book to <span id="listing_title_kind">Buy</span></h2>
 	<!--<% conditions = ['new', 'good', 'poor'] %>-->
 	<% conditions = ['0', '1', '2'] %>
-	<%= form_for (Listing.new, :remote => true) do |f| %>
+	<%= form_for Listing.new, :remote => true do |f| %>
 		<%= f.fields_for Book.new do |builder| %>
 			<%= builder.label :isbn %>
 			<%= builder.text_field :isbn %>

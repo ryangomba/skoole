@@ -11,13 +11,10 @@ class User < ActiveRecord::Base
         user.provider = auth["provider"]
         user.uid = auth["uid"]
         user.name = params["name"]
-        user.sms = params["phone"]
+        user.sms = "1#{params["phone"]}"
         user.email = params["email"]
+        user.nums = '0000000000'
       end
-    end
-    
-    def phone
-        return "1#{self.sms}"
     end
     
 end

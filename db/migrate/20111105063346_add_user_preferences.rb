@@ -1,8 +1,8 @@
 class AddUserPreferences < ActiveRecord::Migration
     
     def up
-        add_column :users, :sms_enabled, :boolean, :default => 1
-        add_column :users, :email_enabled, :boolean, :default => 1
+        add_column :users, :sms_enabled, :boolean, :default => true
+        add_column :users, :email_enabled, :boolean, :default => true
     end
     
     def down
