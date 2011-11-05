@@ -100,13 +100,13 @@ class ListingsController < ApplicationController
                 
                 # get phone numbers              
                 
-                bnums = @buyer.nums
+                bnums = @buyer.nums.dup
                 @t.buyer_number_id = bnums.index('0')
                 bnums[@t.buyer_number_id] = '1'
                 @buyer.nums = "#{bnums}".to_s
                 @buyer.save
                 
-                snums = @seller.nums
+                snums = @seller.nums.dup
                 @t.seller_number_id = snums.index('0')
                 snums[@t.seller_number_id] = '1'
                 @seller.nums = "#{snums}".to_s
