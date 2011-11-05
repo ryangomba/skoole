@@ -123,16 +123,16 @@ class ListingsController < ApplicationController
                 
                 # send message to buyer
                 
-                sender = Contact.new('Skoole', '123@skoole.com', Number.find(@t.buyer_number_id).number)
-                receiver = Contact.new('Ryan', 'ryan@ryangomba.com', @buyer.phone)
-                message = Message.new(sender, receiver, 'sdhjfgkdsbfk')
+                sender = Contact.new('Skoole', "#{@t.id}@skoole.com", Number.find(@t.buyer_number_id).number)
+                receiver = Contact.new('Ryan', @buyer.email, @buyer.phone)
+                message = Message.new(sender, receiver, @t)
 
                 sms_response = Nexmo.send(message)
                 puts sender.inspect, receiver.inspect
                 puts sms_response.body, sms_response.code, sms_response.message, sms_response.headers.inspect
 
-                #email_response = Sendgrid.send(message)
-                #puts email_response.body, email_response.code, email_response.message, email_response.headers.inspect
+                email_response = Sendgrid.send(message)
+                puts email_response.body, email_response.code, email_response.message, email_response.headers.inspect
                
             else
                 
