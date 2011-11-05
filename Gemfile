@@ -5,7 +5,9 @@ gem 'json'
 gem 'jquery-rails'
 gem 'httparty'
 
-gem 'sqlite3', :group => :development
+group :development do
+	gem 'sqlite3'
+end
 
 gem 'pg', :group => :production
 
