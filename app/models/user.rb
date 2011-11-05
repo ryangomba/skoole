@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
         user.name = params["name"]
         user.sms = "1#{params["phone"]}"
         user.email = params["email"]
+        user.nums = '0000000000'
       end
     end
     

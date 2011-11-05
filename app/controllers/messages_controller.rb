@@ -21,6 +21,10 @@ class MessagesController < ApplicationController
         
         if @t
             puts "WE GOT A TRANSACTION!!!!!!!!!!!!"
+            
+            @t.state += 1
+            
+            
         end
         
         render :text => ""
