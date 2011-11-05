@@ -31,3 +31,5 @@ gem 'jquery-rails'
 # gem 'ruby-debug'
 
 # haha
+
+gem 'httparty'

@@ -12,6 +12,7 @@ Skoole::Application.routes.draw do
     
     match 'test' => 'site#test'
     match 'test_request' => 'site#test_request'
+    match 'site/isbn_request' => 'site#isbn_request'
 
     # The priority is based upon order of creation:
     # first created -> highest priority.
