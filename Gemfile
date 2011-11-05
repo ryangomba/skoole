@@ -5,13 +5,9 @@ gem 'json'
 gem 'jquery-rails'
 gem 'httparty'
 
-group :development do
-  gem 'sqlite3'
-end
+gem 'sqlite3', :group => :development
 
-group :production do
-	gem 'pg'
-end
+gem 'pg', :group => :production
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
