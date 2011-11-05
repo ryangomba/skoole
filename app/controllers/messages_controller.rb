@@ -38,6 +38,10 @@ class MessagesController < ApplicationController
 
     def in
         puts 'recieved'
+        puts params.inspect
+        
+        respond_to do |format|
+        end
     end
     
     def out
