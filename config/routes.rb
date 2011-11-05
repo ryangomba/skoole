@@ -3,6 +3,7 @@ Skoole::Application.routes.draw do
     root :to => 'site#index'
     match 'lists' => 'site#lists'
     match 'account' => 'site#account'
+    resources :listings
 
     # The priority is based upon order of creation:
     # first created -> highest priority.
