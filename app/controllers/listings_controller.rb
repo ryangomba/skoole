@@ -124,7 +124,7 @@ class ListingsController < ApplicationController
                 # send message to buyer
                 
                 sender = Contact.new('Skoole', "#{@t.id}@skoole.com", Number.find(@t.buyer_number_id).number)
-                receiver = Contact.new('Ryan', @buyer.email, @buyer.phone)
+                receiver = Contact.new('Ryan', @buyer.email, @buyer.sms)
                 message = Message.new(sender, receiver, @t)
 
                 sms_response = Nexmo.send(message)
