@@ -1,6 +1,8 @@
 def isbn_request(isbn_args)
-    response = JSON.parse(ISBNRequest.getISBN(isbn_args).body)
+    response = ISBNRequest.getISBN(isbn_args)
     puts response.body, response.code, response.message
+    
+    response = JSON.parse(response.body)
 
     @title = response["items"][0]["volumeInfo"]["title"]
     @author = response["items"][0]["volumeInfo"]["authors"][0]
