@@ -62,7 +62,7 @@
 	<h2>Add a Book to <span id="listing_title_kind">Buy</span></h2>
 	<!--<% conditions = ['new', 'good', 'poor'] %>-->
 	<% conditions = ['0', '1', '2'] %>
-	<%= form_for (Listing.new, :remote => true) do |f| %>
+	<%= form_for Listing.new, :remote => true do |f| %>
 		<%= f.fields_for Book.new do |builder| %>
 			<%= builder.label :isbn %>
 			<%= builder.text_field :isbn %>
