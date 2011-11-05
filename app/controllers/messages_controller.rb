@@ -40,7 +40,7 @@ class MessagesController < ApplicationController
 
     def in
         puts 'recieved'
-        from = params[:from]
+        from = params[:msisdn]
         to = params[:to]
         text = params[:text]
         puts from, to, text
