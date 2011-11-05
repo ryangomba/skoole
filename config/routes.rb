@@ -4,6 +4,9 @@ Skoole::Application.routes.draw do
     match 'lists' => 'site#lists'
     match 'account' => 'site#account'
     
+    match 'in' => 'messages#in'
+    match 'out' => 'messages#out'
+    
     match 'test' => 'site#test'
     match 'test_request' => 'site#test_request'
 
