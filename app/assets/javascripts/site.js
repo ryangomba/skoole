@@ -11,9 +11,27 @@ $(document).ready(function() {
 	$('.nit').click(function() {
 		$('div#account-wrapper').fadeToggle()
 	})
-	
+
 })
 
 function login() {
+    
 	$('#facebook').fadeIn()
 }
+
+function loggedin(response) {
+
+    $(document).ready(function() {
+
+        if(response != null) {
+            $.post('/autologin', response)
+            //logged user id: FB.getSession().uid
+        } else {
+            //alert('out')
+            //user is not logged in
+        }
+
+    })
+
+}
+

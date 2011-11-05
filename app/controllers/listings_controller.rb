@@ -45,10 +45,14 @@ class ListingsController < ApplicationController
         puts from, to, text
         
         @sender = User.where("sms = '#{from}'").first
-        @number = Number.where("number = '#{to}'")
-        @t = Transaction.where("buyer_number_id = '#{@number.id}' AND buyer_id = #{@sender.id}").first
+        @number = Number.where("number = '#{to}'").first
+
+	if @sender && @number
+
+        puts "sender and number found"
+        @t = Transaction.where("buyer_number_id = '#{@number.id}' AND buyer_id = '#{@sender.id}'").first
         if !@t
-            @t = Transaction.where("seller_number_id = '#{@number.id}' AND seller_id = #{@sender.id}").first
+            @t = Transaction.where("seller_number_id = '#{@number.id}' AND seller_id = '#{@sender.id}'").first
         end
         
         if @t
@@ -56,8 +60,8 @@ class ListingsController < ApplicationController
             
             @t.state += 1
             
-            
         end
+    end
         
         render :text => ""
     end
@@ -141,13 +145,13 @@ class ListingsController < ApplicationController
                 # get phone numbers              
                 
                 bnums = @buyer.nums.dup
-                @t.buyer_number_id = bnums.index('0')
+                @t.buyer_number_id = bnums.index('0') + 1
                 bnums[@t.buyer_number_id] = '1'
                 @buyer.nums = "#{bnums}".to_s
                 @buyer.save
                 
                 snums = @seller.nums.dup
-                @t.seller_number_id = snums.index('0')
+                @t.seller_number_id = snums.index('0') + 1
                 snums[@t.seller_number_id] = '1'
                 @seller.nums = "#{snums}".to_s
                 @seller.save

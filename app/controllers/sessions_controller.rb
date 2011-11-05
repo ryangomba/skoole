@@ -1,6 +1,6 @@
 require 'auth'
 
-class SessionsController < ApplicationController
+class SessionsController < ActionController::Base
    
     def create
         response = parse_signed_request(request.env["omniauth.params"]["signed_request"])["registration"]
@@ -15,6 +15,19 @@ class SessionsController < ApplicationController
     def destroy
         session[:user_id] = nil
         redirect_to root_url, :notice => "Signed out!"
+    end
+
+    def autofb
+        fid = params[:session][:uid]
+        puts fid
+        #if !current_user
+            @user = User.where(:uid => fid).first
+            if @user then session['user_id'] = @user.id end
+        #end
+    
+        respond_to do |format|
+            format.js
+        end
     end
     
 end

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Skoole</title>
+    <script src='http://connect.facebook.net/en_US/all.js'></script>
 	<%= stylesheet_link_tag "application" %>
 	<%= stylesheet_link_tag "#{params[:controller]}" %>
 	<%= stylesheet_link_tag "#{params[:controller]}_#{params[:action]}" %>
@@ -12,12 +13,34 @@
 </head>
 <body id="<%= params[:action] %>">
 	
+<div id="fb-root"></div>
+<script>
+  function fbLoginStatus(response) {
+     if(response.session) {
+        //user is logged in, display profile div
+     } else {
+        //user is not logged in, display guest div
+     }
+  }
+  window.fbAsyncInit = function() {
+    FB.init({appId: '288275221194002', status: true, cookie: true, xfbml: true});
+    FB.getLoginStatus(loggedin);
+    FB.Event.subscribe('auth.statusChange', fbLoginStatus);
+  };
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>
+
 <!-- LOGIN -->
 
 <div id="facebook" class="overlay"><div id="facebook-form" class="lightbox">
 <iframe id="login_form" src="https://www.facebook.com/plugins/registration.php?
             client_id=288275221194002&
-            redirect_uri=<%= "http://skoole.com/auth/facebook" %>&
+            redirect_uri=<%= "http://buzzruns.com/auth/facebook" %>&
             fields=[
                 {'name': 'name'},
                 {'name': 'email'},

@@ -7,7 +7,7 @@ class AddTransactions < ActiveRecord::Migration
             t.integer :seller_number_id
             t.integer :buyer_listing_id
             t.integer :seller_listing_id
-            t.string :state
+            t.integer :state
 
             t.timestamps
         end

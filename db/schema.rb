@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20111105074352) do
     t.integer  "seller_number_id"
     t.integer  "buyer_listing_id"
     t.integer  "seller_listing_id"
-    t.string   "state"
+    t.integer  "state"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

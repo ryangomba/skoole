@@ -18,7 +18,9 @@ Skoole::Application.routes.draw do
     match "/auth/:provider/callback" => "sessions#create"
     match "/signout" => "sessions#destroy", :as => :signout
     match "facebook" => 'sessions#facebook'
-    
+
+    match "autologin" => 'sessions#autofb' 
+   
     match 'user/update' => 'users#update'
 
     # The priority is based upon order of creation:
