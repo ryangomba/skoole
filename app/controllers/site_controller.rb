@@ -33,15 +33,6 @@ class SiteController < ApplicationController
             format.js 
         end
     end
-    
-
+  
 end
 
-class ISBNRequest
-  include HTTParty
-  def self.getISBN(isbn_args)
-    get('https://www.googleapis.com/books/v1/volumes', :query => {
-        :q => "isbn:#{isbn_args}"
-    })
-  end
-end
