@@ -33,6 +33,14 @@ class Message
         when 1
             @subject =  "We found a match!"
             @body =     "Would you like to sell #{bk} to #{bn} for $#{sl.price}?"
+        when 2
+            @subject =  "Your match is set!"
+            @body =     "Alrighty. You're all set! use this number to arrange when & where to meet."
+        when 3
+            #
+        when 9
+            @subject =  "Match canceled."
+            @body =     "Your match has been canceled. You've been put back in the queue :)"
         else
             @subject =  "Error"
             @body =     "Error"
