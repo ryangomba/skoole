@@ -25,67 +25,53 @@
 	<div class="page">
 	
 		<div id="buying" class="section fl">
-			<div class="add">+</div>
+			<div class="add" name="Buy">+</div>
 			<h1>Buying</h1>
 			<div class="list">
+				<% for l in @buying do %>
 				<div class="entry">
-					<%= image_tag 'pending.png' %>
-					<h2>Introduction to Algorithms, 5th edition</h2>
-					<div class="price">Up to $45.00,</div>
-					<div class="condition">in good condition</div>
+					<%= image_tag l.book.thumbnail %>
+					<h2><%= l.book.title %></h2>
+					<div class="price">Up to $<%= l.price %>.00,</div>
+					<div class="condition">in <%= l.condition %> condition</div>
 				</div>
-				<div class="entry">
-					<%= image_tag 'pending.png' %>
-					<h2>Introduction to Algorithms, 5th edition</h2>
-					<div class="price">Up to $38.00,</div>
-					<div class="condition">new</div>
-				</div>
-				<div class="entry">
-					<%= image_tag 'matched.png' %>
-					<h2>Introduction to Algorithms, 5th edition</h2>
-					<div class="price">Up to $45.00,</div>
-					<div class="condition">in good condition</div>
-				</div>
-				<div class="entry">
-					<%= image_tag 'pending.png' %>
-					<h2>Introduction to Algorithms, 5th edition</h2>
-					<div class="price">Up to $38.00,</div>
-					<div class="condition">new</div>
-				</div>
-				<div class="entry">
-					<%= image_tag 'cancelled.png' %>
-					<h2>Introduction to Algorithms, 5th edition</h2>
-					<div class="price">Up to $45.00,</div>
-					<div class="condition">in good condition</div>
-				</div>
+				<% end %>
 			</div>
 		</div>
 	
 		<div id="selling" class="section fr">
-			<div class="add">+</div>
+			<div class="add" name="Sell">+</div>
 			<h1>Selling</h1>
 			<div class="list">
+				<% for l in @selling do %>
 				<div class="entry">
-					<%= image_tag 'pending.png' %>
-					<h2>Introduction to Algorithms, 5th edition</h2>
-					<div class="condition">Good condition, </div>
-					<div class="price">looking for $45.00</div>
+					<%= image_tag l.book.thumbnail %>
+					<h2><%= l.book.title %></h2>
+					<div class="price">Up to $<%= l.price %>.00,</div>
+					<div class="condition">in <%= l.condition %> condition</div>
 				</div>
-				<div class="entry">
-					<%= image_tag 'pending.png' %>
-					<h2>Introduction to Algorithms, 5th edition</h2>
-					<div class="price">Up to $38.00,</div>
-					<div class="condition">new</div>
-				</div>
-				<div class="entry">
-					<%= image_tag 'pending.png' %>
-					<h2>Introduction to Algorithms, 5th edition</h2>
-					<div class="price">Up to $45.00,</div>
-					<div class="condition">in good condition</div>
-				</div>
+				<% end %>
 			</div>
 		</div>
 	
 		<div class="clear"></div>
 	</div>
 </div>
+
+<div id="new-book" class="overlay"><div id="book-form" class="lightbox">
+	<h2>Add a Book to <span id="listing_title_kind">Buy</span></h2>
+	<!--<% conditions = ['new', 'good', 'poor'] %>-->
+	<% conditions = ['0', '1', '2'] %>
+	<%= form_for (Listing.new, :remote => true) do |f| %>
+		<%= f.fields_for Book.new do |builder| %>
+			<%= builder.label :isbn %>
+			<%= builder.text_field :isbn %>
+		<% end %>
+		<%= f.label :price %>
+		<%= f.number_field :price %>
+		<%= f.select(:condition, conditions) %>
+		<%= f.hidden_field :kind %>
+		<%= f.submit 'Submit' %>
+	<% end %>
+</div></div>
+

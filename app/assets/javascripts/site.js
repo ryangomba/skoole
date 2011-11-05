@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	
-	$('#overlay').click(function() {
+	$('.overlay').click(function() {
 		$(this).fadeOut()
 	})
 	
 })
 
 function login() {
-	$('#overlay').fadeIn()
+	$('#facebook').fadeIn()
 }

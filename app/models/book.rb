@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
     
-    belongs_to :listing
+    has_many :listings
     
     validates_presence_of :isbn
     attr_accessible :isbn, :author, :title, :published, :thumbnail

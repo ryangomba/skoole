@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111104222137) do
+ActiveRecord::Schema.define(:version => 20111105074352) do
 
   create_table "books", :force => true do |t|
     t.string   "isbn"
     t.string   "title"
     t.string   "author"
     t.string   "thumbnail"
-    t.date     "published"
+    t.string   "published"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,12 +30,14 @@ ActiveRecord::Schema.define(:version => 20111104222137) do
     t.string   "condition"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "pending",    :default => false
   end
 
   create_table "numbers", :force => true do |t|
     t.string   "number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "index"
   end
 
   create_table "transactions", :force => true do |t|
@@ -58,6 +60,9 @@ ActiveRecord::Schema.define(:version => 20111104222137) do
     t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "sms_enabled",   :default => true
+    t.boolean  "email_enabled", :default => true
+    t.string   "nums",          :default => "0000000000"
   end
 
 end

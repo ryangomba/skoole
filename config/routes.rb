@@ -19,8 +19,7 @@ Skoole::Application.routes.draw do
     match "/signout" => "sessions#destroy", :as => :signout
     match "facebook" => 'sessions#facebook'
     
-    
-    
+    match 'user/update' => 'users#update'
 
     # The priority is based upon order of creation:
     # first created -> highest priority.

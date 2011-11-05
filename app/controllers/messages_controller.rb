@@ -36,8 +36,6 @@ end
 
 class MessagesController < ApplicationController
 
-{"msisdn"=>"18457026112", "to"=>"12064532171", "messageId"=>"05157E96", "text"=>"Respond!", "type"=>"text", "action"=>"in", "controller"=>"messages"}
-
     def in
         puts 'recieved'
         from = params[:msisdn]

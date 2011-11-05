@@ -6,7 +6,7 @@
 
 /* LOGIN */
 
-div#overlay {
+div.overlay {
 	display: none;
 	position: fixed;
 	z-index: 999;
@@ -15,12 +15,16 @@ div#overlay {
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.7);
-	div#facebook {
-		width: 400px;
+	div.lightbox {
 		margin: auto;
 		margin-top: 100px;
-		iframe {
-			//
+		background-color: #fff;
+		&#facebook-form {
+			width: 400px;
+		}
+		&#book-form {
+			width: 500px;
+			padding: 40px;
 		}
 	}
 	cursor: pointer;

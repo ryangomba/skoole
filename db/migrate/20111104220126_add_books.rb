@@ -5,7 +5,7 @@ class AddBooks < ActiveRecord::Migration
             t.string :title
             t.string :author
             t.string :thumbnail
-            t.date :published
+            t.string :published
 
             t.timestamps
         end

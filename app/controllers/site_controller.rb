@@ -17,9 +17,12 @@ class SiteController < ApplicationController
     end
     
     def lists
+        @buying = current_user.listings.where(:kind => 'Buy')
+        @selling = current_user.listings.where(:kind => 'Sell')
     end
     
     def account
+        @user = current_user
     end
     
     def test

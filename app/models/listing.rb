@@ -1,8 +1,10 @@
 class Listing < ActiveRecord::Base
     
-    belongs_to :transaction
+    has_one :transaction
+    belongs_to :book
+    belongs_to :user
     
     # user_id
-    validates_presence_of :kind, :book_id, :price, :condition
+    validates_presence_of :kind, :book, :user, :price, :condition
     
 end
