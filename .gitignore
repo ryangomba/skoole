@@ -5,6 +5,7 @@
 .DS_Store
 .pyc
 .backup
+.lock
 
 db/*.sqlite3
 log/*.log
