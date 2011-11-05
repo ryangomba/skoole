@@ -13,6 +13,14 @@ Skoole::Application.routes.draw do
     match 'test' => 'site#test'
     match 'test_request' => 'site#test_request'
     match 'site/isbn_request' => 'site#isbn_request'
+    
+    
+    match "/auth/:provider/callback" => "sessions#create"
+    match "/signout" => "sessions#destroy", :as => :signout
+    match "facebook" => 'sessions#facebook'
+    
+    
+    
 
     # The priority is based upon order of creation:
     # first created -> highest priority.

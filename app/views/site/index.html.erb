@@ -13,12 +13,21 @@
 
 			<!-- BUTTON -->
 
+			<% if current_user %>
 	    	<div class="right-content">
 				<div class="button">
-					<div class="top">List your books<%= image_tag 'arrow.png' %></div>
-					<div class="bottom">Returning user? Log in&hellip;</div>
+					<a href="lists"><div class="top">List your books<%= image_tag 'arrow.png' %></div></a>
+					<div class="bottom">Welcome back, <%= current_user.name %></div>
 				</div>
 			</div>
+			<% else %>
+			<div class="right-content">
+				<div class="button">
+					<a href="lists"><div class="top">List your books<%= image_tag 'arrow.png' %></div></a>
+					<div class="bottom" onclick='login()'>Returning user? Log in&hellip;</div>
+				</div>
+			</div>
+			<% end %>
 		
 			<div class="clear"></div>
 		</div>

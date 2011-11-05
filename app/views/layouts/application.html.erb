@@ -11,6 +11,26 @@
 	<%= csrf_meta_tags %>
 </head>
 <body id="<%= params[:action] %>">
+	
+<!-- LOGIN -->
+
+<div id="overlay"><div id="facebook">
+<iframe id="login_form" src="https://www.facebook.com/plugins/registration.php?
+            client_id=288275221194002&
+            redirect_uri=<%= "http://#{request.env['HTTP_HOST']}/auth/facebook" %>&
+            fields=[
+                {'name': 'name'},
+                {'name': 'email'},
+                {'name': 'phone', 'description': 'Phone Number', 'type':'text'}]"
+        scrolling="auto"
+        frameborder="no"
+        style="border:none"
+        allowTransparency="true"
+        width="400"
+        height="100%">
+</iframe>
+</div></div>
+
 <div id="wrapper">
 
 <!-- NAVIGATION -->
@@ -19,9 +39,13 @@
 	<div id="nav">
 		<div class="page">
 			<h1>Skoole <span class="subtitle"></span></h1>
-			<a href="/account"><div class="nav-item account right">Account</div></a>
-			<a href="/lists"><div class="nav-item lists">Your Lists</div></a>
-			<a href="/"><div class="nav-item index left">Welcome</div></a>
+			<div class="tabs">
+				<% if current_user %>
+				<a class="nav-item" href="/account"><div class="account">Account</div></a>
+				<% end %>
+				<a class="nav-item" href="/lists"><div class="lists">Your Lists</div></a>
+				<a class="nav-item" href="/"><div class="index">Welcome</div></a>
+			</div>
 		</div>
 	</div>
 </div>

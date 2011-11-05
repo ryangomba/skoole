@@ -54,7 +54,8 @@ ActiveRecord::Schema.define(:version => 20111104222137) do
     t.string   "name"
     t.string   "email"
     t.string   "sms"
-    t.string   "f_id"
+    t.string   "provider"
+    t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
