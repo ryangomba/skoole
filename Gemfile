@@ -28,5 +28,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
-# http
-gem 'httparty'
+
