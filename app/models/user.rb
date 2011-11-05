@@ -16,5 +16,9 @@ class User < ActiveRecord::Base
         user.nums = '0000000000'
       end
     end
-    
+ 
+    def firstname
+        return name.split(" ")[0]
+    end
+   
 end

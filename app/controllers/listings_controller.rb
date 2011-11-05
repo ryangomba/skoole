@@ -10,6 +10,7 @@ class Nexmo
     default_params :username => '86e3fbf7', :password => '414092e9'
     format :json
     def self.send(message)
+        puts "sending message from #{message.sender.sms} to #{message.receiver.sms}"
         get('/sms/json', :query => {
             :from => message.sender.sms,
             :to => message.receiver.sms,
@@ -56,10 +57,58 @@ class ListingsController < ApplicationController
         end
         
         if @t
+            yesno = text.downcase[0].chr == 'y'       
+
+            if @t.state == 0
+                puts "send message to buyer asking for confirmation"
+                if yesno
+                    @t.state = 1
+                    puts "YES!"
+                    sknumber = Number.find(@t.seller_number_id).number
+                    sen = Contact.new('Skoole', "#{@t.id}@skoole.com", sknumber)
+                    seller = User.find(@t.seller_id)
+                    rec = Contact.new(seller.firstname, seller.email, seller.sms)
+                else
+                    @t.state = 9
+                    sen = Contact.new('Skoole', "#{@t.id}@skoole.com", to)
+                    rec = Contact.new(buyer.firstname, buyer.email, buyer.sms)
+                end
+                m = Message.new(sen, rec, @t)
+                Nexmo.send(m)
+                Sendgrid.send(m)
+            end
+
+            if @t.state == 1
+                puts "send message to seller asking for confirmation"
+                if yesno
+                    puts "sending instructions to both parties"
+                    @t.state = 2
+                    puts "YES!"
+                    # sending instructions back to seller
+                    sen = Contact.new('Skoole', "#{@t.id}@skoole.com", to)
+                    rec = Contact.new(seller.firstname, seller.email, seller.sms)
+                    m1 = Message.new(sen, rec, @t)
+                    r1 = Nexmo.send(m1)
+                    Sendgrid.send(m1)
+                    puts r1.inspect
+                    # sending instructions to buyer
+                    sknumber = Number.find(@t.buyer_number_id).number
+                    sen = Contact.new('Skoole', "#{@t.id}@skoole.com", sknumber)
+                    buyer = User.find(@t.buyer_id)
+                    rec = Contact.new(buyer.firstname, buyer.email, buyer.sms)
+                    m2 = Message.new(sen, rec, @t)
+                    r2 = Nexmo.send(m2)
+                    Sendgrid.send(m2)
+                    puts r2.inspect
+                else
+                    pass
+                end
+            end
+
             puts "WE GOT A TRANSACTION!!!!!!!!!!!!"
-            
-            @t.state += 1
-            
+            puts @t.inspect
+
+            @t.save
         end
     end
         
@@ -132,7 +181,7 @@ class ListingsController < ApplicationController
                 else
                     @seller = @seller_listing.user
                 end
-            
+
                 # create the transaction
                          
                 @t = Transaction.new
@@ -168,7 +217,7 @@ class ListingsController < ApplicationController
                 # send message to buyer
                 
                 sender = Contact.new('Skoole', "#{@t.id}@skoole.com", Number.find(@t.buyer_number_id).number)
-                receiver = Contact.new('Ryan', @buyer.email, @buyer.sms)
+                receiver = Contact.new(@buyer.name, @buyer.email, @buyer.sms)
                 message = Message.new(sender, receiver, @t)
 
                 sms_response = Nexmo.send(message)

@@ -1,1 +1,6 @@
-alert('made new')
+$('<div class="entry"> \
+    <%= image_tag @latest_entry.book.thumbnail %>  \
+    <h2><%= @latest_entry.book.title %></h2>   \
+    <div class="price">Up to $<%= @latest_entry.price %>.00,</div> \
+    <div class="condition">in <%= @latest_entry.condition %> condition</div>   \
+</div>').hide().appendTo('#<%= @listing.kind == 'Buy' ? 'buying' : 'selling' %> .list').fadeIn();
