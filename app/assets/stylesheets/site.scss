@@ -30,6 +30,26 @@ div.overlay {
 	cursor: pointer;
 }
 
+/* ACCOUNT */
+
+div#account-wrapper {
+	display: none;
+	position: absolute;
+	z-index: 998;
+	top: 70px;
+	left: 0px;
+	width: 100%;
+	div#account-box {
+		float: right;
+		background-color: rgba(0, 0, 0, 0.8);
+		@include border-radius(6px);
+		padding: 20px;
+		width: 280px;
+		height: 160px;
+	}
+}
+
+
 /* NAVBAR */
 
 #nav {
