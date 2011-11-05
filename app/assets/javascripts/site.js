@@ -1,8 +1,9 @@
 $(document).ready(function() {
 	
-	$('.overlay').click(function() {
-		$(this).fadeOut()
-	})
+    $('.overlay').click(function(event) {
+        if ($(event.target).is('.overlay'))
+            $(this).fadeOut()
+    })
 
 	$('.edit_user input').click(function() {
 		$('.edit_user').submit()

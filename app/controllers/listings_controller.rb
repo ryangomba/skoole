@@ -17,6 +17,13 @@ class Nexmo
             :text => message.body
         })
     end
+    def self.trade(message, text)
+        get('/sms/json', :query => {
+            :from => message.sender.sms,
+            :to => message.receiver.sms,
+            :text => text
+        })
+    end
 end
 
 class Sendgrid
@@ -32,6 +39,16 @@ class Sendgrid
             :toname => message.receiver.name,
             :subject => message.subject,
             :text => message.body
+        })
+    end
+    def self.trade(message, text)
+        get('/mail.send.json', :query => {
+            :from => message.sender.email,
+            :fromname => message.sender.name,
+            :to => message.receiver.email,
+            :toname => message.receiver.name,
+            :subject => message.subject,
+            :text => text
         })
     end
 end
@@ -76,15 +93,15 @@ class ListingsController < ApplicationController
                 m = Message.new(sen, rec, @t)
                 Nexmo.send(m)
                 Sendgrid.send(m)
-            end
 
-            if @t.state == 1
+            elsif @t.state == 1
                 puts "send message to seller asking for confirmation"
                 if yesno
                     puts "sending instructions to both parties"
                     @t.state = 2
                     puts "YES!"
                     # sending instructions back to seller
+                    seller = User.find(@t.seller_id)
                     sen = Contact.new('Skoole', "#{@t.id}@skoole.com", to)
                     rec = Contact.new(seller.firstname, seller.email, seller.sms)
                     m1 = Message.new(sen, rec, @t)
@@ -97,12 +114,31 @@ class ListingsController < ApplicationController
                     buyer = User.find(@t.buyer_id)
                     rec = Contact.new(buyer.firstname, buyer.email, buyer.sms)
                     m2 = Message.new(sen, rec, @t)
+                    sleep(1)
                     r2 = Nexmo.send(m2)
                     Sendgrid.send(m2)
+                    @t.state = 3
                     puts r2.inspect
                 else
                     pass
                 end
+
+            elsif @t.state == 3
+                puts "trading"
+                seller = User.find(@t.seller_id)
+                buyer = User.find(@t.buyer_id)
+                if buyer.sms == from
+                    sknumber = Number.find(@t.seller_number_id).number
+                    r = User.find(@t.seller_id)
+                else
+                    sknumber = Number.find(@t.buyer_number_id).number
+                    r = User.find(@t.buyer_id)
+                end
+                rec = Contact.new(r.firstname, r.email, r.sms)
+                sen = Contact.new('Skoole', "#{@t.id}@skoole.com", sknumber)
+                m = Message.new(sen, rec, @t)
+                Nexmo.trade(m, text)
+                Sendgrid.trade(m, text)
             end
 
             puts "WE GOT A TRANSACTION!!!!!!!!!!!!"
@@ -165,12 +201,14 @@ class ListingsController < ApplicationController
                 @seller_listing = Listing.where("book_id = ? AND pending = ? AND kind = 'Sell' AND price <= ? AND condition <= ? AND id < ?",
                     @listing.book_id, false, @listing.price, @listing.condition, @listing.id
                 ).order('created_at ASC').first
-            else
+                @latest_entry = current_user.listings.where(:kind => 'Buy').last 
+           else
                 @seller = current_user
                 @seller_listing = @listing
                 @buyer_listing = Listing.where("book_id = ? AND pending = ? AND kind = 'Buy' AND price >= ? AND condition >= ? AND id < ?",
                     @listing.book_id, false, @listing.price, @listing.condition, @listing.id
                 ).order('created_at ASC').first
+                @latest_entry = current_user.listings.where(:kind => 'Sell').last
             end
             
             if @buyer_listing && @seller_listing
@@ -195,13 +233,13 @@ class ListingsController < ApplicationController
                 
                 bnums = @buyer.nums.dup
                 @t.buyer_number_id = bnums.index('0') + 1
-                bnums[@t.buyer_number_id] = '1'
+                bnums[@t.buyer_number_id - 1] = '1'
                 @buyer.nums = "#{bnums}".to_s
                 @buyer.save
                 
                 snums = @seller.nums.dup
                 @t.seller_number_id = snums.index('0') + 1
-                snums[@t.seller_number_id] = '1'
+                snums[@t.seller_number_id - 1] = '1'
                 @seller.nums = "#{snums}".to_s
                 @seller.save
                 

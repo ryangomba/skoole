@@ -37,7 +37,8 @@ class Message
             @subject =  "Your match is set!"
             @body =     "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
         when 3
-            #
+            @subject =  "You have a message!"
+            @body =     "boo"
         when 9
             @subject =  "Match canceled."
             @body =     "No problem. You're back in the queue! :)"

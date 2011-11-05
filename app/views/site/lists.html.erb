@@ -33,7 +33,7 @@
 					<%= image_tag l.book.thumbnail %>
 					<h2><%= l.book.title %></h2>
 					<div class="price">Up to $<%= l.price %>.00,</div>
-					<div class="condition">in <%= l.condition %> condition</div>
+					<div class="condition">in <%= l.condition_name %> condition</div>
 				</div>
 				<% end %>
 			</div>
@@ -47,8 +47,8 @@
 				<div class="entry">
 					<%= image_tag l.book.thumbnail %>
 					<h2><%= l.book.title %></h2>
-					<div class="price">Up to $<%= l.price %>.00,</div>
-					<div class="condition">in <%= l.condition %> condition</div>
+					<div class="price">For $<%= l.price %>.00,</div>
+					<div class="condition">in <%= l.condition_name %> condition</div>
 				</div>
 				<% end %>
 			</div>
@@ -63,15 +63,27 @@
 	<!--<% conditions = ['new', 'good', 'poor'] %>-->
 	<% conditions = ['0', '1', '2'] %>
 	<%= form_for Listing.new, :remote => true do |f| %>
+        <div class="isbn-field">
 		<%= f.fields_for Book.new do |builder| %>
-			<%= builder.label :isbn %>
+			<%= builder.label :isbn, "ISBN" %>
 			<%= builder.text_field :isbn %>
 		<% end %>
+        </div>
+        <div class="price-field">
 		<%= f.label :price %>
 		<%= f.number_field :price %>
-		<%= f.select(:condition, conditions) %>
+        </div>
+        <div class="conditions-field">
+		<!--<%= f.select(:condition, conditions) %>-->
+        <select id="listing_condition" name="listing[condition]">
+            <option value="0">New</option>
+            <option value="1">Good</option>
+            <option value="2">Fair</option>
+        </select>
+        </div>
 		<%= f.hidden_field :kind %>
 		<%= f.submit 'Submit' %>
 	<% end %>
+    <div class="clear"></div>
 </div></div>
 
