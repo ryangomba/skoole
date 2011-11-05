@@ -18,4 +18,3 @@ group :assets do
   gem 'uglifier'
 end
 
-end
