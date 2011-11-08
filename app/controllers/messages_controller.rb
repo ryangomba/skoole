@@ -32,13 +32,13 @@ class MessagesController < ApplicationController
         # if numbers are valid
         if sender && number
 
-            # find the transaction
-            t = Transaction.find_by_buyer_id_and_buyer_number_id(number.id, sender.id)
-            if t.nil? then t = Transaction.find_by_seller_id_and_seller_number_id(number.id, sender.id) end
+            # find the match
+            t = Match.find_by_buyer_id_and_buyer_number_id(number.id, sender.id)
+            if t.nil? then t = Match.find_by_seller_id_and_seller_number_id(number.id, sender.id) end
 
-            # if we couldn't find a transaction, send an error
+            # if we couldn't find a match, send an error
             if t.nil?
-                puts "COULD NOT FIND A VALID TRANSACTION"
+                puts "COULD NOT FIND A VALID MATCH"
                 sender.send_error(to, error_message)
                 render :nothing => true
                 break

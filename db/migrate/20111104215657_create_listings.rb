@@ -1,4 +1,4 @@
-class AddListings < ActiveRecord::Migration
+class CreateListings < ActiveRecord::Migration
     def change
         create_table :listings do |t|
             t.string :kind
@@ -6,6 +6,7 @@ class AddListings < ActiveRecord::Migration
             t.integer :book_id
             t.integer :price
             t.string :condition
+            t.boolean :pending, :default => false
 
             t.timestamps
         end

@@ -13,10 +13,10 @@ class User < ActiveRecord::Base
         user ? user : create(
             :f_id => fb["uid"],
             :f_token => fb["credentials"]["token"],
-            :first_name => fb["user_info"]["first_name"],
-            :last_name => fb["user_info"]["last_name"],
-            :email => fb["user_info"]["email"],
-            :image => fb["user_info"]["image"]
+            :first_name => fb["info"]["first_name"],
+            :last_name => fb["info"]["last_name"],
+            :email => fb["info"]["email"],
+            :image => fb["info"]["image"]
         )
     end
     
