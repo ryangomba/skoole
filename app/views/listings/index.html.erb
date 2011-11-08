@@ -1,0 +1,48 @@
+<!-- HEADER -->
+
+<div class="header">
+	<div id="about">
+		<div class="page">
+		
+			<!-- TAGLINE -->
+		
+			<div class="left-content">
+				<h1>List your books</h1>
+	    	</div>
+
+			<!-- BUTTON -->
+
+	    	<div class="right-content">
+				<div class="button">
+					<div class="top">Find your matches<%= image_tag 'arrow.png' %></div>
+				</div>
+			</div>
+		
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+
+<!-- LISTS -->
+
+<div id="lists" class="main-content">
+	<div class="page">
+	
+		<% @listings.each do |kind, list| %>
+	
+		<div id="<%= kind %>" class="section">
+			<div class="add" name="<%= kind %>">+</div>
+			<h1><%= kind %>ing</h1>
+			<div class="list" id="listBuy">
+				<% for @listing in list do %>
+				<%= render "listing" %>
+				<% end %>
+			</div>
+		</div>
+		
+		<% end %>
+	
+	</div>
+</div>
+
+<%= render "form" %>

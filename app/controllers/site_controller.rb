@@ -1,40 +1,22 @@
-require 'rubygems'
-require 'httparty'
-require 'json'
-
-class TestRequest
-  include HTTParty
-  def self.send
-      get('http://apple.com', :query => {
-          :foo => 'bar'
-      })
-  end
-end
-
 class SiteController < ApplicationController
 
-    def index
+    def welcome
     end
     
-    def lists
-        @buying = current_user.listings.where(:kind => 'Buy')
-        @selling = current_user.listings.where(:kind => 'Sell')
+    def login
+        redirect_to '/auth/facebook'
     end
     
-    def account
-        @user = current_user
+    def logout
+        session[:user_id] = nil
+        redirect_to root_url, :notice => "User signed out!"
     end
+  
+    ##
     
     def test
-    end
-    
-    def test_request
-        response = TestRequest.send
-        @test = "haha"
-        
-        respond_to do |format|
-            format.js 
-        end
+        @current_user.test
+        redirect_to root_url, :notice => "API request finished."
     end
   
 end

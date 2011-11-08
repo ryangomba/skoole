@@ -1,19 +1,11 @@
 source :rubygems
 
+##### BASE #####
+
 gem 'rails', '3.1.0'
 gem "rspec"
 gem 'json'
 gem 'jquery-rails'
-
-gem 'httparty'
-gem 'devise', '1.4.5'
-gem 'omniauth', '0.3.0.rc3'
-
-#group :development do
-	gem 'sqlite3'
-#end
-
-#gem 'pg', :group => :production
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
@@ -21,6 +13,24 @@ group :assets do
   gem 'uglifier'
 end
 
+##### AUTH #####
+
+gem 'omniauth'
+
+##### HTTP #####
+
+gem 'httparty'
+gem 'delayed_job'
+
+##### JAVASCRIPT #####
+
 gem 'execjs'
 gem 'therubyracer'
 
+##### DEVELOPMENT #####
+
+gem 'sqlite3'
+
+##### PRODUCTION #####
+
+### gem 'pg', :group => :production

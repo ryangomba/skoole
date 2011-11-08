@@ -1,0 +1,41 @@
+<!-- ABOUT -->
+
+<div class="header">
+	<div id="about">
+		<div class="page">
+		
+			<!-- TAGLINE -->
+		
+			<div class="left-content">
+	    		<h1>The textbook dilemma. Solved.</h1>
+	    		<p>Don't lose money to Chegg, Amazon, or Half.com when buyers and sellers live down the street. Use Skoole to list, match, and meet.</p>
+	    	</div>
+
+			<!-- BUTTON -->
+			
+			<div class="right-content">
+				<div class="button">
+					<a href="/auth/facebook" class="popup" data-width=600 data-height=400 data-method="get" data-remote="true"><div class="top">List your books<%= image_tag 'arrow.png' %></div></a>
+					<% if @current_user %>
+					<div class="bottom">Welcome back, <%= @current_user.first_name %></div>
+					<% else %>
+					<div class="bottom">To save...</div>
+					<% end %>
+				</div>
+			</div>
+		
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+
+<!-- CONTENT -->
+	
+<div id="content">
+	<div class="page">
+		
+		<%= render "video" %>
+		<!--<%= render "tour" %>-->
+
+	</div>
+</div>

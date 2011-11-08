@@ -1,24 +1,40 @@
-require 'auth'
+require 'rubygems'
+require 'httparty'
+require 'message'
 
 class User < ActiveRecord::Base
     
     has_many :listings
     
-    validates_presence_of :name, :email, :sms, :uid, :nums
-      
-    def self.create_with_omniauth(auth, params)
-      create! do |user|
-        user.provider = auth["provider"]
-        user.uid = auth["uid"]
-        user.name = params["name"]
-        user.sms = "1#{params["phone"]}"
-        user.email = params["email"]
-        user.nums = '0000000000'
-      end
+    validates_presence_of :first_name, :last_name, :email, :image, :f_id, :f_token
+    
+    def self.create_with_facebook(fb)
+        user = find_by_f_id(fb["uid"])
+        user ? user : create(
+            :f_id => fb["uid"],
+            :f_token => fb["credentials"]["token"],
+            :first_name => fb["user_info"]["first_name"],
+            :last_name => fb["user_info"]["last_name"],
+            :email => fb["user_info"]["email"],
+            :image => fb["user_info"]["image"]
+        )
     end
- 
-    def firstname
-        return name.split(" ")[0]
+    
+    ##
+    
+    def test
+        Facebook.user('ryangomba', self.f_token)
+    end
+    
+    ##### MESSAGING #####
+    
+    def new_number
+        nums = self.nums.dup
+        number_id = nums.index('0') + 1
+        nums[number_id - 1] = '1'
+        nums = "#{nums}".to_s
+        self.save()
+        return number_id
     end
    
 end

@@ -11,9 +11,11 @@
 	<%= javascript_include_tag "#{params[:controller]}_#{params[:action]}" %>
 	<%= csrf_meta_tags %>
 </head>
-<body id="<%= params[:action] %>">
-	
+<body id="<%= "#{params[:controller]}-#{params[:action]}" %>">
+
+
 <div id="fb-root"></div>
+<% if @current_user.nil? %>
 <script>
   function fbLoginStatus(response) {
      if(response.session) {
@@ -23,7 +25,7 @@
      }
   }
   window.fbAsyncInit = function() {
-    FB.init({appId: '288275221194002', status: true, cookie: true, xfbml: true});
+    FB.init({appId: '184512731633300', status: true, cookie: true, xfbml: true});
     FB.getLoginStatus(loggedin);
     FB.Event.subscribe('auth.statusChange', fbLoginStatus);
   };
@@ -34,47 +36,8 @@
     document.getElementById('fb-root').appendChild(e);
   }());
 </script>
-
-<!-- LOGIN -->
-
-<div id="facebook" class="overlay"><div id="facebook-form" class="lightbox">
-<iframe id="login_form" src="https://www.facebook.com/plugins/registration.php?
-            client_id=288275221194002&
-            redirect_uri=<%= "http://buzzruns.com/auth/facebook" %>&
-            fields=[
-                {'name': 'name'},
-                {'name': 'email'},
-                {'name': 'phone', 'description': 'Phone Number', 'type':'text'}]"
-        scrolling="auto"
-        frameborder="no"
-        style="border:none"
-        allowTransparency="true"
-        width="400"
-        height="100%">
-</iframe>
-</div></div>
-
-<!-- ACCOUNT -->
-
-<% if current_user %>
-<div id="account-wrapper">
-<div class="page">
-<div id="account-box">
-	
-	<%= form_for current_user, :url => '/user/update', :remote => true do |f| %>
-		<p><%= f.check_box :sms_enabled %><%= f.label :sms_enabled, "Notify via SMS" %></p>
-		<p><%= f.check_box :email_enabled %><%= f.label :email_enabled, "Notify via E-mail" %></p>
-		<% f.submit 'Submit' %>
-	<% end %>
-	
-	<div class="button">
-		<a href="<%= signout_path %>"><div class="top">Log out of Skoole<%= image_tag 'arrow.png' %></div></a>
-	</div>
-	
-</div>
-</div>
-</div>
 <% end %>
+
 
 <div id="wrapper">
 
@@ -85,11 +48,9 @@
 		<div class="page">
 			<h1>Skoole <span class="subtitle"></span></h1>
 			<div class="tabs">
-				<% if current_user %>
-				<a class="nav-item nit"><div class="account">Account</div></a>
-				<% end %>
-				<a class="nav-item" href="/lists"><div class="lists">Your Lists</div></a>
-				<a class="nav-item" href="/"><div class="index">Welcome</div></a>
+				<a class="nav-item" href="/matches"><div class="user-show">Match</div></a>
+				<a class="nav-item" href="<%= listings_path %>"><div class="listings-index">List</div></a>
+				<a class="nav-item" href="/"><div class="site-welcome">Join</div></a>
 			</div>
 		</div>
 	</div>

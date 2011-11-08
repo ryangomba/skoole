@@ -1,4 +1,5 @@
 namespace :populate do
+    
 	desc "Populate database with phone numbers"
 	task :numbers =>:environment do
 		Number.create(:number => 12064532171, :index => 0)
@@ -12,4 +13,16 @@ namespace :populate do
 		Number.create(:number => 19252700851, :index => 8)
 		Number.create(:number => 19252700853, :index => 9)
 	end
+	
+	desc "Populate database with a few users"
+	task :users =>:environment do
+	    User.create(
+	        :name => 'Ryan Gomba',
+	        :email => 'ryan@ryangomba.com',
+	        :sms => '18457026112',
+	        :provider => 'facebook',
+	        :uid => '779018113'
+	    )
+    end
+	
 end

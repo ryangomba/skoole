@@ -1,6 +1,6 @@
-/*
- * List page styles
-*/
+// Place all the styles related to the listing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'application.scss';
 
@@ -81,6 +81,8 @@ div#lists {
     text-shadow: 0px 1px 0px #fff;
     div.section {
         width: 450px;
+		&:first-child { float: left; }
+        &:last-child { float: right; }
         div.add {
             float: right;
             font-size: 42px;
@@ -94,31 +96,37 @@ div#lists {
             }
         }
         div.list {
-            div.entry {
-                padding: 25px 4px;
+            div.listing {
+				position: relative;
+				top: -1px;
+				height: 100px;
                 border-top: dotted 1px #ccc;
+				border-bottom: dotted 1px #ccc;
                 &:nth-child(odd) {
                     background-color: rgba(0, 0, 0, 0.03);
                 }
-                &:last-child {
-                    border-bottom: dotted 1px #ccc;
-                }
                 img {
-                    float: left;
+					position: absolute;
+					top: 12px;
+					left: 12px;
                     height: 70px;
                     padding: 1px;
                     border: solid 1px #ddd;
-                    margin: -15px 18px 0px 8px;
                 }
-                div {
-                    display: inline-block;
-                    color: #666;
-                }
-                h2 {
-                    font-weight: bold;
-                    font-size: 18px;
-                    margin-bottom: 10px;
-                }
+				div.info {
+					position: absolute;
+					top: 24px;
+					left: 80px;
+					h2 {
+	                    font-weight: bold;
+	                    font-size: 18px;
+	                    margin-bottom: 10px;
+	                }
+					div {
+						display: inline-block;
+	                    color: #666;
+	                }
+				}
             }
         }
     }
