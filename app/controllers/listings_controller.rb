@@ -16,7 +16,7 @@ class ListingsController < ApplicationController
         if @book.nil? || @listing.nil?
             puts "Error saving listing"
         else
-            @listing.match # check for matches
+            # @listing.match # check for matches
             respond_to do |format|          
                 format.js
             end
