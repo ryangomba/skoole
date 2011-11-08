@@ -29,13 +29,25 @@ ActiveRecord::Schema.define(:version => 20111107035442) do
     t.integer  "book_id"
     t.integer  "price"
     t.string   "condition"
+    t.boolean  "pending",    :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "pending",    :default => false
+  end
+
+  create_table "matches", :force => true do |t|
+    t.integer  "buyer_id"
+    t.integer  "seller_id"
+    t.integer  "buyer_number_id"
+    t.integer  "seller_number_id"
+    t.integer  "buyer_listing_id"
+    t.integer  "seller_listing_id"
+    t.integer  "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "messages", :force => true do |t|
-    t.integer  "transaction_id"
+    t.integer  "match_id"
     t.integer  "user_id"
     t.integer  "sms"
     t.string   "subject"
@@ -47,19 +59,7 @@ ActiveRecord::Schema.define(:version => 20111107035442) do
 
   create_table "numbers", :force => true do |t|
     t.string   "number"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "index"
-  end
-
-  create_table "transactions", :force => true do |t|
-    t.integer  "buyer_id"
-    t.integer  "seller_id"
-    t.integer  "buyer_number_id"
-    t.integer  "seller_number_id"
-    t.integer  "buyer_listing_id"
-    t.integer  "seller_listing_id"
-    t.integer  "state"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

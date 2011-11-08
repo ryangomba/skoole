@@ -2,7 +2,7 @@ class Listing < ActiveRecord::Base
     scope :buy, where(:kind => 'Buy')
     scope :sell, where(:kind => 'Sell')
     
-    has_one :transaction
+    has_one :match
     belongs_to :book
     belongs_to :user
     
@@ -47,8 +47,8 @@ class Listing < ActiveRecord::Base
             # get the other user
             buyer.nil? ? buyer = buyer_listing.user : seller = seller_listing.user
 
-            # create the transaction
-            t = Transaction.create(
+            # create the match
+            t = Match.create(
                 :buyer_id => buyer.id,
                 :buyer_number_id => buyer.new_number(),
                 :buyer_listing_id => buyer_listing.id,
@@ -60,7 +60,7 @@ class Listing < ActiveRecord::Base
             t.save()
             
             if t.errors
-                puts "Error creating transaction: #{t.errors}"
+                puts "Error creating match: #{t.errors}"
             else
                 
                 # mark listings as pending

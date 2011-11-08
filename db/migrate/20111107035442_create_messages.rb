@@ -1,7 +1,7 @@
-class AddMessages < ActiveRecord::Migration
+class CreateMessages < ActiveRecord::Migration
     def change
         create_table :messages do |t|
-            t.integer :transaction_id # the transaction
+            t.integer :match_id # the transaction
             t.integer :user_id # the receiver
             t.integer :sms # sms gateway
             t.string :subject
