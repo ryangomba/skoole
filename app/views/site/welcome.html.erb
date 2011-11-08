@@ -15,12 +15,20 @@
 			
 			<div class="right-content">
 				<div class="button">
-					<a href="/auth/facebook" class="popup" data-width=600 data-height=400 data-method="get" data-remote="true"><div class="top">List your books<%= image_tag 'arrow.png' %></div></a>
+					
 					<% if @current_user %>
-					<div class="bottom">Welcome back, <%= @current_user.first_name %></div>
+					<div class="top">List your books<%= image_tag 'arrow.png' %></div>
+					<div class="bottom">Welcome back, <%= @current_user.first_name %></div>					
+					
 					<% else %>
-					<div class="bottom">To save...</div>
+					<div class="top">Get started!<!--<%= image_tag 'arrow.png' %>--></div>
+					<div class="bottom">
+						<a href="/auth/facebook" class="popup" data-width=640 data-height=400 data-method="get" data-remote="true">
+							<div id="connect-with-facebook"><%= image_tag 'fb.png' %></div>
+						</a>
+					</div>
 					<% end %>
+					
 				</div>
 			</div>
 		
@@ -34,8 +42,11 @@
 <div id="content">
 	<div class="page">
 		
-		<%= render "video" %>
-		<!--<%= render "tour" %>-->
+		<% if @current_user %>
+		<%= render "network" %>
+		<% else %>
+		<%= render "tour" %>
+		<% end %>
 
 	</div>
 </div>

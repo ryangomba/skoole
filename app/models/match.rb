@@ -2,7 +2,7 @@ require 'api/nexmo'
 require 'api/sendgrid'
 require 'contents'
 
-class Transaction < ActiveRecord::Base
+class Match < ActiveRecord::Base
     
     has_one :buyer, :class_name => User, :foreign_key => "buyer_id"
     has_one :seller, :class_name => User, :foreign_key => "seller_id"
@@ -29,13 +29,13 @@ class Transaction < ActiveRecord::Base
                 puts "Buyer wants to buy! We'll check with the seller..."
                 seller = User.find(self.seller_id)
                 sknumber = Number.find(self.seller_number_id).number
-                contents = contents_for_transaction(self, text)
+                contents = contents_for_match(self, text)
                 message = Message.create
                 seller.send_sms(sknumber, message, t.id)
                 self.state = 1
                 self.save
             else
-                puts "Buyer has declined :( We'll respond & mark the transaction as canceled."
+                puts "Buyer has declined :( We'll respond & mark the match as canceled."
                 message = make_message(self, text)
                 sender.send(rec_num, message)
                 self.state = 9
@@ -93,7 +93,7 @@ class Transaction < ActiveRecord::Base
             Sendgrid.trade(m, text)
         end
 
-        puts "WE GOT A TRANSACTION!!!!!!!!!!!!"
+        puts "WE GOT A MATCH!!!!!!!!!!!!"
         puts self.inspect
 
         self.save
