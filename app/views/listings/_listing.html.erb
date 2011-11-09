@@ -4,6 +4,6 @@
 		<h2><%= @listing.book.title %></h2>
 		<div class="price">Up to $<%= @listing.price %>.00,</div>
 		<div class="condition">in <%= @listing.condition_name %> condition</div>
-		<%= link_to 'Destroy', @listing, :method => :delete, :remote => true, :class => 'destroy' %>
+		<%= link_to 'Destroy', @listing, method: :delete, remote: true, class: 'destroy' %>
 	</div>
 </div>

@@ -4,14 +4,14 @@ require 'contents'
 
 class Match < ActiveRecord::Base
     
-    has_one :buyer, :class_name => User, :foreign_key => "buyer_id"
-    has_one :seller, :class_name => User, :foreign_key => "seller_id"
+    has_one :buyer, class_name: User, foreign_key: "buyer_id"
+    has_one :seller, class_name: User, foreign_key: "seller_id"
     
-    has_one :buyer_number, :class_name => Number, :foreign_key => "buyer_number_id"
-    has_one :seller_number, :class_name => Number, :foreign_key => "seller_number_id"
+    has_one :buyer_number, class_name: Number, foreign_key: "buyer_number_id"
+    has_one :seller_number, class_name: Number, foreign_key: "seller_number_id"
     
-    has_one :buyer_listing, :class_name => Listing, :foreign_key => "buyer_id"
-    has_one :seller_listing, :class_name => Listing, :foreign_key => "seller_number_id"
+    has_one :buyer_listing, class_name: Listing, foreign_key: "buyer_id"
+    has_one :seller_listing, class_name: Listing, foreign_key: "seller_number_id"
     
     validates_presence_of :buyer_id, :seller_id, :buyer_number_id, :seller_number_id, :buyer_listing_id, :seller_listing_id, :state
     
@@ -47,11 +47,10 @@ class Match < ActiveRecord::Base
 
         elsif self.state == 1
             
-            puts "send message to seller asking for confirmation"
+            puts "Received message from seller re: confirmation"
             if yesno
-                puts "sending instructions to both parties"
+                puts "Seller confirmed! Sending instructions to both parties..."
                 self.state = 2
-                puts "YES!"
                 # sending instructions back to seller
                 seller = User.find(self.seller_id)
                 sen = Contact.new('Skoole', "#{self.id}@skoole.com", to)
@@ -59,7 +58,7 @@ class Match < ActiveRecord::Base
                 m1 = Message.new(sen, rec, @t)
                 r1 = Nexmo.send(m1)
                 Sendgrid.send(m1)
-                puts r1.inspect
+                puts "Seller instructions: " + r1.inspect
                 # sending instructions to buyer
                 sknumber = Number.find(self.buyer_number_id).number
                 sen = Contact.new('Skoole', "#{self.id}@skoole.com", sknumber)
@@ -70,13 +69,13 @@ class Match < ActiveRecord::Base
                 r2 = Nexmo.send(m2)
                 Sendgrid.send(m2)
                 self.state = 3
-                puts r2.inspect
+                puts "Buyer instructions: " + r2.inspect
             else
                 pass
             end
 
         elsif self.state == 3
-            puts "trading"
+            puts "Users trading messages"
             seller = User.find(self.seller_id)
             buyer = User.find(self.buyer_id)
             if buyer.sms == from
@@ -93,8 +92,8 @@ class Match < ActiveRecord::Base
             Sendgrid.trade(m, text)
         end
 
-        puts "WE GOT A MATCH!!!!!!!!!!!!"
-        puts self.inspect
+        puts "WE GOT A MATCH!"
+        puts "Match hash: " + self.inspect
 
         self.save
         
