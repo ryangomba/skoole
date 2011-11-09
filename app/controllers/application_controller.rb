@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
     before_filter :current_user
     private
     def current_user
+        puts params.inspect
         @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]
     end
 end
