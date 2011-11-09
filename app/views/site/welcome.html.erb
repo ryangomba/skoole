@@ -6,30 +6,15 @@
 		
 			<!-- TAGLINE -->
 		
-			<div class="left-content">
+			<div id="left-content">
 	    		<h1>The textbook dilemma. Solved.</h1>
 	    		<p>Don't lose money to Chegg, Amazon, or Half.com when buyers and sellers live down the street. Use Skoole to list, match, and meet.</p>
 	    	</div>
 
 			<!-- BUTTON -->
 			
-			<div class="right-content">
-				<div class="button">
-					
-					<% if @current_user %>
-					<a href="<%= listings_link %>"><div class="top">List your books<%= image_tag 'arrow.png' %></div></a>
-					<div class="bottom">Welcome back, <%= @current_user.first_name %></div>					
-					
-					<% else %>
-					<div class="top">Get started!<!--<%= image_tag 'arrow.png' %>--></div>
-					<div class="bottom">
-						<a href="#" class="popup" data-width=640 data-height=400 data-method="get" data-remote="true">
-							<div id="connect-with-facebook"><%= image_tag 'fb.png' %></div>
-						</a>
-					</div>
-					<% end %>
-					
-				</div>
+			<div id="right-content">
+				<%= render 'button' %>
 			</div>
 		
 			<div class="clear"></div>

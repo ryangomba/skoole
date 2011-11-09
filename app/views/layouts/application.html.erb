@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Skoolebooks</title>
+	<title>Skoole</title>
     <script src='http://connect.facebook.net/en_US/all.js'></script>
 	<%= stylesheet_link_tag "application" %>
 	<%= stylesheet_link_tag "#{params[:controller]}" %>
@@ -31,8 +31,10 @@
 		document.getElementById('fb-root').appendChild(e);
 	}());
 	function loggedin(response) {
-		if (response['session'] != null)
+		if (response['session'] != null) {
 			f_id = response['session']['uid']
+			$("#connect-with-facebook").attr('href', '/login?f_id=' + f_id)
+		}
 	}
 	</script>
 <% end %>
@@ -42,11 +44,9 @@
 <div class="header">
 	<div id="nav">
 		<div class="page">
-			<h1>Skoolebooks <span class="subtitle"></span></h1>
-			<div class="tabs">
-				<a class="nav-item" href="<%= matches_link %>"><div class="users-show">Match</div></a>
-				<a class="nav-item" href="<%= listings_link %>"><div class="listings-index">List</div></a>
-				<a class="nav-item" href="/"><div class="site-welcome">Join</div></a>
+			<h1>Skoole <span class="subtitle"></span></h1>
+			<div id="tabs">
+				<%= render 'tabs' %>
 			</div>
 		</div>
 	</div>

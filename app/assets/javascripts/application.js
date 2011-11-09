@@ -9,21 +9,7 @@
 
 $(document).ready(function() {
 	
-	// AUTH POPOP
-	
-	function popupCenter() {
-		var width = 640
-		var height = 400
-		var left = (screen.width/2)-(width/2);
-		var top = (screen.height/2)-(height/2);
-		return window.open("/auth/facebook", "authPopup", "menubar=no,toolbar=no,status=no,width="+width+",height="+height+",left="+left+",top="+top);
-	}
-	$("a.popup").click(function(e) {
-		if (f_id) quick_login()
-		else popupCenter();
-		e.stopPropagation();
-		return false;
-	});
+	// hide the facebook window when complete
 	if(window.opener) {
 		window.opener.didlogin()
 	    window.close()
@@ -35,23 +21,23 @@ $(document).ready(function() {
             $(this).fadeOut()
     })
 
-	// edit user button
-	$('.edit_user input').click(function() {
-		$('.edit_user').submit()
-	})
-	
-	// show/hide account box
-	$('.nit').click(function() {
-		$('div#account-wrapper').fadeToggle()
-	})
-
 })
 
-function quick_login() {
-	window.location = '/login?f_id=' + f_id
+// pop the facebook dialog
+function popupCenter() {
+	var width = 640
+	var height = 400
+	var left = (screen.width/2)-(width/2);
+	var top = (screen.height/2)-(height/2);
+	return window.open("/auth/facebook", "authPopup", "menubar=no,toolbar=no,status=no,width="+width+",height="+height+",left="+left+",top="+top);
 }
 
+// refresh the page after login
 function didlogin() {
-	window.location.reload()
-	//alert()
+	$.ajaxSettings.accepts.html = $.ajaxSettings.accepts.script
+	$.ajax({
+	    url: '/login',
+		type: 'get',
+		dataType: 'script'
+	})
 }
