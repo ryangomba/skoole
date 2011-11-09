@@ -14,14 +14,14 @@ class SessionsController < ActionController::Base
 
     def destroy
         session[:user_id] = nil
-        redirect_to root_url, :notice => "Signed out!"
+        redirect_to root_url, notice: "Signed out!"
     end
 
     def autofb
         fid = params[:session][:uid]
         puts fid
         #if !current_user
-            @user = User.where(:uid => fid).first
+            @user = User.where(uid: fid).first
             if @user then session['user_id'] = @user.id end
         #end
     

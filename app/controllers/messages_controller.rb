@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
         message.set_contents(Contents.new('Subject', 'Short', 'Long'))
         
         user.send(message)
-        render :nothing => true
+        render nothing: true
     
     end
 
@@ -40,7 +40,7 @@ class MessagesController < ApplicationController
             if t.nil?
                 puts "COULD NOT FIND A VALID MATCH"
                 sender.send_error(to, error_message)
-                render :nothing => true
+                render nothing: true
                 break
                 
             # otherwise, respond
@@ -50,7 +50,7 @@ class MessagesController < ApplicationController
             
         end
         
-        render :nothing => true
+        render nothing: true
         
     end
 
