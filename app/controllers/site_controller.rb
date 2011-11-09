@@ -8,16 +8,15 @@ class SiteController < ApplicationController
         session[:user_id] = @current_user.id if @current_user
         if @current_user
             puts 'we have a user'
-            redirect_to '/'
+            respond_to do |format|
+                format.js
+            end
         else
             puts 'no user. to facebook ->'
-            redirect_to '/auth/facebook'
+            respond_to do |format|
+                format.js { render :auth }
+            end
         end
-    end
-    
-    def autologin
-        session[:f_id] = params[:session][:uid]
-        render :nothing => true
     end
     
     def logout
@@ -33,4 +32,3 @@ class SiteController < ApplicationController
     end
   
 end
-
