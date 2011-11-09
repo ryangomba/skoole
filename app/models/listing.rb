@@ -1,6 +1,6 @@
 class Listing < ActiveRecord::Base
-    scope :buy, where(:kind => 'Buy')
-    scope :sell, where(:kind => 'Sell')
+    scope :buy, where(kind: 'Buy')
+    scope :sell, where(kind: 'Sell')
     
     has_one :match
     belongs_to :book
@@ -49,13 +49,13 @@ class Listing < ActiveRecord::Base
 
             # create the match
             t = Match.create(
-                :buyer_id => buyer.id,
-                :buyer_number_id => buyer.new_number(),
-                :buyer_listing_id => buyer_listing.id,
-                :seller_id => seller.id,
-                :seller_number_id => seller.new_number(),
-                :seller_listing_id => seller_listing.id,
-                :state => 0
+                buyer_id: buyer.id,
+                buyer_number_id: buyer.new_number(),
+                buyer_listing_id: buyer_listing.id,
+                seller_id: seller.id,
+                seller_number_id: seller.new_number(),
+                seller_listing_id: seller_listing.id,
+                state: 0
             )
             t.save()
             

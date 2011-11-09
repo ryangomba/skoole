@@ -23,13 +23,13 @@ class Message < ActiveRecord::Base
     def send_email(user)
         if user.sms_enabled == true
             response = HTTParty.get('http://rest.nexmo.com/sms/json',
-            :format => json,
-            :query => {
-                :username => '86e3fbf7',
-                :password => '414092e9',
-                :from => self.sms,
-                :to => user.sms,
-                :text => self.short
+            format: json,
+            query: {
+                username: '86e3fbf7',
+                password: '414092e9',
+                from: self.sms,
+                to: user.sms,
+                text: self.short
             })
             puts response.inspect
         end
