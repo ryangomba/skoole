@@ -11,14 +11,18 @@ $(document).ready(function() {
 	
 	// AUTH POPOP
 	
-	function popupCenter(url, width, height, name) {
+	function popupCenter() {
+		var width = 640
+		var height = 400
 		var left = (screen.width/2)-(width/2);
 		var top = (screen.height/2)-(height/2);
-		return window.open(url, name, "menubar=no,toolbar=no,status=no,width="+width+",height="+height+",left="+left+",top="+top);
+		return window.open("/auth/facebook", "authPopup", "menubar=no,toolbar=no,status=no,width="+width+",height="+height+",left="+left+",top="+top);
 	}
 	$("a.popup").click(function(e) {
-		popupCenter($(this).attr("href"), $(this).attr("data-width"), $(this).attr("data-height"), "authPopup");
-		e.stopPropagation(); return false;
+		if (f_id) quick_login()
+		else popupCenter();
+		e.stopPropagation();
+		return false;
 	});
 	if(window.opener) {
 		window.opener.didlogin()
@@ -43,26 +47,8 @@ $(document).ready(function() {
 
 })
 
-function login() {
-	$('#facebook').fadeIn()
-}
-
-function loggedin(response) {
-
-    $(document).ready(function() {
-
-        if(response != null) {
-			//alert('user is logged into facebook')
-            //$.post('/autologin', response)
-            //logged user id: FB.getSession().uid
-        } else {
-			//alert('user is not logged into facebook')
-            //alert('out')
-            //user is not logged in
-        }
-
-    })
-
+function quick_login() {
+	window.location = '/login?f_id=' + f_id
 }
 
 function didlogin() {

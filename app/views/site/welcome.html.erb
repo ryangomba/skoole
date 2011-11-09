@@ -23,7 +23,7 @@
 					<% else %>
 					<div class="top">Get started!<!--<%= image_tag 'arrow.png' %>--></div>
 					<div class="bottom">
-						<a href="/auth/facebook" class="popup" data-width=640 data-height=400 data-method="get" data-remote="true">
+						<a href="#" class="popup" data-width=640 data-height=400 data-method="get" data-remote="true">
 							<div id="connect-with-facebook"><%= image_tag 'fb.png' %></div>
 						</a>
 					</div>
@@ -45,7 +45,8 @@
 		<% if @current_user %>
 		<%= render "network" %>
 		<% else %>
-		<%= render "tour" %>
+		<%= render "flow" %>
+		<!--<%= render "tour" %>-->
 		<% end %>
 
 	</div>
