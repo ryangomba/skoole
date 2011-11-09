@@ -1,0 +1,19 @@
+<div class="button">
+	
+	<% if @current_user %>
+	
+	<div class="top" href="/listings">List your books<%= image_tag 'arrow.png' %></div>
+	<div class="bottom">Welcome back, <%= @current_user.first_name %></div>					
+	
+	<% else %>
+	
+	<div class="top">Get started!<!--<%= image_tag 'arrow.png' %>--></div>
+	<div class="bottom">
+		<a href="/login" id="connect-with-facebook" data-width=640 data-height=400 data-method="get" data-remote="true">
+			<%= image_tag 'fb.png' %>
+		</a>
+	</div>
+	
+	<% end %>
+	
+</div>

@@ -1,0 +1,5 @@
+$('#tabs').html('<%= escape_javascript(render "application/tabs")%>')
+
+$('#right-content').fadeOut(function() {
+	$(this).html('<%= escape_javascript(render "button")%>').fadeIn()
+})
