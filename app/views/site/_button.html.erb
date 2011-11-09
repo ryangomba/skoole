@@ -2,7 +2,7 @@
 	
 	<% if @current_user %>
 	
-	<div class="top" href="/listings">List your books<%= image_tag 'arrow.png' %></div>
+	<a href="/listings"><div class="top">List your books<%= image_tag 'arrow.png' %></div></a>
 	<div class="bottom">Welcome back, <%= @current_user.first_name %></div>					
 	
 	<% else %>

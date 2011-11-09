@@ -8,7 +8,7 @@ class UsersController < ApplicationController
         puts fb_params.inspect
         user = User.create_with_facebook(fb_params)
         session[:user_id] = user.id
-        redirect_to root_url, :notice => "User created & signed in!"
+        redirect_to root_url, notice: "User created & signed in!"
     end
 
     def update
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
         current_user.destroy
         session[:user_id] = nil
         flash[:notice] = "Successfully destroyed authentication."
-        redirect_to root_url, :notice => "User deleted & signed out!"
+        redirect_to root_url, notice: "User deleted & signed out!"
     end
     
 end
