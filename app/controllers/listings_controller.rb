@@ -9,10 +9,8 @@ class ListingsController < ApplicationController
     end
 
     def create
-
         @book = Book.via_isbn(params[:isbn])
         @listing = @book.listings.create(params[:listing]) if @book
-        
         if @book.nil? || @listing.nil?
             puts "Error saving listing"
         else
@@ -25,13 +23,11 @@ class ListingsController < ApplicationController
     end
     
     def destroy
-        
         @listing = Listing.find(params[:id])
         @listing.destroy
         respond_to do |format|          
             format.js
         end
-        
     end
   
 end
