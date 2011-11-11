@@ -2,30 +2,37 @@ class ListingsController < ApplicationController
 
     def index
         @listings = {
-            'Buy' => current_user.listings.buy,
-            'Sell' => current_user.listings.sell
+            Buy: {
+                list: current_user.buy_listings,
+                new_listing: BuyListing.new
+            },
+            Sell: {
+                list: current_user.sell_listings,
+                new_listing: SellListing.new
+            }
         }
-        @new_listing = Listing.new
     end
 
-    def create
-        @book = Book.via_isbn(params[:isbn])
-        @listing = @book.listings.create(params[:listing]) if @book
+    def create        
+        if @book = Book.via_isbn(params[:isbn])
+            @listing = @book.buy_listings.create(params[:buy_listing]) if params[:buy_listing]
+            @listing = @book.sell_listings.create(params[:sell_listing]) if params[:sell_listing]
+        end
         if @book.nil? || @listing.nil?
             puts "Error saving listing"
         else
-            # @listing.match # check for matches
+            @listing.match
+            puts @listing.errors.inspect
             respond_to do |format|          
                 format.js
             end
         end
-        
     end
     
     def destroy
         @listing = Listing.find(params[:id])
         @listing.destroy
-        respond_to do |format|          
+        respond_to do |format|
             format.js
         end
     end

@@ -5,6 +5,8 @@ require 'message'
 class User < ActiveRecord::Base
     
     has_many :listings
+    has_many :buy_listings
+    has_many :sell_listings
     
     validates_presence_of :first_name, :last_name, :email, :image, :f_id, :f_token
     

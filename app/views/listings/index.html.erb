@@ -28,13 +28,17 @@
 <div id="lists" class="main-content">
 	<div class="page">
 	
-		<% @listings.each do |kind, list| %>
+		<% @listings.each do |kind_name, kind| %>
 	
-		<div id="<%= kind %>" class="section">
-			<div class="add" name="<%= kind %>">+</div>
-			<h1><%= kind %>ing</h1>
+		<div id="<%= kind_name %>Listing" class="section">
+			<div>
+				<div class="add">+</div>
+				<%= render "form", listing: kind[:new_listing] %>
+			</div>
+			
+			<h1><%= kind_name %>ing (<%= kind[:list].count %>)</h1>
 			<div class="list" id="listBuy">
-				<% for @listing in list do %>
+				<% for @listing in kind[:list] do %>
 				<%= render "listing" %>
 				<% end %>
 			</div>
@@ -44,5 +48,3 @@
 	
 	</div>
 </div>
-
-<%= render "form" %>

@@ -7,10 +7,10 @@ class CreateUsers < ActiveRecord::Migration
             t.string :email
             t.string :sms
             
-            t.string :nums, :default => '0000000000'
+            t.string :nums, default: '0000000000'
             
-            t.boolean :sms_enabled, :default => true
-            t.boolean :email_enabled, :default => true
+            t.boolean :sms_enabled, default: true
+            t.boolean :email_enabled, default: true
             
             t.string :f_id
             t.string :f_token
