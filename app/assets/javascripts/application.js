@@ -12,8 +12,8 @@ $(document).ready(function() {
 	
 	window.location.hash = ''
 	
-	$(document).delegate("a.nav-item div, .header h1", "click", function() {
-		$('a.nav-item div.selected').removeClass('selected')
+	$(document).delegate("a.nav-item, .header h1", "click", function() {
+		$('a.nav-item.selected').removeClass('selected')
 		$(this).addClass('selected')
 	})
 	
