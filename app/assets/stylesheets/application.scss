@@ -9,6 +9,7 @@
 
 /* COLORS */
 
+$background: #f7f7f7;
 $light-orange: #ff8d2d;
 $orange: #f0730b;
 
@@ -22,7 +23,9 @@ body {
 	height: 100%;
 	position: relative;
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	background-image: url('white-bg.gif');
+	background-color: $background;
+	background-image: url(bg.png);
+	background-repeat: repeat-x;
 	font-size: 16px;
 	color: #444;
 }
@@ -92,14 +95,14 @@ div#account-wrapper {
 
 #nav {
 	height: 40px;
-	padding: 22px;
+	padding: 32px;
 	color: #fff;
-	background-color: rgba(0,0,0,0.1);
-	border-bottom: solid 1px rgba(0,0,0,0.4);
+	//background-color: rgba(0,0,0,0.1);
+	//border-bottom: solid 1px rgba(0,0,0,0.4);
 	h1 {
 		float: left;
 		font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, sans-serif;
-		text-shadow: 0px 1px 0px #000;
+		text-shadow: 0px -1px 0px #000;
 		font-size: 40px;
 		span.subtitle {
 		    opacity: 0.7;
@@ -109,52 +112,52 @@ div#account-wrapper {
 	a.nav-item {
 		div {
 			float: right;
-			padding: 10px 24px;
-			text-shadow: 0px 1px 0px #000;
+			padding: 12px 20px;
+			text-shadow: 0px -1px 0px #000;
+			color: #adbac6;
+			margin-left: 12px;
+			font-size: 18px;
 			
-			background: none;
-			background-color: rgba(0, 0, 0, 0.2);
-			@include inner-shadow(0px, 2px, 3px, rgba(0,0,0,0.3));
-			border: solid 1px rgba(0,0,0,0.2);
+			@include border-radius(6px);
 			
-			/*&:hover {
+			border: solid 1px rgba(0, 0, 0, 0.4);
+			@include gradient-2(rgba(255, 255, 255, 0.08), 0%, rgba(255, 255, 255, 0.05), 100%);
+			@include drop-shadow(0px, 1px, 0px, rgba(255, 255, 255, 0.2));
+			
+			&:hover {
 			    cursor: pointer;
-				@include gradient-2(rgba(255, 255, 255, 0.25), 0%, rgba(255, 255, 255, 0.1), 100%);
-			}*/
+				@include gradient-2(rgba(255, 255, 255, 0.1), 0%, rgba(255, 255, 255, 0.08), 100%);
+			}
+			&:active {
+			    //@include inner-shadow(0px, 1px, 0px, rgba(0, 0, 0, 0.2));
+				@include gradient-2(rgba(255, 255, 255, 0.05), 0%, rgba(255, 255, 255, 0.03), 100%);
+			}
 		}
-		&:last-child div {
-			@include border-radii(6px, 0px, 0px, 6px);
-		}
-		&:first-child div {
-		    @include border-radii(0px, 6px, 6px, 0px);
-		}
-		/*&:active {
-		    @include inner-shadow(0px, 2px, 3px, rgba(0, 0, 0, 0.3));
-			@include gradient-2(rgba(255, 255, 255, 0.0), 0%, rgba(255, 255, 255, 0.1), 100%);
-		}*/
 	}
 }
 
 body#site-welcome #nav .nav-item div.site-welcome,
 body#listings-index #nav .nav-item div.listings-index,
 body#users-show #nav .nav-item div.users-show, {
-    border: solid 1px rgba(255, 255, 255, 0.1);
-	@include gradient-2(rgba(255, 255, 255, 0.2), 0%, rgba(255, 255, 255, 0.05), 100%);
-	@include inner-shadow(0px, -1px, 0px, rgba(0, 0, 0, 0.2));
+	color: #d4dee8;
+	background: none;
+    border: solid 1px rgba(0,0,0,0.2);
+	background-color: rgba(0, 0, 0, 0.15);
+	//@include inner-shadow(0px, 1px, 2px, rgba(0,0,0,0.2));
 }
 
 /* SHARED */
 
 div.header {
-	background-image: url('blue-bg.png');
+	//background-image: url('blue-bg.png');
 }
 div.main-content {
 	width: 1040px;
 	margin: auto;
 	overflow: visible;
 	height: 180px;
-	background-image: url('white-bg.gif');
-	@include drop-shadow(0px, -1px, 2px, rgba(0, 0, 0, 0.2));
+	//background-image: url('white-bg.gif');
+	//@include drop-shadow(0px, -1px, 2px, rgba(0, 0, 0, 0.2));
 	position: relative;
 	top: -62px;
 	div.page {
@@ -185,7 +188,7 @@ div#right-content {
 	height: 20px;
     border-top: solid 1px #ccc;
 	background-color: rgba(0, 0, 0, 0.05);
-    @include drop-shadow(0px, -1px, 2px, rgba(0,0,0,0.1));
+    //@include drop-shadow(0px, -1px, 2px, rgba(0,0,0,0.1));
     color: #999;
     font-size: 13px;
     text-align: center;
@@ -200,7 +203,7 @@ div#right-content {
     border-radius: 6px;
     border: solid 1px #894c0c;
     background-color: #f0730b;
-    text-shadow: 0px 1px 0px #000;
+    text-shadow: 0px -1px 0px #000;
     width: 320px;
 	.top {
     	font-size: 24px;

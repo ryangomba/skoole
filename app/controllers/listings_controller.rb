@@ -23,18 +23,12 @@ class ListingsController < ApplicationController
         else
             @listing.match
             puts @listing.errors.inspect
-            respond_to do |format|          
-                format.js
-            end
         end
     end
     
     def destroy
         @listing = Listing.find(params[:id])
         @listing.destroy
-        respond_to do |format|
-            format.js
-        end
     end
   
 end

@@ -1,0 +1,32 @@
+<!-- ABOUT -->
+
+<div class="header">
+	<div id="about">
+		<div class="page">
+		
+			<!-- TAGLINE -->
+		
+			<div id="tagline">
+	    		<h1>A better way to buy and sell textbooks.</h1>
+	    		<p>Don't lose money to Chegg or Amazon when buyers &amp; sellers live down the street.</p>
+	    	</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- CONTENT -->
+	
+<div id="content">
+	<div class="page">
+		
+		<% if @current_user %>
+		<!--<%= render "network" %>-->
+		<%= render "tour" %>
+		<% else %>
+		<!--<%= render "flow" %>-->
+		<%= render "tour" %>
+		<% end %>
+
+	</div>
+</div>

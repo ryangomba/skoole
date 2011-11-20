@@ -1,5 +1,7 @@
 <% if @current_user %>
-<a class="nav-item" href="/matches"><div class="users-show">Match</div></a>
-<a class="nav-item" href="/listings"><div class="listings-index">List</div></a>
+<a class="nav-item" href="/logout" data-method="get" data-remote="true"><div class="logout">Log out</div></a>
+<a class="nav-item" href="/matches" data-method="get" data-remote="true"><div class="users-show">Matches</div></a>
+<a class="nav-item" href="/listings" data-method="get" data-remote="true"><div class="listings-index">Lists</div></a>
+<% else %>
+<a id="connect-with-facebook" class="nav-item" href="/login" data-method="get" data-remote="true"><div class="login">Connect</div></a>
 <% end %>
-<a class="nav-item" href="/"><div class="site-welcome">Join</div></a>
