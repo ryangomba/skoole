@@ -1,0 +1,3 @@
+rake db:test:purge
+rake db:migrate
+rake db:test:load

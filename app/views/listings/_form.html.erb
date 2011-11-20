@@ -1,10 +1,8 @@
-<div id="new-book" class="overlay"><div id="book-form" class="lightbox">
+<div class="overlay"><div id="book-form" class="lightbox">
 	
-	<h2>Add a Book to <span id="listing_title_kind">Buy</span></h2>
+	<h2>Add a Book to <%= listing.type_name %></h2>
 	
-	<!--<% conditions = ['new', 'good', 'poor'] %>-->
-	<% conditions = ['0', '1', '2'] %>
-	<%= form_for @new_listing, remote: true do |f| %>
+	<%= form_for listing, url: listings_path, remote: true do |f| %>
 	
 		<div class="isbn-field">
 			<%= label_tag :isbn, "ISBN" %>
@@ -17,16 +15,10 @@
 		</div>
 	
 		<div class="conditions-field">
-			<!--<%= f.select(:condition, conditions) %>-->
-			<select id="listing_condition" name="listing[condition]">
-				<option value="0">New</option>
-				<option value="1">Good</option>
-				<option value="2">Fair</option>
-			</select>
+			<%= f.select :condition, options_for_select(Listing.conditions) %>
 		</div>
 	
 		<%= f.hidden_field :user_id, value: @current_user.id %>
-		<%= f.hidden_field :kind %>
 		<%= f.submit 'Submit' %>
 	
 	<% end %>

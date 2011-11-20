@@ -16,7 +16,7 @@ end
 ##### AUTH #####
 
 gem 'omniauth', '1.0.0'
-gem 'omniauth-facebook', '1.0.0.rc1', :git => 'git@github.com:ryangomba/omniauth-facebook.git'
+gem 'omniauth-facebook', '1.0.0.ryan1', :git => 'git@github.com:ryangomba/omniauth-facebook.git'
 
 ##### HTTP #####
 

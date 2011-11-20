@@ -1,44 +1,51 @@
 class Listing < ActiveRecord::Base
-    scope :buy, where(kind: 'Buy')
-    scope :sell, where(kind: 'Sell')
+    scope :oldest, order('created_at ASC')
     
     has_one :match
     belongs_to :book
     belongs_to :user
     
-    # user_id
-    validates_presence_of :kind, :book, :user, :price, :condition
+    validates_presence_of :type, :book, :user, :price, :condition
     accepts_nested_attributes_for :book
+    
+    ##### CHILD CLASS NAMES
+    
+    @child_classes = []
+    def self.inherited(child)
+      @child_classes << child
+      super # important!
+    end
+    def self.child_classes
+      @child_classes
+    end
+ 
+    ##### CONDITIONS
+ 
+    def self.conditions
+        return {
+            New: 0,
+            Good: 1,
+            Fair: 2
+        }
+    end
  
     def condition_name
-        case self.condition
-        when '0'
-            "new"
-        when '1'
-            "good"
-        when '2'
-            "fair"
-        end
+        return Listing.conditions.key(self.condition)
     end
     
     ##### CHECK FOR MATCHES
     
-    def fetch_match
-        return Listing.where("book_id = ? AND pending = ? AND kind = 'Sell' AND price <= ? AND condition <= ? AND id < ?",
-            self.book_id, false, self.price, self.condition, self.id
-        ).order('created_at ASC').first
-    end
-    
     def match
+        return # for now
         
-        if self.kind == 'Buy'
+        if self.type == 'BuyListing'
             buyer = self.user
             buyer_listing = self
-            seller_listing = self.fetch_match()
+            seller_listing = self.fetch_matches.first
         else
             seller = self.user
             seller_listing = self
-            buyer_listing = self.fetch_match()
+            buyer_listing = self.fetch_matches.first
         end
         
         # if we found a match

@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20111107035442) do
   end
 
   create_table "listings", :force => true do |t|
-    t.string   "kind"
+    t.string   "type"
     t.integer  "user_id"
     t.integer  "book_id"
     t.integer  "price"

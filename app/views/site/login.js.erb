@@ -1,5 +1,9 @@
-$('#tabs').html('<%= escape_javascript(render "application/tabs")%>')
-
-$('#right-content').fadeOut(function() {
-	$(this).html('<%= escape_javascript(render "button")%>').fadeIn()
+$('#tabs').fadeOut(100, function() {
+	$(this).html('<%= escape_javascript(render "application/tabs")%>').fadeIn(500, function() {
+		getLoginStatus()
+	})
 })
+
+<% if @current_user.nil? %>
+<%= render "logout" %>
+<% end %>

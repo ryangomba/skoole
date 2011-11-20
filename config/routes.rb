@@ -10,8 +10,10 @@ Skoole::Application.routes.draw do
 
     # SITE
 
-    root :to => 'site#welcome'
+    root to: 'site#welcome'
     resources :listings
+    resources :buy_listings, :controller => :listings, :listing_type => 'BuyListing'
+    resources :sell_listings, :controller => :listings, :listing_type => 'SellListing'
     match 'matches' => 'users#show'
 
     # CALLBACKS
