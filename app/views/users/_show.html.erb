@@ -1,15 +1,19 @@
-<div class="page">
-<div id="account-box">
+<div id="bin" class="matches">
+
+	<div class="page">
+		<div id="account-box">
 	
-	<%= form_for @current_user, url: '/user/update', remote: true do |f| %>
-		<p><%= f.check_box :sms_enabled %><%= f.label :sms_enabled, "Notify via SMS" %></p>
-		<p><%= f.check_box :email_enabled %><%= f.label :email_enabled, "Notify via E-mail" %></p>
-		<% f.submit 'Submit' %>
-	<% end %>
+			<%= form_for @current_user, url: '/user/update', remote: true do |f| %>
+				<p><%= f.check_box :sms_enabled %><%= f.label :sms_enabled, "Notify via SMS" %></p>
+				<p><%= f.check_box :email_enabled %><%= f.label :email_enabled, "Notify via E-mail" %></p>
+				<% f.submit 'Submit' %>
+			<% end %>
 	
-	<div class="button">
-		<a href="/logout"><div class="top">Log out of Skoole<%= image_tag 'arrow.png' %></div></a>
+			<div class="button">
+				<a href="/logout"><div class="top">Log out of Skoole<%= image_tag 'arrow.png' %></div></a>
+			</div>
+	
+		</div>
 	</div>
 	
-</div>
 </div>

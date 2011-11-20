@@ -6,8 +6,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree .
 
 $(document).ready(function() {
+	
+	window.location.hash = ''
 	
 	// hide the facebook window when complete
 	if(window.opener) {
