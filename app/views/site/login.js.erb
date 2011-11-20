@@ -1,5 +1,5 @@
-$('#tabs').fadeOut(function() {
-	$(this).html('<%= escape_javascript(render "application/tabs")%>').fadeIn(function() {
+$('#tabs').fadeOut(100, function() {
+	$(this).html('<%= escape_javascript(render "application/tabs")%>').fadeIn(500, function() {
 		getLoginStatus()
 	})
 })
