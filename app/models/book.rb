@@ -3,6 +3,8 @@ require 'api/googlebooks'
 class Book < ActiveRecord::Base
     
     has_many :listings
+    has_many :buy_listings
+    has_many :sell_listings
     
     validates_presence_of :isbn
     attr_accessible :isbn, :author, :title, :published, :thumbnail

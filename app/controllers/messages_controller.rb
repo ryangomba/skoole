@@ -6,7 +6,6 @@ require 'contents'
 class MessagesController < ApplicationController
 
     def out
-        
         from = Number.find(1)
         user = User.find_by_sms('18457026112')
         
@@ -16,11 +15,9 @@ class MessagesController < ApplicationController
         
         user.send(message)
         render nothing: true
-    
     end
 
     def in
-        
         from = params[:msisdn]
         to = params[:to]
         text = params[:text]
@@ -51,7 +48,6 @@ class MessagesController < ApplicationController
         end
         
         render nothing: true
-        
     end
 
 end

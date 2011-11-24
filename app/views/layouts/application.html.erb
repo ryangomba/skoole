@@ -4,47 +4,22 @@
 	<title>Skoole</title>
     <script src='http://connect.facebook.net/en_US/all.js'></script>
 	<%= stylesheet_link_tag "application" %>
-	<%= stylesheet_link_tag "#{params[:controller]}" %>
-	<!--<%= stylesheet_link_tag "#{params[:controller]}_#{params[:action]}" %>-->
 	<%= javascript_include_tag "application" %>
-	<%= javascript_include_tag "#{params[:controller]}" %>
-	<!--<%= javascript_include_tag "#{params[:controller]}_#{params[:action]}" %>-->
 	<%= csrf_meta_tags %>
 </head>
-<body id="<%= "#{params[:controller]}-#{params[:action]}" %>">
+<body>
 <div id="wrapper">
 
 <!-- LOGIN -->
 
 <div id="fb-root"></div>
-<% if @current_user.nil? %>
-	<script>
-	var f_id = null
-	window.fbAsyncInit = function() {
-		FB.init({appId: '184512731633300', status: true, cookie: true, xfbml: true});
-		FB.getLoginStatus(loggedin);
-		FB.Event.subscribe('auth.statusChange', loggedin);
-	};
-	(function() {
-		var e = document.createElement('script'); e.async = true;
-		e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
-		document.getElementById('fb-root').appendChild(e);
-	}());
-	function loggedin(response) {
-		if (response['session'] != null) {
-			f_id = response['session']['uid']
-			$("#connect-with-facebook").attr('href', '/login?f_id=' + f_id)
-		}
-	}
-	</script>
-<% end %>
 
 <!-- NAVIGATION -->
 
 <div class="header">
 	<div id="nav">
 		<div class="page">
-			<h1>Skoole <span class="subtitle"></span></h1>
+			<a href="/"  data-method="get" data-remote="true"><h1>Skoole <span class="subtitle"></span></h1></a>
 			<div id="tabs">
 				<%= render 'tabs' %>
 			</div>

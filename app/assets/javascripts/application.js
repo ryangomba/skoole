@@ -6,8 +6,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree .
 
 $(document).ready(function() {
+	
+	window.location.hash = ''
+	
+	$(document).delegate("a.nav-item, .header h1", "click", function() {
+		$('a.nav-item.selected').removeClass('selected')
+		$(this).addClass('selected')
+	})
 	
 	// hide the facebook window when complete
 	if(window.opener) {
@@ -21,7 +29,31 @@ $(document).ready(function() {
             $(this).fadeOut()
     })
 
+	// user on FB?
+	getLoginStatus()
+
 })
+
+// determine if a user us logged into Facebook
+function getLoginStatus() {
+	var f_id = null
+	window.fbAsyncInit = function() {
+		FB.init({appId: '184512731633300', status: true, cookie: true, xfbml: true});
+		FB.getLoginStatus(loggedin);
+		FB.Event.subscribe('auth.statusChange', loggedin);
+	};
+	(function() {
+		var e = document.createElement('script'); e.async = true;
+		e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+		document.getElementById('fb-root').appendChild(e);
+	}());
+	function loggedin(response) {
+		if (response['session'] != null) {
+			f_id = response['session']['uid']
+			$("#connect-with-facebook").attr('href', '/login?f_id=' + f_id)
+		}
+	}
+}
 
 // pop the facebook dialog
 function popupCenter() {

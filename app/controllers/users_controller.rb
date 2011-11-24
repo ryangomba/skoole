@@ -5,26 +5,21 @@ class UsersController < ApplicationController
    
     def create
         fb_params = request.env["omniauth.auth"]
-        puts fb_params.inspect
+        #puts fb_params.inspect
         user = User.create_with_facebook(fb_params)
         session[:user_id] = user.id
-        redirect_to root_url, notice: "User created & signed in!"
+        redirect_to root_url, notice: "User created & signed in."
     end
 
     def update
         @user = current_user
         @user.update_attributes(params[:user])
-        respond_to do |format|
-            format.js
-            format.html { redirect_to '/account' }
-        end
     end
 
     def destroy
         current_user.destroy
         session[:user_id] = nil
-        flash[:notice] = "Successfully destroyed authentication."
-        redirect_to root_url, notice: "User deleted & signed out!"
+        redirect_to root_url, notice: "User deleted & signed out."
     end
     
 end
