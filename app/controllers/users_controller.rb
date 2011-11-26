@@ -4,10 +4,13 @@ class UsersController < ApplicationController
     end
    
     def create
-        fb_params = request.env["omniauth.auth"]
-        #puts fb_params.inspect
-        user = User.create_with_facebook(fb_params)
-        session[:user_id] = user.id
+        puts "CREATING", params.inspect
+        if params[:error_reason].nil?
+            fb_params = request.env["omniauth.auth"]
+            #puts fb_params.inspect
+            user = User.create_with_facebook(fb_params)
+            session[:user_id] = user.id
+        end
         redirect_to root_url, notice: "User created & signed in."
     end
 

@@ -19,8 +19,10 @@ $(document).ready(function() {
 	
 	// hide the facebook window when complete
 	if(window.opener) {
-		window.opener.didlogin()
-	    window.close()
+		if (window.location.href.indexOf('failure') < 0) {
+			window.opener.didlogin()
+	    }
+		window.close()
 	}
 	
 	// hide an overlay when it is dismissed
@@ -66,7 +68,6 @@ function popupCenter() {
 
 // refresh the page after login
 function didlogin() {
-	$.ajaxSettings.accepts.html = $.ajaxSettings.accepts.script
 	$.ajax({
 	    url: '/login',
 		type: 'get',
