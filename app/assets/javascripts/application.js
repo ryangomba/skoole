@@ -24,7 +24,7 @@ $(document).ready(function() {
 	}
 	
 	// hide an overlay when it is dismissed
-    $('.overlay').click(function(event) {
+    $(document).delegate(".overlay", "click", function(event) {
         if ($(event.target).is('.overlay'))
             $(this).fadeOut()
     })
