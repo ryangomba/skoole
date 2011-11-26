@@ -38,7 +38,7 @@ class MessagesController < ApplicationController
                 puts "COULD NOT FIND A VALID MATCH"
                 sender.send_error(to, error_message)
                 render nothing: true
-                break
+                return
                 
             # otherwise, respond
             else
