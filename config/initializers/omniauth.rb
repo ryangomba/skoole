@@ -8,7 +8,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 	    APP_SECRET = '434eb084d0cacaefd9bbec9dc1e0c5b4'
     end
 	
-	provider :facebook, '184512731633300', '434eb084d0cacaefd9bbec9dc1e0c5b4',
+	provider :facebook, APP_ID, APP_SECRET,
 	    scope: 'email, offline_access',	:authorize_params => { :display => 'popup' }
 
 end

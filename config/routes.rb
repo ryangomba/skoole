@@ -6,6 +6,7 @@ Skoole::Application.routes.draw do
     match '/login' => 'site#login'
     match '/logout' => 'site#logout'
     match '/auth/:provider/callback' => 'users#create'
+    match '/auth/failure' => 'site#welcome'
     match '/user/update' => 'users#update'
 
     # SITE
