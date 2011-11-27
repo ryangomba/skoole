@@ -1,0 +1,8 @@
+/*$('#tabs').fadeOut(100, function() {
+	$(this).html('<%= escape_javascript(render "application/navbar_content")%>').fadeIn(500, function() {
+		getLoginStatus()
+	})
+})*/
+
+$('#tabs').html('<%= escape_javascript(render "application/navbar_content")%>')
+getLoginStatus()

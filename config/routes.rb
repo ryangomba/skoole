@@ -2,12 +2,11 @@ Skoole::Application.routes.draw do
 
     # AUTH
     
-    match '/autologin' => 'site#autologin'
-    match '/login' => 'site#login'
-    match '/logout' => 'site#logout'
-    match '/auth/:provider/callback' => 'users#create'
+    match '/connect' => 'users#connect'
+    match '/auth/:provider/callback' => 'users#callback'
+    match '/authorized' => 'users#authorized'
     match '/auth/failure' => 'site#welcome'
-    match '/user/update' => 'users#update'
+    match '/logout' => 'users#logout'
 
     # SITE
 
