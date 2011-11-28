@@ -8,12 +8,12 @@ class Nexmo
     default_params username: '86e3fbf7', password: '414092e9'
     format :json
     
-    def self.send(message, to)
-        puts "Sending sms from #{message.sms} to #{to.sms}."
+    def self.send(dispatch)
+        puts "Sending sms from #{dispatch.from_address} to #{dispatch.to_address}."
         get('/sms/json', query: {
-            from: message.sms,
-            to: to.sms,
-            text: message.short
+            from: dispatch.from_address,
+            to: dispatch.to_address,
+            text: dispatch.content
         })
     end
     

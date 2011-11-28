@@ -43,6 +43,14 @@ class Listing < ActiveRecord::Base
     
     ##### CHECK FOR MATCHES
     
+    def delayed_match
+        Delayed::Job.enqueue self
+    end
+    
+    def perform
+        self.match
+    end
+    
     def match
         
         if self.type == 'BuyListing'
@@ -65,7 +73,7 @@ class Listing < ActiveRecord::Base
         buyer.nil? ? buyer = buyer_listing.user : seller = seller_listing.user
 
         # create the match
-        t = Match.create(
+        m = Match.create(
             buyer_id: buyer.id,
             buyer_number_id: buyer.new_number(),
             buyer_listing_id: buyer_listing.id,
@@ -77,8 +85,8 @@ class Listing < ActiveRecord::Base
         )
 
         # try to save the match
-        if !t.save() 
-            puts "Error creating match: #{t.errors.inspect}"
+        if !m.save() 
+            puts "Error creating match: #{m.errors.inspect}"
             return
         end
             
@@ -87,15 +95,8 @@ class Listing < ActiveRecord::Base
         seller_listing.pending = true
         
         if buyer_listing.save && seller_listing.save
-            
-            # send the first message
-            #msg = make_message(t, msg)
-            #sms_response = buyer.send_sms(Number.find(buyer_number), msg)
-            #email_response = buyer.send_email("#{@t.id}@skoole.com", msg)
-            #puts "SMS RESPONSE:", sms_response.body, sms_response.code, sms_response.message, sms_response.headers.inspect
-            #puts "EMAIL RESPONSE:", email_response.body, email_response.code, email_response.message, email_response.headers.inspect
             puts 'SHOULD SEND THE FIRST MESSAGE!'
-            
+            m.first_message
         else
             puts "Error marking listings as pending: #{buyer_listing.errors.inspect}, #{seller_listing.errors.inspect}"
         end

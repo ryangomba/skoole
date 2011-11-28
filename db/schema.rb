@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111107035442) do
+ActiveRecord::Schema.define(:version => 20111128233307) do
 
   create_table "books", :force => true do |t|
     t.string   "isbn"
@@ -19,6 +19,34 @@ ActiveRecord::Schema.define(:version => 20111107035442) do
     t.string   "author"
     t.string   "thumbnail"
     t.string   "published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "dispatches", :force => true do |t|
+    t.string   "type"
+    t.integer  "message_id"
+    t.string   "from_address"
+    t.string   "to_address"
+    t.text     "content"
+    t.string   "from_name"
+    t.string   "to_name"
+    t.string   "subject"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,7 +79,6 @@ ActiveRecord::Schema.define(:version => 20111107035442) do
   create_table "messages", :force => true do |t|
     t.integer  "match_id"
     t.integer  "user_id"
-    t.integer  "sms"
     t.string   "subject"
     t.text     "short"
     t.text     "long"

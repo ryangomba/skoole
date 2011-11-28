@@ -1,12 +1,9 @@
-require 'rubygems'
-require 'httparty'
-require 'message'
-
 class User < ActiveRecord::Base
     
     has_many :listings
     has_many :buy_listings
     has_many :sell_listings
+    has_many :messages
     
     validates_presence_of :first_name, :last_name, :image, :f_id, :f_token
     
@@ -16,7 +13,11 @@ class User < ActiveRecord::Base
             self.email = nil
         else
             parts = self.email.split(/[@.]/)
-            self.network = parts[parts.size-2]
+            if parts.size > 2 
+                self.network = parts[parts.size-2]
+            else
+                self.email = nil
+            end
         end
     end
     
