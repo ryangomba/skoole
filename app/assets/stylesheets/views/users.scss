@@ -1,10 +1,18 @@
-@import 'application.scss';
+/*
+ * User page styles
+*/
+
+@import 'helpers.scss';
 
 form.edit_user {
 	margin: auto;
-	width: 730px;
-	input:not(:last-child) {
-		margin-right: 8px;
+	width: 720px;
+	overflow: visible;
+	div.inline-input-box {
+		float: left;
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
 	}
 	input[type=text] {
 		font-size: 18px;
@@ -12,8 +20,8 @@ form.edit_user {
 		@include border-radius(4px);
 		background-color: $light-blue;
 		@include emboss-inset(1.0, 0.2, 0px, 2px, 2px, rgba(0, 0, 0, 0.4));
-		color: $dark-blue;
-		text-shadow: 0px 1px rgba(255, 255, 255, 0.3);
+		color: $blue;
+		text-shadow: 0px 1px #fff;
 		-webkit-transition-property: background, box-shadow;
 		-webkit-transition-duration: 300ms, 300ms;
 		&:focus {
@@ -23,10 +31,18 @@ form.edit_user {
 	}
 	input[type=submit] {
 		@extend .blue-button;
+		display: inline-block;
 		padding: 10px 20px;
 		font-size: 18px;
 	}
 	input.empty {
 		color: $light-text;
+	}
+	div.inline-input-label {
+		margin: 20px 0px 0px 15px;
+	}
+	label {
+		color: $darkest-blue;
+		text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
 	}
 }

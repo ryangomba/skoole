@@ -12,7 +12,12 @@ class User < ActiveRecord::Base
     
     validate :edu_email
     def edu_email
-        if self.email && !(self.email =~ /\.edu$/) then self.email = nil end
+        if self.email && !(self.email =~ /\.edu$/)
+            self.email = nil
+        else
+            parts = self.email.split(/[@.]/)
+            self.network = parts[parts.size-2]
+        end
     end
     
     validate :us_phone
@@ -54,7 +59,11 @@ class User < ActiveRecord::Base
     end
     
     def ready
-        self.email && self.sms
+        self.email && self.sms && self.network
+    end
+    
+    def member
+        self.ready && self.network == 'gatech'
     end
    
 end

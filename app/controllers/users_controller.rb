@@ -26,8 +26,10 @@ class UsersController < ApplicationController
     end
     
     def authorized
-        if @current_user && @current_user.ready
+        if @current_user && @current_user.member
             redirect_to listings_path
+        elsif @current_user.ready
+            render 'soon'
         elsif @current_user
             render 'signup'
         else

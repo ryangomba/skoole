@@ -3,6 +3,7 @@ class CreateListings < ActiveRecord::Migration
         create_table :listings do |t|
             t.string :type
             t.integer :user_id
+            t.string :network
             t.integer :book_id
             t.integer :price
             t.string :condition

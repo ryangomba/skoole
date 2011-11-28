@@ -1,39 +1,11 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
+ * Application CSS
  *= require_self
- *= require_tree .
+ *= require_tree ./views
 */
 
 @import 'base.scss';
-
-/* COLORS */
-
-$background: #f7f7f7;
-$light-orange: #ff8d2d;
-$orange: #f0730b;
-$dark-blue: #2f4a68;
-$blue: #446487;
-$light-blue: #d8e2ed;
-$lighter-blue: #ecf1f6;
-$light-text: #7d8a96;
-$lighter-text: #bdcad6;
-
-/* MIXINS */
-
-@mixin emboss($dark, $light) {
-	border: solid 1px rgba(0, 0, 0, $dark);
-	@include drop-shadow(0px, 1px, 0px, rgba(255, 255, 255, $light));
-}
-@mixin emboss-inset($dark, $light, $x, $y, $s, $c) {
-	border: solid 1px rgba(0, 0, 0, $dark);
-	@include drop-inner-shadow(0px, 1px, 0px, rgba(255, 255, 255, $light),  $x, $y, $s, $c);
-}
-@mixin emboss-inset-glow($dark, $light, $x1, $y1, $s1, $c1, $x2, $y2, $s2, $c2) {
-	border: solid 1px rgba(0, 0, 0, $dark);
-	@include drop-inner-shadow-2(0px, 1px, 0px, rgba(255, 255, 255, $light), $x1, $y1, $s1, $c1, $x2, $y2, $s2, $c2);
-}
+@import 'helpers.scss';
 
 /* GLOBAL */
 
@@ -115,29 +87,6 @@ div#account-wrapper {
 
 
 /* NAVBAR */
-
-.blue-button {
-	text-shadow: 0px -1px 0px #000;
-	color: $lighter-text;
-	@include border-radius(4px);
-	@include emboss(0.4, 0.2);
-	@include gradient-2(rgba(255, 255, 255, 0.08), 0%, rgba(255, 255, 255, 0.05), 100%);
-	-webkit-transition-property: background, border, color;
-	-webkit-transition-duration: 200ms, 200ms, 1000ms;
-	&:hover {
-	    cursor: pointer;
-		@include gradient-2(rgba(255, 255, 255, 0.1), 0%, rgba(255, 255, 255, 0.08), 100%);
-	}
-	&:active {
-		@include gradient-2(rgba(255, 255, 255, 0.05), 0%, rgba(255, 255, 255, 0.03), 100%);
-	}
-	&.selected {
-		color: #e4eef8;
-		background: none;
-	    border: solid 1px rgba(0,0,0,0.2);
-		background-color: rgba(0, 0, 0, 0.15);
-	}
-}
 
 #nav {
 	height: 40px;

@@ -22,8 +22,20 @@
 			
 			<%= form_for @current_user, :remote => true do |f| %>
 			
-				<%= f.text_field :email %>
-				<%= f.text_field :sms %>
+				<div class="inline-input-box">
+					<%= f.text_field :email %>
+					<!--<div id='email-label' class='inline-input-label'>
+						<%= f.label :email, "\u25C9 why we need this" %>
+					</div>-->
+				</div>
+				
+				<div class="inline-input-box">
+					<%= f.text_field :sms %>
+					<!--<div id='sms-label' class='inline-input-label'>
+						<%= f.label :email, 'why we need this' %>
+					</div>-->
+				</div>
+				
 				<%= f.submit "Sign up" %>
 			
 			<% end %>

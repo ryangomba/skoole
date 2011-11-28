@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20111107035442) do
   create_table "listings", :force => true do |t|
     t.string   "type"
     t.integer  "user_id"
+    t.string   "network"
     t.integer  "book_id"
     t.integer  "price"
     t.string   "condition"
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20111107035442) do
     t.integer  "buyer_listing_id"
     t.integer  "seller_listing_id"
     t.integer  "state"
+    t.string   "network"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -69,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20111107035442) do
     t.string   "last_name"
     t.string   "image"
     t.string   "email"
+    t.string   "network"
     t.string   "sms"
     t.string   "nums",          :default => "0000000000"
     t.boolean  "sms_enabled",   :default => true

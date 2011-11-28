@@ -6,7 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require_tree ./views
 
 $(document).ready(function() {
 	
@@ -32,7 +32,7 @@ $(document).ready(function() {
 function getLoginStatus() {
 	var f_id = null
 	window.fbAsyncInit = function() {
-		FB.init({appId: '184512731633300', status: true, cookie: true, xfbml: true});
+		FB.init({appId: FB_APP_KEY, status: true, cookie: true, xfbml: true});
 		FB.getLoginStatus(loggedin);
 		FB.Event.subscribe('auth.statusChange', loggedin);
 	};
@@ -44,7 +44,7 @@ function getLoginStatus() {
 	function loggedin(response) {
 		if (response['session'] != null) {
 			f_id = response['session']['uid']
-			$("#connect-with-facebook").attr('href', '/login?fid=' + f_id)
+			$("#connect-with-facebook").attr('href', '/connect?f_id=' + f_id)
 		}
 	}
 }
