@@ -7,7 +7,7 @@ del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td, input {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -95,6 +95,20 @@ a {
     -moz-box-shadow: $x $y $s $c;
     -o-box-shadow: $x $y $s $c;
     box-shadow: $x $y $s $c;
+}
+@mixin drop-inner-shadow($x1, $y1, $s1, $c1, $x2, $y2, $s2, $c2) {
+    box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2;
+    -webkit-box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2;
+    -moz-box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2;
+    -o-box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2;
+    box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2;
+}
+@mixin drop-inner-shadow-2($x1, $y1, $s1, $c1, $x2, $y2, $s2, $c2, $x3, $y3, $s3, $c3) {
+    box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2, $x3 $y3 $s3 $c3;
+    -webkit-box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2, $x3 $y3 $s3 $c3;
+    -moz-box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2, $x3 $y3 $s3 $c3;
+    -o-box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2, $x3 $y3 $s3 $c3;
+    box-shadow: $x1 $y1 $s1 $c1, inset $x2 $y2 $s2 $c2, $x3 $y3 $s3 $c3;
 }
 @mixin inner-shadow($x, $y, $s, $c) {
     box-shadow: inset $x $y $s $c;

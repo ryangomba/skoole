@@ -1,1 +1,34 @@
-NEED TO VALIDATE EMAIL/PHONE NUMBER
+<div id="bin" class="site">
+
+	<!-- ABOUT -->
+
+	<div id="about">
+		<div class="page">
+
+			<!-- TAGLINE -->
+
+			<div id="tagline">
+	    		<h1>One more thing...</h1>
+	    		<p>Please validate your .edu email address and mobile phone number.</p>
+	    	</div>
+
+		</div>
+	</div>
+
+	<!-- CONTENT -->
+
+	<div id="content">
+		<div class="page">
+			
+			<%= form_for @current_user, :remote => true do |f| %>
+			
+				<%= f.text_field :email %>
+				<%= f.text_field :sms %>
+				<%= f.submit "Sign up" %>
+			
+			<% end %>
+
+		</div>
+	</div>
+
+</div>

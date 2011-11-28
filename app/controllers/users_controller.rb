@@ -8,10 +8,10 @@ class UsersController < ApplicationController
     def connect
         @current_user = User.find_by_f_id(params[:f_id]) if params[:f_id]
         session[:user_id] = @current_user.id if @current_user
-        if @current_user.nil?
-            render 'auth'
+        if @current_user && @current_user.ready
+            redirect_to listings_path and return
         else
-            redirect_to @listings
+            render 'auth'
         end
     end
     
@@ -26,7 +26,13 @@ class UsersController < ApplicationController
     end
     
     def authorized
-        render 'signup'
+        if @current_user && @current_user.ready
+            redirect_to listings_path
+        elsif @current_user
+            render 'signup'
+        else
+            redirect_to root_url
+        end
     end
     
     def logout
@@ -36,10 +42,10 @@ class UsersController < ApplicationController
     end
     
     # EDITS
-
+    
     def update
-        @user = current_user
-        @user.update_attributes(params[:user])
+        @current_user.update_attributes(params[:user])
+        redirect_to :action => :authorized
     end
 
     def destroy
