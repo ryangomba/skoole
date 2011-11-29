@@ -12,12 +12,12 @@ class MessagesController < ApplicationController
         puts puts "RECEIVED SMS from #{from} to #{to}: \"#{msg}\""
 
         # a test number (just forward it on to ryan)
-        if from == '12064532948'
+        if to == '12064532948'
             Sms.new(
                 message_id: 0,
-                from_address: from,
+                from_address: '12064532948',
                 to_address: '18457026112',
-                content: msg
+                content: "FW: #{msg}"
             ).broadcast
             render nothing: true and return
         end

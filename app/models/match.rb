@@ -146,6 +146,12 @@ class Match < ActiveRecord::Base
             
             trade_message(recipient_id, msg)
         
+        # if the message didn't match any condition
+        else
+            
+            # TODO should send an error message
+            puts "Message unexpected (state didn't match)"
+            
         end
         
     end

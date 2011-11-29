@@ -30,7 +30,7 @@ Skoole::Application.configure do
     config.assets.debug = true
 
     config.after_initialize do
-        SkooleSettings.queuing = true
+        SkooleSettings.queuing = false
     end
 
 end
