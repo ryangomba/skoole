@@ -13,12 +13,14 @@ class MessagesController < ApplicationController
 
         # a test number (just forward it on to ryan)
         if to == '12064532948'
-            Sms.new(
+            sms = Sms.new(
                 message_id: 0,
                 from_address: '12064532948',
                 to_address: '18457026112',
                 content: "FW: #{msg}"
-            ).broadcast
+            )
+            puts 'Sending to dummy number'
+            sms.broadcast_now
             render nothing: true and return
         end
 
