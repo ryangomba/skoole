@@ -167,7 +167,7 @@ class Match < ActiveRecord::Base
     def other_user(user)
         if user.id == self.buyer.id
             return self.seller
-        elsif user.id == self.buyer.id
+        elsif user.id == self.seller.id
             return self.buyer
         end
         return nil
