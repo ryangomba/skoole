@@ -38,7 +38,7 @@ class Match < ActiveRecord::Base
     # confirm with the seller
     def confirm_with_seller
         puts 'Creating seller confirmation message'
-        buyer_name = self.buyer.firstname
+        buyer_name = self.buyer.first_name
         book_title = self.seller_listing.book.title
         price = self.seller_listing.price
         
