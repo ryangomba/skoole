@@ -1,0 +1,4 @@
+heroku pg:reset SHARED_DATABASE
+heroku run rake db:migrate
+heroku run rake populate:numbers
+heroku restart

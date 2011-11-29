@@ -18,11 +18,10 @@ class ListingsController < ApplicationController
             @listing = @book.buy_listings.create(params[:buy_listing]) if params[:buy_listing]
             @listing = @book.sell_listings.create(params[:sell_listing]) if params[:sell_listing]
         end
-        if @book.nil? || @listing.nil?
-            puts "Error saving listing"
+        if @listing.nil?
+            puts "Error saving listing: #{@listing.errors.inspect}"
         else
             @listing.match
-            puts @listing.errors.inspect
         end
     end
     

@@ -8,6 +8,7 @@ class CreateMatches < ActiveRecord::Migration
             t.integer :buyer_listing_id
             t.integer :seller_listing_id
             t.integer :state
+            t.string :network
 
             t.timestamps
         end

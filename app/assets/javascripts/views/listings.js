@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	
-    $('.add').click(function() {
+    $(document).delegate(".add", "click", function() {
         $(this).parent().find('.overlay').fadeIn()
     });
 
-    $('.overlay form').submit(function() {
+    $(document).delegate('.overlay form', 'submit', function() {
         $('.overlay').fadeOut('fast');
     });
 

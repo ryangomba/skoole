@@ -1,102 +1,181 @@
-require 'api/nexmo'
-require 'api/sendgrid'
-require 'contents'
-
 class Match < ActiveRecord::Base
     
-    has_one :buyer, class_name: User, foreign_key: "buyer_id"
-    has_one :seller, class_name: User, foreign_key: "seller_id"
+    belongs_to :buyer, class_name: 'User', foreign_key: "buyer_id"
+    belongs_to :seller, class_name: 'User', foreign_key: "seller_id"
     
-    has_one :buyer_number, class_name: Number, foreign_key: "buyer_number_id"
-    has_one :seller_number, class_name: Number, foreign_key: "seller_number_id"
+    belongs_to :buyer_number, class_name: 'Number', foreign_key: "buyer_number_id"
+    belongs_to :seller_number, class_name: 'Number', foreign_key: "seller_number_id"
     
-    has_one :buy_listing, class_name: BuyListing, foreign_key: "buy_listing_id"
-    has_one :sell_listing, class_name: SellListing, foreign_key: "sell_listing_id"
+    belongs_to :buyer_listing, class_name: 'BuyListing', foreign_key: "buyer_listing_id"
+    belongs_to :seller_listing, class_name: 'SellListing', foreign_key: "seller_listing_id"
     
-    validates_presence_of :buyer_id, :seller_id, :buyer_number_id, :seller_number_id, :buyer_listing_id, :seller_listing_id, :state
+    has_many :messages
+    
+    validates_presence_of :buyer_id, :seller_id, :buyer_number_id, :seller_number_id, :buyer_listing_id, :seller_listing_id, :state, :network
     
     ##### MESSAGING
     
-    def respond(sender, text, rec_num)
+    # the first message
+    def first_message
+        self.confirm_with_buyer
+    end
+    
+    # confirm with the buyer
+    def confirm_with_buyer
+        puts 'Creating buyer confirmation message'
+        seller_name = self.seller.first_name
+        book_title = self.seller_listing.book.title
+        price = self.seller_listing.price
+        msg = self.messages.create(
+            user_id: self.buyer_id,
+            subject: "We found a match!",
+            short: "Would you like to purchase #{book_title} from #{seller_name} for $#{price}?",
+            full: "Would you like to purchase #{book_title} from #{seller_name} for $#{price}?"
+        )
+        msg.dispatch
+    end
+    
+    # confirm with the seller
+    def confirm_with_seller
+        puts 'Creating seller confirmation message'
+        buyer_name = self.buyer.first_name
+        book_title = self.seller_listing.book.title
+        price = self.seller_listing.price
         
-        yesno = text.downcase[0].chr == 'y'
+        msg = self.messages.create(
+            user_id: self.seller.id,
+            subject: "We found a match!",
+            short: "Would you like to sell #{book_title} to #{buyer_name} for $#{price}?",
+            full: "Would you like to sell #{book_title} to #{buyer_name} for $#{price}?"
+        )
+        msg.dispatch
+    end
+    
+    # confirm the match
+    def confirm_matched
+        puts 'Creating match confirmation message'
+        msg1 = self.messages.create(
+            user_id: self.buyer.id,
+            subject: "Your match is set!",
+            short: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping).",
+            full: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
+        )
+        msg2 = self.messages.create(
+            user_id: self.seller.id,
+            subject: "Your match is set!",
+            short: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping).",
+            full: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
+        )
+        msg1.dispatch
+        msg2.dispatch
+    end
+    
+    # confirm the match has been canceled
+    def confirm_canceled
+        puts 'Creating cancelation confirmation message'
+        msg1 = self.messages.create(
+            user_id: self.buyer.id,
+            subject: "Match canceled.",
+            short: "No problem. You're back in the queue! :)",
+            full: "No problem. You're back in the queue! :)"
+        )
+        msg2 = self.messages.create(
+            user_id: self.seller.id,
+            subject: "Match canceled.",
+            short: "No problem. You're back in the queue! :)",
+            full: "No problem. You're back in the queue! :)"
+        )
+        msg1.dispatch
+        msg2.dispatch
+    end
+    
+    # trade a message
+    def trade_message(recipient_id, msg)
+        puts 'Relaying user messsage'
+        book_title = self.seller_listing.book.title
+        
+        msg = self.messages.create(
+            user_id: recipient_id,
+            subject: "You have a message regarding #{book_title}!",
+            short: msg,
+            full: msg
+        )
+        msg.dispatch
+    end
+    
+    ##### MESSAGE LOGIC
+    
+    def respond(sender, msg)
+        
+        yesno = msg.downcase[0].chr == 'y'
 
-        # if the message is from a potential buyer
+        # if the message is from a buyer
         if self.state == 0 && sender.id == self.buyer_id
             
             puts "Received message from buyer re: confirmation"
             if yesno
                 puts "Buyer wants to buy! We'll check with the seller..."
-                seller = User.find(self.seller_id)
-                sknumber = Number.find(self.seller_number_id).number
-                contents = contents_for_match(self, text)
-                message = Message.create
-                seller.send_sms(sknumber, message, t.id)
+                self.confirm_with_seller
                 self.state = 1
                 self.save
             else
                 puts "Buyer has declined :( We'll respond & mark the match as canceled."
-                message = make_message(self, text)
-                sender.send(rec_num, message)
+                self.confirm_canceled
                 self.state = 9
                 self.save
             end
-            m = Message.new(sen, rec, @t)
-            Nexmo.send(m)
-            Sendgrid.send(m)
 
-        elsif self.state == 1
+        # if the message is from a seller
+        elsif self.state == 1 && sender.id == self.seller_id
             
             puts "Received message from seller re: confirmation"
             if yesno
                 puts "Seller confirmed! Sending instructions to both parties..."
+                self.confirm_matched
                 self.state = 2
-                # sending instructions back to seller
-                seller = User.find(self.seller_id)
-                sen = Contact.new('Skoole', "#{self.id}@skoole.com", to)
-                rec = Contact.new(seller.firstname, seller.email, seller.sms)
-                m1 = Message.new(sen, rec, @t)
-                r1 = Nexmo.send(m1)
-                Sendgrid.send(m1)
-                puts "Seller instructions: " + r1.inspect
-                # sending instructions to buyer
-                sknumber = Number.find(self.buyer_number_id).number
-                sen = Contact.new('Skoole', "#{self.id}@skoole.com", sknumber)
-                buyer = User.find(self.buyer_id)
-                rec = Contact.new(buyer.firstname, buyer.email, buyer.sms)
-                m2 = Message.new(sen, rec, @t)
-                sleep(1)
-                r2 = Nexmo.send(m2)
-                Sendgrid.send(m2)
-                self.state = 3
-                puts "Buyer instructions: " + r2.inspect
+                self.save
             else
-                pass
+                puts "Seller has declined :( We'll respond & mark the match as canceled."
+                self.confirm_canceled
+                self.state = 9
+                self.save
             end
 
-        elsif self.state == 3
-            puts "Users trading messages"
-            seller = User.find(self.seller_id)
-            buyer = User.find(self.buyer_id)
-            if buyer.sms == from
-                sknumber = Number.find(self.seller_number_id).number
-                r = User.find(self.seller_id)
-            else
-                sknumber = Number.find(self.buyer_number_id).number
-                r = User.find(self.buyer_id)
-            end
-            rec = Contact.new(r.firstname, r.email, r.sms)
-            sen = Contact.new('Skoole', "#{self.id}@skoole.com", sknumber)
-            m = Message.new(sen, rec, @t)
-            Nexmo.trade(m, text)
-            Sendgrid.trade(m, text)
-        end
-
-        puts "WE GOT A MATCH!"
-        puts "Match hash: " + self.inspect
-
-        self.save
+        # if the message is part of a conversation
+        elsif self.state == 2 && recipient = self.other_user(sender)
+            
+            trade_message(recipient.id, msg)
         
+        # if the message didn't match any condition
+        else
+            
+            # TODO should send an error message
+            puts "Message unexpected (state didn't match)"
+            
+        end
+        
+    end
+    
+    ##### HELPERS
+    
+    def self.locate_via_sender(sender, number)
+        m = find_by_buyer_id_and_buyer_number_id(sender.id, number.id)
+        if m.nil? then m = find_by_seller_id_and_seller_number_id(sender.id, number.id) end
+        return m
+    end
+    
+    def other_user(user)
+        if user.id == self.buyer.id
+            return self.seller
+        elsif user.id == self.seller.id
+            return self.buyer
+        end
+        return nil
+    end
+    
+    def number_for_user_id(user_id)
+        if user_id == self.buyer_id then return self.buyer_number end
+        return self.seller_number
     end
     
 end

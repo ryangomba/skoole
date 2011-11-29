@@ -1,18 +1,11 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
+ * Application CSS
  *= require_self
- *= require_tree .
+ *= require_tree ./views
 */
 
 @import 'base.scss';
-
-/* COLORS */
-
-$background: #f7f7f7;
-$light-orange: #ff8d2d;
-$orange: #f0730b;
+@import 'helpers.scss';
 
 /* GLOBAL */
 
@@ -26,6 +19,7 @@ body {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	background-color: $background;
 	background-image: url(bg.png);
+	background-position: 0px -10px;
 	background-repeat: repeat-x;
 	font-size: 16px;
 	color: #444;
@@ -96,10 +90,8 @@ div#account-wrapper {
 
 #nav {
 	height: 40px;
-	padding: 32px;
+	padding: 27px;
 	color: #fff;
-	//background-color: rgba(0,0,0,0.1);
-	//border-bottom: solid 1px rgba(0,0,0,0.4);
 	h1 {
 		float: left;
 		font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, sans-serif;
@@ -111,21 +103,11 @@ div#account-wrapper {
 		}
 	}
 	a.nav-item {
-		float: right;
+		@extend .blue-button;
 		
-		text-shadow: 0px -1px 0px #000;
-		color: #bdcad6;
+		float: right;		
 		margin-left: 12px;
-		font-size: 18px;
-		
-		@include border-radius(6px);
-		
-		border: solid 1px rgba(0, 0, 0, 0.4);
-		@include gradient-2(rgba(255, 255, 255, 0.08), 0%, rgba(255, 255, 255, 0.05), 100%);
-		@include drop-shadow(0px, 1px, 0px, rgba(255, 255, 255, 0.2));
-		
-		-webkit-transition-property: background, border, color;
-		-webkit-transition-duration: 200ms, 200ms, 1000ms;
+		font-size: 16px;		
 		
 		div {
 			float: left;
@@ -148,21 +130,6 @@ div#account-wrapper {
 			left: 16px;
 		}
 		
-		&:hover {
-		    cursor: pointer;
-			@include gradient-2(rgba(255, 255, 255, 0.1), 0%, rgba(255, 255, 255, 0.08), 100%);
-		}
-		&:active {
-		    //@include inner-shadow(0px, 1px, 0px, rgba(0, 0, 0, 0.2));
-			@include gradient-2(rgba(255, 255, 255, 0.05), 0%, rgba(255, 255, 255, 0.03), 100%);
-		}
-		&.selected {
-			color: #e4eef8;
-			background: none;
-		    border: solid 1px rgba(0,0,0,0.2);
-			background-color: rgba(0, 0, 0, 0.15);
-			//@include inner-shadow(0px, 1px, 2px, rgba(0,0,0,0.2));
-		}
 	}
 }
 
@@ -207,8 +174,7 @@ div#right-content {
     padding: 30px 0px;
 	height: 20px;
     border-top: solid 1px #ccc;
-	background-color: rgba(0, 0, 0, 0.05);
-    //@include drop-shadow(0px, -1px, 2px, rgba(0,0,0,0.1));
+	background-color: #eee;
     color: #999;
     font-size: 13px;
     text-align: center;
