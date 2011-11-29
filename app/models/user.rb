@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
     has_many :messages
     
     validates_presence_of :first_name, :last_name, :image, :f_id, :f_token
+    validates_uniqueness_of :sms, :allow_blank => true, :allow_nil => true
+    validates_uniqueness_of :email, :allow_blank => true, :allow_nil => true
     
     validate :edu_email
     def edu_email
