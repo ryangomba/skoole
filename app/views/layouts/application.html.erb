@@ -2,9 +2,10 @@
 <html>
 <head>
 	<title>Skoole</title>
+	<meta name="robots" content="noindex">
     <script src='http://connect.facebook.net/en_US/all.js'></script>
-	<%= stylesheet_link_tag "application" %>
-	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "application", Rails.env, :cache => "cache/all" %>
+	<%= stylesheet_link_tag "application", :cache => "cache/all" %>
 	<%= csrf_meta_tags %>
 </head>
 <body>
@@ -21,7 +22,7 @@
 		<div class="page">
 			<a href="/"  data-method="get" data-remote="true"><h1>Skoole <span class="subtitle"></span></h1></a>
 			<div id="tabs">
-				<%= render 'tabs' %>
+				<%= render 'application/navbar_content' %>
 			</div>
 		</div>
 	</div>

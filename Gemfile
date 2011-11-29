@@ -16,7 +16,7 @@ end
 ##### AUTH #####
 
 gem 'omniauth', '1.0.0'
-gem 'omniauth-facebook', '1.0.0.ryan1', :git => 'git@github.com:ryangomba/omniauth-facebook.git'
+gem 'omniauth-facebook', '1.0.0'
 
 ##### HTTP #####
 
@@ -30,8 +30,14 @@ gem 'therubyracer'
 
 ##### DEVELOPMENT #####
 
-gem 'sqlite3'
+group :development do
+    gem 'sqlite3'
+end
 
 ##### PRODUCTION #####
 
-### gem 'pg', :group => :production
+group :production do
+    gem 'pg'
+    gem 'thin'
+end
+

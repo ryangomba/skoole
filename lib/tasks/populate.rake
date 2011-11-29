@@ -1,7 +1,7 @@
 namespace :populate do
     
 	desc "Populate database with phone numbers"
-	task :numbers =>:environment do
+	task :numbers => :environment do
 		Number.create(:number => 12064532171, :index => 0)
 		Number.create(:number => 12067927926, :index => 1)
 		Number.create(:number => 13038000261, :index => 2)

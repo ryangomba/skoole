@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
             t.string :last_name
             t.string :image
             t.string :email
+            t.string :network
             t.string :sms
             
             t.string :nums, default: '0000000000'

@@ -1,47 +1,40 @@
 class Message < ActiveRecord::Base
     
-    validates_presence_of :sender_id, :receiver_id
+    belongs_to :match
+    belongs_to :user
     
-    def email
-        self.t_id ? "#{self.t_id}@skoole.com}" : 'desk@skoole.com'        
+    has_many :dispatches
+    has_many :emails
+    has_many :smses
+    
+    validates_presence_of :match_id, :user_id, :subject, :short, :full
+    
+    def dispatch
+        if self.user.sms_enabled then self.queue_sms end
+        if self.user.email_enabled then self.queue_email end
     end
     
-    def set_contents(contents)
-        self.subject = contents.subject
-        self.short = contents.short
-        self.long = contents.long
+    def queue_sms
+        puts 'Dispatching an SMS message'
+        d = self.smses.create(
+            from_address: self.match.number_for_user_id(self.user_id).number,
+            to_address: self.user.sms,
+            content: self.short
+        )
+        d.broadcast
     end
     
-    ##### MESSAGING
-    
-    def send(user)
-        self.user_id = user_id
-        self.send_sms
-        self.send_email
+    def queue_email
+        puts 'Dispatching an email message'
+        d = self.emails.create(
+            from_name: 'Skoole.com',
+            from_address: "match-#{self.match_id}@skoole.com}",
+            to_name: self.user.full_name,
+            to_address: self.user.email,
+            subject: self.subject,
+            content: self.full
+        )
+        d.broadcast
     end
-    
-    def send_email(user)
-        if user.sms_enabled == true
-            response = HTTParty.get('http://rest.nexmo.com/sms/json',
-            format: json,
-            query: {
-                username: '86e3fbf7',
-                password: '414092e9',
-                from: self.sms,
-                to: user.sms,
-                text: self.short
-            })
-            puts response.inspect
-        end
-    end
-    
-    def send_sms(user)
-        if user.email_enabled == true
-            response = Sendgrid.send(message, user)
-            puts response.inspect
-        end
-    end
-    
-    
     
 end
