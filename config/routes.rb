@@ -21,10 +21,7 @@ Skoole::Application.routes.draw do
 
     # CALLBACKS
     
-    match 'in' => 'messages#in'
-    
-    # TESTS
-    
-    match 'out' => 'messages#out'
+    match 'sms_in' => 'messages#sms_in'
+    match 'email_in' => 'messages#email_in'
 
 end

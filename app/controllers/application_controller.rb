@@ -8,12 +8,12 @@ class ApplicationController < ActionController::Base
         @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]
     end
     
-    before_filter :subdomain
-    private
-    def subdomain
-        @subdomain = request.subdomains.first
-        unless @subdomain then @subdomain = params[:sub] end
-        puts "SUB: #{@subdomain}"
-        return @subdomain
-    end
+    #before_filter :subdomain
+    #private
+    #def subdomain
+    #    @subdomain = request.subdomains.first
+    #    unless @subdomain then @subdomain = params[:sub] end
+    #    puts "SUB: #{@subdomain}"
+    #    return @subdomain
+    #end
 end

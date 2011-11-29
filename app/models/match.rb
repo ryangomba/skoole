@@ -152,6 +152,12 @@ class Match < ActiveRecord::Base
     
     ##### HELPERS
     
+    def self.locate_via_sender(sender, number)
+        m = find_by_buyer_id_and_buyer_number_id(sender.id, number.id)
+        if m.nil? then m = find_by_seller_id_and_seller_number_id(sender.id, number.id) end
+        return m
+    end
+    
     def other_user(user)
         if user.id == self.buyer.id
             return self.seller
