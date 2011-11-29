@@ -144,7 +144,7 @@ class Match < ActiveRecord::Base
         # if the message is part of a conversation
         elsif self.state == 2 && recipient = self.other_user(sender)
             
-            trade_message(recipient_id, msg)
+            trade_message(recipient.id, msg)
         
         # if the message didn't match any condition
         else

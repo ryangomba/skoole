@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
                 message_id: 0,
                 from_address: '12064532948',
                 to_address: '18457026112',
-                content: "FW: #{msg}"
+                content: "FW FROM #{from}: #{msg}"
             )
             puts 'Sending to dummy number'
             sms.broadcast_now
