@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
                 t.respond(sender, text, to)
             else
                 puts "COULD NOT FIND A VALID MATCH"
-                sender.send_error(to, error_message)
+                # TODO should send an error message back to the user
                 render nothing: true and return
             end
         else
