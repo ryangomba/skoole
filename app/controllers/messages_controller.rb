@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
 
             # find the match and respond
             if match = Match.locate_via_sender(sender, number)
-                t.respond(sender, text, to)
+                match.respond(sender, msg)
             else
                 puts "COULD NOT FIND A VALID MATCH"
                 puts "sender_id: #{sender.id}"
