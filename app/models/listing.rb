@@ -37,22 +37,22 @@ class Listing < ActiveRecord::Base
         return Listing.where("book_id = ? AND pending = ? AND network = ? AND user_id != ?
             AND type = ? AND price #{self.comparator} ? AND condition #{self.comparator} ?",
             self.book_id, false, self.network, self.user_id,
-            "#{self.type_name}Listing", self.price, self.condition
+            "#{self.other_type_name}Listing", self.price, self.condition
         ).oldest
     end
     
     ##### CHECK FOR MATCHES
     
-    def delayed_match
-        Delayed::Job.enqueue self
+    def match
+        SkooleSettings.queuing ? (Delayed::Job.enqueue self) : self.perform
     end
     
     def perform
-        self.match
+        puts "Looking for a match now..."
+        self.match_now
     end
     
-    def match
-        
+    def match_now        
         if self.type == 'BuyListing'
             buyer = self.user
             buyer_listing = self
@@ -68,17 +68,17 @@ class Listing < ActiveRecord::Base
             puts "NO MATCH FOUND"
             return
         end
-            
+        
         #get the other user
         buyer.nil? ? buyer = buyer_listing.user : seller = seller_listing.user
 
         # create the match
         m = Match.create(
             buyer_id: buyer.id,
-            buyer_number_id: buyer.new_number(),
+            buyer_number_id: buyer.new_number().id,
             buyer_listing_id: buyer_listing.id,
             seller_id: seller.id,
-            seller_number_id: seller.new_number(),
+            seller_number_id: seller.new_number().id,
             seller_listing_id: seller_listing.id,
             network: self.network,
             state: 0
@@ -95,7 +95,7 @@ class Listing < ActiveRecord::Base
         seller_listing.pending = true
         
         if buyer_listing.save && seller_listing.save
-            puts 'SHOULD SEND THE FIRST MESSAGE!'
+            puts 'MATCH FOUND!'
             m.first_message
         else
             puts "Error marking listings as pending: #{buyer_listing.errors.inspect}, #{seller_listing.errors.inspect}"

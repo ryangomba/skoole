@@ -10,14 +10,16 @@ class Sendgrid
     
     def self.send(dispatch)
         puts "Sending email from #{dispatch.from_address} to #{dispatch.to_address}."
-        get('/mail.send.json', query: {
-            from: dispatch.from_address
+        request = get('/mail.send.json', query: {
+            from: dispatch.from_address,
             fromname: dispatch.from_name,
             to: dispatch.to_address,
             toname: dispatch.to_name,
             subject: dispatch.subject,
             text: dispatch.content
         })
+        puts request
+        return request.response.class == Net::HTTPOK
     end
     
 end

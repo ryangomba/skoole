@@ -4,7 +4,7 @@ class Email < Dispatch
     
     validates_presence_of :from_name, :to_name, :subject
     
-    def send
+    def broadcast_now
         Sendgrid.send(self)
     end
    

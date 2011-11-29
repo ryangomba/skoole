@@ -4,6 +4,10 @@ class SellListing < Listing
         'Sell'
     end
     
+    def other_type_name
+        'Buy'
+    end
+    
     def comparator
         '>='
     end

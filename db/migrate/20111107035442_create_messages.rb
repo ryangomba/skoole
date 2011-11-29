@@ -5,7 +5,7 @@ class CreateMessages < ActiveRecord::Migration
             t.integer :user_id
             t.string :subject
             t.text :short
-            t.text :long
+            t.text :full
 
             t.timestamps
         end

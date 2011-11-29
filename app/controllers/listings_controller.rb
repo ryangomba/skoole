@@ -21,7 +21,7 @@ class ListingsController < ApplicationController
         if @listing.nil?
             puts "Error saving listing: #{@listing.errors.inspect}"
         else
-            @listing.delayed_match
+            @listing.match
         end
     end
     

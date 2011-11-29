@@ -42,10 +42,10 @@ class User < ActiveRecord::Base
         )
     end
     
-    ##
+    ##### HELPERS #####
     
-    def test
-        Facebook.user('ryangomba', self.f_token)
+    def full_name
+        "#{self.first_name} #{self.last_name}"
     end
     
     ##### MESSAGING #####
@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
         nums[number_id - 1] = '1'
         nums = "#{nums}".to_s
         self.save()
-        return number_id
+        return Number.find_by_index(number_id)
     end
     
     def ready

@@ -10,11 +10,13 @@ class Nexmo
     
     def self.send(dispatch)
         puts "Sending sms from #{dispatch.from_address} to #{dispatch.to_address}."
-        get('/sms/json', query: {
+        request = get('/sms/json', query: {
             from: dispatch.from_address,
             to: dispatch.to_address,
             text: dispatch.content
         })
+        puts request
+        return request.response.class == Net::HTTPOK
     end
     
 end

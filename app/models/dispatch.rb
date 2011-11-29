@@ -4,12 +4,13 @@ class Dispatch < ActiveRecord::Base
     
     validates_presence_of :type, :message_id, :from_address, :to_address, :content
     
-    def delayed_send
-        Delayed::Job.enqueue self
+    def broadcast
+        SkooleSettings.queuing ? (Delayed::Job.enqueue self) : self.perform
     end
     
     def perform
-        self.send 
+        'Broadcasting the message now'
+        self.broadcast_now
     end
    
 end

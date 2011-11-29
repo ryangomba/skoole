@@ -1,13 +1,13 @@
 class Match < ActiveRecord::Base
     
-    has_one :buyer, class_name: User, foreign_key: "buyer_id"
-    has_one :seller, class_name: User, foreign_key: "seller_id"
+    belongs_to :buyer, class_name: 'User', foreign_key: "buyer_id"
+    belongs_to :seller, class_name: 'User', foreign_key: "seller_id"
     
-    has_one :buyer_number, class_name: Number, foreign_key: "buyer_number_id"
-    has_one :seller_number, class_name: Number, foreign_key: "seller_number_id"
+    belongs_to :buyer_number, class_name: 'Number', foreign_key: "buyer_number_id"
+    belongs_to :seller_number, class_name: 'Number', foreign_key: "seller_number_id"
     
-    has_one :buy_listing, class_name: BuyListing, foreign_key: "buy_listing_id"
-    has_one :sell_listing, class_name: SellListing, foreign_key: "sell_listing_id"
+    belongs_to :buyer_listing, class_name: 'BuyListing', foreign_key: "buyer_listing_id"
+    belongs_to :seller_listing, class_name: 'SellListing', foreign_key: "seller_listing_id"
     
     has_many :messages
     
@@ -22,47 +22,49 @@ class Match < ActiveRecord::Base
     
     # confirm with the buyer
     def confirm_with_buyer
-        seller_name = self.seller.firstname
-        book_title = self.sell_listing.book.title
-        price = self.sell_listing.price
-        
+        puts 'Creating buyer confirmation message'
+        seller_name = self.seller.first_name
+        book_title = self.seller_listing.book.title
+        price = self.seller_listing.price
         msg = self.messages.create(
-            :user_id = self.buyer.id,
-            :subject = "We found a match!"
-            :short = "Would you like to purchase #{book_title} from #{seller_name} for $#{price}?"
-            :full = "Would you like to purchase #{book_title} from #{seller_name} for $#{price}?"
+            user_id: self.buyer_id,
+            subject: "We found a match!",
+            short: "Would you like to purchase #{book_title} from #{seller_name} for $#{price}?",
+            full: "Would you like to purchase #{book_title} from #{seller_name} for $#{price}?"
         )
         msg.dispatch
     end
     
     # confirm with the seller
     def confirm_with_seller
+        puts 'Creating seller confirmation message'
         buyer_name = self.buyer.firstname
-        book_title = self.sell_listing.book.title
-        price = self.sell_listing.price
+        book_title = self.seller_listing.book.title
+        price = self.seller_listing.price
         
         msg = self.messages.create(
-            :user_id = self.seller.id,
-            :subject = "We found a match!"
-            :short = "Would you like to sell #{book_title} to #{buyer_name} for $#{price}?"
-            :full = "Would you like to sell #{book_title} to #{buyer_name} for $#{price}?"
+            user_id: self.seller.id,
+            subject: "We found a match!",
+            short: "Would you like to sell #{book_title} to #{buyer_name} for $#{price}?",
+            full: "Would you like to sell #{book_title} to #{buyer_name} for $#{price}?"
         )
         msg.dispatch
     end
     
     # confirm the match
     def confirm_matched
+        puts 'Creating match confirmation message'
         msg1 = self.messages.create(
-            :user_id = self.buyer.id,
-            :subject = "Your match is set!"
-            :short = "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
-            :full = "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
+            user_id: self.buyer.id,
+            subject: "Your match is set!",
+            short: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping).",
+            full: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
         )
         msg2 = self.messages.create(
-            :user_id = self.seller.id,
-            :subject = "Your match is set!"
-            :short = "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
-            :full = "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
+            user_id: self.seller.id,
+            subject: "Your match is set!",
+            short: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping).",
+            full: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
         )
         msg1.dispatch
         msg2.dispatch
@@ -70,17 +72,18 @@ class Match < ActiveRecord::Base
     
     # confirm the match has been canceled
     def confirm_canceled
+        puts 'Creating cancelation confirmation message'
         msg1 = self.messages.create(
-            :user_id = self.buyer.id,
-            :subject = "Match canceled."
-            :short = "No problem. You're back in the queue! :)"
-            :full = "No problem. You're back in the queue! :)"
+            user_id: self.buyer.id,
+            subject: "Match canceled.",
+            short: "No problem. You're back in the queue! :)",
+            full: "No problem. You're back in the queue! :)"
         )
         msg2 = self.messages.create(
-            :user_id = self.seller.id,
-            :subject = "Match canceled."
-            :short = "No problem. You're back in the queue! :)"
-            :full = "No problem. You're back in the queue! :)"
+            user_id: self.seller.id,
+            subject: "Match canceled.",
+            short: "No problem. You're back in the queue! :)",
+            full: "No problem. You're back in the queue! :)"
         )
         msg1.dispatch
         msg2.dispatch
@@ -88,13 +91,14 @@ class Match < ActiveRecord::Base
     
     # trade a message
     def trade_message(recipient_id, msg)
-        book_title = self.sell_listing.book.title
+        puts 'Relaying user messsage'
+        book_title = self.seller_listing.book.title
         
         msg = self.messages.create(
-            :user_id = recipient_id,
-            :subject = "You have a message regarding #{book_title}!"
-            :short = msg
-            :full = msg
+            user_id: recipient_id,
+            subject: "You have a message regarding #{book_title}!",
+            short: msg,
+            full: msg
         )
         msg.dispatch
     end

@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(:version => 20111128233307) do
     t.integer  "user_id"
     t.string   "subject"
     t.text     "short"
-    t.text     "long"
+    t.text     "full"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
