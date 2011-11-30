@@ -6,6 +6,9 @@ class TwilioController < ApplicationController
     
     def voice
         puts params.inspect
+        respond_to do |format|
+            format.xml
+        end
     end
 
 end
