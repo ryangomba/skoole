@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20111128233307) do
     t.string   "from_address"
     t.string   "to_address"
     t.text     "content"
+    t.string   "service"
     t.string   "from_name"
     t.string   "to_name"
     t.string   "subject"

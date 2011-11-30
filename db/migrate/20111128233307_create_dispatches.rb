@@ -7,6 +7,7 @@ class CreateDispatches < ActiveRecord::Migration
             t.string :from_address
             t.string :to_address
             t.text :content
+            t.string :service
             
             # EMAIL ONLY
             

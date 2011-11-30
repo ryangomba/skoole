@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'httparty'
 
 class Sendgrid
@@ -8,7 +7,7 @@ class Sendgrid
     default_params api_user: 'ryangomba', api_key: '8893300r'
     format :json
     
-    def self.send(dispatch)
+    def self.send_email(dispatch)
         puts "Sending email from #{dispatch.from_address} to #{dispatch.to_address}."
         request = get('/mail.send.json', query: {
             from: dispatch.from_address,

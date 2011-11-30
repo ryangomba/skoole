@@ -60,7 +60,10 @@ Skoole::Application.configure do
     config.active_support.deprecation = :notify
 
     config.after_initialize do
+        SkooleSettings.host_url = 'http://skoole.com'
         SkooleSettings.queuing = true
+        SkooleSettings.sms_service = 'Nexmo'
+        SkooleSettings.email_service = 'Sendgrid'
     end
 
 end
