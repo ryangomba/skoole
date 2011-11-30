@@ -6,9 +6,7 @@ class TwilioController < ApplicationController
     
     def voice
         puts params.inspect
-        respond_to do |format|
-            format.xml
-        end
+        render :file => 'twilio/voice.xml', :content_type => Mime::XML
     end
 
 end
