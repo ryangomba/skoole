@@ -97,8 +97,8 @@ class Match < ActiveRecord::Base
         msg = self.messages.create(
             user_id: recipient_id,
             subject: "You have a message regarding #{book_title}!",
-            short: "#{sender_name} says: msg",
-            full: "#{sender_name} says: msg"
+            short: "#{sender_name} says: #{msg}",
+            full: "#{sender_name} says: #{msg}"
         )
         msg.dispatch
     end
