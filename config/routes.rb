@@ -26,5 +26,7 @@ Skoole::Application.routes.draw do
     
     match 'sms_in' => 'messages#nexmo_sms'
     match 'email_in' => 'messages#sendgrid_email'
+    
+    match 'twilio_xml' => 'messages#twilio_xml'
 
 end

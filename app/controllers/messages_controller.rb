@@ -48,5 +48,11 @@ class MessagesController < ApplicationController
     
     def process_message
     end
+    
+    def twilio_xml
+        @redirect_1 = '18457026112'
+        @redirect_2 = '19197404420'
+        render :file => 'twilio/voice.xml', :content_type => Mime::XML
+    end
 
 end
