@@ -4,7 +4,6 @@ class GoogleBooks
     
     include HTTParty
     base_uri 'https://www.googleapis.com'
-    default_params username: '86e3fbf7', password: '414092e9'
     format :json
     
     def self.book_for_isbn(isbn)
