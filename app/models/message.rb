@@ -36,9 +36,13 @@ class Message < ActiveRecord::Base
         )
         d.broadcast
     end
-
-    def self.process_incoming(from, to, msg)
-        puts "RECEIVED SMS from #{from} to #{to}: \"#{msg}\""
+    
+    def self.process_incoming(from, to, msg, kind)
+        if kind == 'sms'
+            puts "RECEIVED SMS from #{from} to #{to}: \"#{msg}\""
+        else
+            puts "RECEIVED SMS from #{from} to #{to}: \"#{msg}\""
+        end
         
         sender = User.find_by_sms(from)
         number = Number.find_by_number(to)
@@ -49,13 +53,13 @@ class Message < ActiveRecord::Base
 
             # find the match and respond
             if match = Match.locate_via_sender(sender, number)
-                match.respond(sender, msg)
+                if kind == 'sms' then return match.respond_to_sms(sender, msg) end
+                return match.respond_to_voice(sender, msg)
             else
                 puts "COULD NOT FIND A VALID MATCH"
                 puts "sender_id: #{sender.id}"
                 puts "number_id: #{number.id}"
                 # TODO should send an error message back to the user
-                render nothing: true and return
             end
         else
             puts 'This message is from/to an unknown number'
