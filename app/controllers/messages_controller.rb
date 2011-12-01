@@ -5,11 +5,10 @@ require 'contents'
 
 class MessagesController < ApplicationController
 
-    def sms_in                        
+    def nexmo_sms                        
         from = params[:msisdn]
         to = params[:to]
         msg = params[:text]
-        puts puts "RECEIVED SMS from #{from} to #{to}: \"#{msg}\""
 
         # a test number (just forward it on to ryan)
         if to == '12064532948'
@@ -23,32 +22,29 @@ class MessagesController < ApplicationController
             sms.broadcast_now
             render nothing: true and return
         end
-
-        sender = User.find_by_sms(from)
-        number = Number.find_by_number(to)
-
-        # if numbers are valid
-        if sender && number
-            puts 'This message is from a valid user'
-
-            # find the match and respond
-            if match = Match.locate_via_sender(sender, number)
-                match.respond(sender, msg)
-            else
-                puts "COULD NOT FIND A VALID MATCH"
-                puts "sender_id: #{sender.id}"
-                puts "number_id: #{number.id}"
-                # TODO should send an error message back to the user
-                render nothing: true and return
-            end
-        else
-            puts 'This message is from/to an unknown number'
-        end
         
+        Message.process_incoming(from, to, msg)       
         render nothing: true
     end
     
-    def email_in
+    def sendgrid_email
+    end
+    
+    def twilio_sms
+        from = params[:From].gsub(/\D/, '')
+        to = params[:To].gsub(/\D/, '')
+        msg = params[:Body]
+        
+        Message.process_incoming(from, to, msg)       
+        render nothing: true
+    end
+    
+    def twilio_voice
+        puts params.inspect
+        render :file => 'twilio/voice.xml', :content_type => Mime::XML
+    end
+    
+    def process_message
     end
 
 end
