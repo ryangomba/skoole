@@ -9,7 +9,8 @@ class GoogleBooks
     def self.book_for_isbn(isbn)
         puts "Getting book information for ISBN."
         request = get('/books/v1/volumes', query: {
-            q: "isbn:#{isbn}"
+            q: "isbn:#{isbn}",
+            country: 'US'
         })
         puts request.inspect
         if request.response.class == Net::HTTPOK
