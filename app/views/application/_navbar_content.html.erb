@@ -1,13 +1,14 @@
 <% if @current_user && @current_user.member %>
 
 <a class="nav-item logout" href="/logout" data-method="get" data-remote="true">
-	<div>Log out</div>
+	<!--<div>Log out</div>-->
+	<div class="logout-button"><%= image_tag('power-18.png') %></div>
 </a>
-<a class="nav-item users-show" href="/matches" data-method="get" data-remote="true">
+<!--<a class="nav-item users-show" href="/matches" data-method="get" data-remote="true">
 	<div>Matches</div>
-</a>
+</a>-->
 <a class="nav-item listings-index" href="/listings" data-method="get" data-remote="true">
-	<div>Lists</div>
+	<div>Your Books</div>
 </a>
 
 <% elsif @current_user %>

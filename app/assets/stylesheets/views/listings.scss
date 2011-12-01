@@ -1,5 +1,5 @@
 /*
- * Listings page styles
+* Listings page styles
 */
 
 @import 'helpers.scss';
@@ -7,70 +7,123 @@
 #bin.listings {
 
 	#new-book.overlay {
-	    cursor: auto;
+		cursor: auto;
 	}
 
 	/* FORM */
 
 	#book-form {
-	    position: relative;
-	    h2 {
-	        font-size: 30px;
-	        font-weight: bold;
-	        margin-bottom: 30px;
-	    }
-	    input, select {
-	        font-size: 18px;
-	    }
-	    div.isbn-field input {
-	        width: 408px;
-	        height: 36px;
-	        margin-bottom: 15px;
-	        border: solid 1px #bbb;
-	    }
-	    div.price-field input {
-	        border: solid 1px #bbb;
-	    }
-	    div.price-field input,
-	    div.conditions-field select {
-	        display: inline;
-	        width: 140px;
-	        height: 36px;
-	    }
-	    div.conditions-field {
-	        position: absolute;
-	        top: 164px;
-	        left: 300px;
-	        select {
-	            width: 240px;
-	        }
-	    }
-	    label {
-	        display: inline;
-	        margin-right: 40px;
-	    }
-	    input[type=submit] {
-	        margin-top: 30px;
-	        float: right;
-	    }
+		width: 500px;
+		position: relative;
+		@include border-radius(5px);
+		div.lightbox-title {
+			@include gradient-3($light-blue, 0%, $blue, 1%, $dark-blue, 100%);
+			background-repeat: repeat-x;
+			@include border-radii(4px, 4px, 0px, 0px);
+			padding: 30px 40px;
+			color: #fff;
+			text-shadow: 0px -1px 0px #000;
+			font-size: 24px;
+		}
+		div.exit {
+			float: right;
+			color: $light-blue;
+			&:hover {
+				color: #fff;
+				cursor: pointer;
+			}
+		}
+		div.lightbox-content {
+			border-top: solid 0px #fff;
+			padding: 40px;
+		}
+		input, select {
+			font-size: 18px;
+		}
+		input {
+			padding: 10px;
+			border: solid 1px #bbb;
+			background-color: #f7f7f7;
+			@include border-radius(4px);
+			@include inner-shadow(0px,2px,2px,#ddd);
+		}
+		div.field-box {
+			position: relative;
+			&.isbn-field input {
+				width: 398px;
+				margin-bottom: 15px;
+				&.empty {
+					color: #777;
+				}
+			}
+			&.price-field {
+				float: left;
+				input {
+					width: 140px;
+					border: solid 1px #bbb;
+					padding-left: 25px;
+				}
+				label {
+					position: absolute;
+					font-size: 18px;
+					top: 12px;
+					left: 10px;
+					color: #777;
+				}
+			}
+			&.conditions-field {
+				float: right;
+				select {
+					width: 220px;
+					-webkit-appearance: none;
+					padding: 10px;
+					border: solid 1px #bbb;
+					background-color: #f7f7f7;
+					@include border-radius(4px);
+					&:hover {
+						cursor: pointer;
+					}
+				}
+				.arrow-down {
+					position: absolute;
+					top: 19px;
+					right: 14px;
+					width: 0;
+					height: 0;
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-top: 8px solid #aaa;
+					pointer-events: none;
+				}
+			}
+
+		}
+		input[type=submit] {
+			@extend .orange-button;
+			margin-top: 30px;
+			float: right;
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 18px;
+		}
 	}
 
 	/* TAGLINE */
 
 	#about {
-	    color: #fff;
-	    padding: 50px 0px 60px 0px;
-	    text-shadow: 0px -1px 0px #000;
-	    h1 {
-	        font-size: 36px;
-	        margin-bottom: 10px;
-	    }
-	    p {
-	        font-size: 18px;
-	        line-height: 23px;
-	        margin-bottom: 10px;
-	        color: #e5ffff;
-	    }
+		color: #fff;
+		padding: 50px 0px 60px 0px;
+		text-shadow: 0px -1px 0px #000;
+		h1 {
+			font-size: 36px;
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 23px;
+			margin-bottom: 10px;
+			color: #e5ffff;
+		}
 	}
 
 	/* LISTS */
@@ -79,62 +132,97 @@
 		height: 405px;
 		@include drop-shadow(0px, 0px, 10px, rgba(0, 0, 0, 0.25));
 		div#lists {
-		    height: 500px;
-		    text-shadow: 0px 1px 0px #fff;
+			height: 500px;
+			text-shadow: 0px 1px 0px #fff;
 			background-color: #fff;
 			@include gradient-2(#fff, 0.5, $background, 1.0);
-		    div.section {
-		        width: 450px;
+			div.section {
+				width: 450px;
 				&:first-child { float: left; }
-		        &:last-child { float: right; }
-		        div.add {
-		            float: right;
-		            font-size: 42px;
-		            line-height: 18px;
-		            color: $light-orange;
-		            font-weight: bold;
-		            padding-right: 20px;
-		            &:hover {
-		                cursor: pointer;
-		                color: $orange;
-		            }
-		        }
-		        div.list {
-		            div.listing {
+				&:last-child { float: right; }
+				div.add {
+					float: right;
+					font-size: 42px;
+					line-height: 18px;
+					color: $light-orange;
+					font-weight: bold;
+					padding-right: 20px;
+					&:hover {
+						cursor: pointer;
+						color: $orange;
+					}
+				}
+				div.list {
+					div.listing {
 						position: relative;
 						top: -1px;
-						height: 100px;
-		                border-top: dotted 1px #ccc;
+						height: 110px;
+						border-top: dotted 1px #ccc;
 						border-bottom: dotted 1px #ccc;
-		                &:nth-child(odd) {
-		                    background-color: rgba(0, 0, 0, 0.03);
-		                }
-		                img {
+						&:nth-child(odd) {
+							background-color: rgba(0, 0, 0, 0.03);
+						}
+						img.thumbnail {
 							position: absolute;
-							top: 12px;
+							top: 17px;
 							left: 12px;
-		                    height: 70px;
-		                    padding: 1px;
-		                    border: solid 1px #ddd;
-		                }
+							height: 70px;
+							padding: 1px;
+							border: solid 1px #ddd;
+						}
 						div.info {
 							position: absolute;
-							top: 24px;
+							width: 350px;
+							top: 18px;
 							left: 80px;
 							h2 {
-			                    font-weight: bold;
-			                    font-size: 18px;
-			                    margin-bottom: 10px;
-			                }
+								font-weight: bold;
+								font-size: 18px;
+								margin-bottom: 12px;
+							}
 							div {
-								display: inline-block;
-			                    color: #666;
-			                }
+								&.attributes {
+									margin-bottom: 8px;
+									color: #666;
+								}
+								&.status {
+									img {
+										height: 16px;
+										position: relative;
+										top: 3px;
+										margin-right: 5px;
+									}
+									font-size: 12px;
+									font-style: italic;
+									color: #999;
+								}
+							}
 						}
-		            }
-		        }
-		    }
+						div.edit-book,
+						a.destroy {
+							position: absolute;
+							bottom: -2px;
+							opacity: 0.25;
+							img {
+								height: 20px;
+							}
+							&:hover {
+								cursor: pointer;
+								opacity: 0.5;
+							}
+							-webkit-transition-property: opacity;
+							-webkit-transition-duration: 300ms;
+						}
+						div.edit-book {
+							right: 30px;
+						}
+						a.destroy {
+							right: 2px;
+						}
+					}
+				}
+			}
 		}
 	}
-	
+
 }

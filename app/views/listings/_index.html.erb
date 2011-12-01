@@ -15,9 +15,7 @@
 				<!-- BUTTON -->
 
 		    	<div id="right-content">
-					<div class="button">
-						<div class="top">Find your matches<%= image_tag 'arrow.png' %></div>
-					</div>
+					<!--Auto Matching-->
 				</div>
 		
 				<div class="clear"></div>
@@ -39,7 +37,7 @@
 						<%= render "form", listing: kind[:new_listing] %>
 					</div>
 			
-					<h1><%= kind_name %>ing (<%= kind[:list].count %>)</h1>
+					<h1><%= kind_name %>ing (<span class="count"><%= kind[:list].count %></span>)</h1>
 					<div class="list" id="listBuy">
 						<% for @listing in kind[:list] do %>
 						<%= render "listing" %>

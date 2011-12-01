@@ -1,5 +1,6 @@
 <% if @listing %>
 $('<%= escape_javascript(render "listing")%>').hide().appendTo('#<%= @listing.type %> .list').fadeIn();
+update_counts()
 <% else %>
 alert('Book could not be found')
 <% end %>

@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20111128233307) do
     t.string   "network"
     t.integer  "book_id"
     t.integer  "price"
-    t.string   "condition"
+    t.integer  "condition"
     t.boolean  "pending",    :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
