@@ -24,7 +24,7 @@ class Match < ActiveRecord::Base
     def confirm_with_buyer
         puts 'Creating buyer confirmation message'
         seller_name = self.seller.first_name
-        book_title = self.seller_listing.book.title
+        book_title = self.seller_listing.book.title.titleize
         price = self.seller_listing.price
         msg = self.messages.create(
             user_id: self.buyer_id,
@@ -39,7 +39,7 @@ class Match < ActiveRecord::Base
     def confirm_with_seller
         puts 'Creating seller confirmation message'
         buyer_name = self.buyer.first_name
-        book_title = self.seller_listing.book.title
+        book_title = self.seller_listing.book.title.titleize
         price = self.seller_listing.price
         
         msg = self.messages.create(
@@ -57,14 +57,14 @@ class Match < ActiveRecord::Base
         msg1 = self.messages.create(
             user_id: self.buyer.id,
             subject: "Your match is set!",
-            short: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping).",
-            full: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
+            short: "Alrighty, you're all set! Use this number to arrange when & where to meet. You should send the first message.",
+            full: "Alrighty, you're all set! Use this number to arrange when & where to meet. You should send the first message."
         )
         msg2 = self.messages.create(
             user_id: self.seller.id,
             subject: "Your match is set!",
-            short: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping).",
-            full: "Alrighty. You're all set! Use this number to arrange when & where to meet (we won't be eavesdropping)."
+            short: "Alrighty. You're all set! Use this number to arrange when & where to meet. #{self.buyer.first_name} will contact you first.",
+            full: "Alrighty. You're all set! Use this number to arrange when & where to meet. #{self.buyer.first_name} will contact you first."
         )
         msg1.dispatch
         msg2.dispatch
@@ -76,29 +76,29 @@ class Match < ActiveRecord::Base
         msg1 = self.messages.create(
             user_id: self.buyer.id,
             subject: "Match canceled.",
-            short: "No problem. You're back in the queue! :)",
-            full: "No problem. You're back in the queue! :)"
+            short: "This match has been canceled. No worries; you're back in the queue! :)",
+            full: "This match has been canceled. No worries; you're back in the queue! :)"
         )
         msg2 = self.messages.create(
             user_id: self.seller.id,
             subject: "Match canceled.",
-            short: "No problem. You're back in the queue! :)",
-            full: "No problem. You're back in the queue! :)"
+            short: "This match has been canceled. No worries; you're back in the queue! :)",
+            full: "This match has been canceled. No worries; you're back in the queue! :)"
         )
         msg1.dispatch
         msg2.dispatch
     end
     
     # trade a message
-    def trade_message(recipient_id, msg)
+    def trade_message(recipient_id, sender_name, msg)
         puts 'Relaying user messsage'
-        book_title = self.seller_listing.book.title
+        book_title = self.seller_listing.book.title.titleize
         
         msg = self.messages.create(
             user_id: recipient_id,
             subject: "You have a message regarding #{book_title}!",
-            short: msg,
-            full: msg
+            short: "#{sender_name} says: #{msg}",
+            full: "#{sender_name} says: #{msg}"
         )
         msg.dispatch
     end
@@ -144,7 +144,7 @@ class Match < ActiveRecord::Base
         # if the message is part of a conversation
         elsif self.state == 2 && recipient = self.other_user(sender)
             
-            trade_message(recipient.id, msg)
+            trade_message(recipient.id, sender.first_name, msg)
         
         # if the message didn't match any condition
         else

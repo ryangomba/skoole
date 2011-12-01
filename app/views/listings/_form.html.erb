@@ -1,27 +1,34 @@
 <div class="overlay"><div id="book-form" class="lightbox">
+
+	<div class="lightbox-title">
+		<div class="exit">X</div>
+		<h2>Add a Book to <%= listing.type_name %></h2>
+	</div>
 	
-	<h2>Add a Book to <%= listing.type_name %></h2>
-	
-	<%= form_for listing, url: listings_path, remote: true do |f| %>
-	
-		<div class="isbn-field">
-			<%= label_tag :isbn, "ISBN" %>
-			<%= text_field_tag :isbn %>
+	<div class="lightbox-content">
+		<%= form_for listing, url: listings_path, remote: true, :html => { class: "new_listing_form"} do |f| %>
+
+		<div class="field-box isbn-field">
+			<%= text_field_tag :isbn, value = 'ISBN', class: 'empty' %>
 		</div>
-	
-		<div class="price-field">
-			<%= f.label :price %>
+
+		<div class="field-box price-field">
+			<%= f.label :price, '$' %>
 			<%= f.number_field :price %>
 		</div>
-	
-		<div class="conditions-field">
-			<%= f.select :condition, options_for_select(Listing.conditions) %>
+		
+		<div class="field-box conditions-field">
+			<div class="arrow-down"></div>
+			<%= f.select :condition, options_for_select(Listing.form_conditions) %>
 		</div>
-	
+
+		<div class="clear"></div>
 		<%= f.hidden_field :user_id, value: @current_user.id %>
 		<%= f.hidden_field :network, value: @current_user.network %>
-		<%= f.submit 'Submit' %>
+		<%= f.submit 'List' %>
+
+		<% end %>
+		<div class="clear"></div>
+	</div>
 	
-	<% end %>
-	<div class="clear"></div>
 </div></div>

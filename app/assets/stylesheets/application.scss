@@ -49,21 +49,13 @@ div.overlay {
 	left: 0px;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.8);
 	div.lightbox {
 		margin: auto;
-		margin-top: 100px;
+		margin-top: 114px;
 		background-color: #fff;
-		&#facebook-form {
-			width: 400px;
-			height: 320px;
-		}
-		&#book-form {
-			width: 500px;
-			padding: 40px;
-		}
 	}
-	cursor: pointer;
+	//cursor: pointer;
 }
 
 /* ACCOUNT */
@@ -85,7 +77,6 @@ div#account-wrapper {
 	}
 }
 
-
 /* NAVBAR */
 
 #nav {
@@ -103,7 +94,7 @@ div#account-wrapper {
 		}
 	}
 	a.nav-item {
-		@extend .blue-button;
+		@extend .clear-button;
 		
 		float: right;		
 		margin-left: 12px;
@@ -113,6 +104,18 @@ div#account-wrapper {
 			float: left;
 			position: relative;
 			padding: 12px 15px;
+			&.logout-button {
+				padding: 10px 15px 9px 15px;
+				img {
+					opacity: 0.7;
+				}
+				&:hover img {
+					opacity: 0.9;
+				}
+			}
+			&:hover {
+				color: $light-blue;
+			}
 		}
 		div.image-wrapper {
 			border-right: solid 1px rgba(255, 255, 255, 0.1);
@@ -123,13 +126,12 @@ div#account-wrapper {
 			height: 42px;
 			border-right: solid 1px rgba(0, 0, 0, 0.3);
 			padding: 0px;
+			img {
+				position: absolute;
+				top: 10px;
+				left: 16px;
+			}
 		}
-		img {
-			position: absolute;
-			top: 10px;
-			left: 16px;
-		}
-		
 	}
 }
 
@@ -159,6 +161,7 @@ div.main-content {
 div#left-content {
 	float: left;
 	width: 580px;
+	margin-bottom: 10px;
 }
 div#right-content {
 	float: right;

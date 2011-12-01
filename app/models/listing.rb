@@ -23,9 +23,17 @@ class Listing < ActiveRecord::Base
  
     def self.conditions
         return {
-            New: 0,
-            Good: 1,
-            Fair: 2
+            'New' => 0,
+            'Good' => 1,
+            'Fair' => 2
+        }
+    end
+    
+    def self.form_conditions
+        return {
+            'new condition' => 0,
+            'good condition' => 1,
+            'fair condition' => 2
         }
     end
  
