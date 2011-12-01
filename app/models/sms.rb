@@ -7,7 +7,7 @@ class Sms < Dispatch
     
     def broadcast_now
         sleep(1) # let the circuits clear
-        self.service.constantize.send_sms(self)
+        SkooleSettings.sms_service.constantize.send_sms(self)
     end
    
 end

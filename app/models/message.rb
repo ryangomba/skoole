@@ -11,7 +11,7 @@ class Message < ActiveRecord::Base
     
     def dispatch
         if self.user.sms_enabled then self.queue_sms end
-        if self.user.email_enabled then self.queue_email end
+        #if self.user.email_enabled then self.queue_email end
     end
     
     def queue_sms
