@@ -8,8 +8,9 @@ end
 ##### BASE #####
 
 gem 'rails', '3.1.0'
-gem 'json'
 gem 'jquery-rails'
+gem "rspec"
+gem 'json'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
