@@ -30,7 +30,10 @@ Skoole::Application.configure do
     config.assets.debug = true
 
     config.after_initialize do
+        SkooleSettings.host_url = 'http://buzzruns.com'
         SkooleSettings.queuing = false
+        SkooleSettings.sms_service = 'Nexmo'
+        SkooleSettings.email_service = 'Sendgrid'
     end
 
 end

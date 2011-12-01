@@ -1,0 +1,4 @@
+$('#listing-<%= @listing.id %>').animate({ height: 'toggle', opacity: 'toggle' }, 300, function() {
+	$(this).remove()
+	update_counts()
+})

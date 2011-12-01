@@ -6,7 +6,7 @@ class CreateListings < ActiveRecord::Migration
             t.string :network
             t.integer :book_id
             t.integer :price
-            t.string :condition
+            t.integer :condition
             t.boolean :pending, default: false
 
             t.timestamps
