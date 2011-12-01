@@ -19,7 +19,7 @@ class ListingsController < ApplicationController
             @listing = @book.sell_listings.create(params[:sell_listing]) if params[:sell_listing]
         end
         if @listing.nil?
-            puts "Error saving listing: #{@listing.errors.inspect}"
+            puts "No listing found for this book."
         else
             @listing.match
         end
