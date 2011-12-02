@@ -149,14 +149,16 @@ $lighter-text: #bdcad6;
 .orange-button {
 	@extend .clear-button;
 	color: #fff;
-	@include gradient-3(#fdcaa6, 0%, #ff8d2d, 3%, #f0730b, 100%);
+	@include gradient-3(#fdcaa6, 0%, #f8ac79, 3%, #de7f2c, 100%);
+	font-weight: bold;
+	text-shadow: 0px -1px 1px #333;
 	&:hover {
 		color: #fff;
 		cursor: pointer;
-		@include gradient-3(#fdcaa6, 0%, #ff9d3d, 3%, #ff831b, 100%);
+		@include gradient-3(#fdcaa6, 0%, #ffbf7f, 3%, #ff8f1f, 100%);
 	}
 	&:active {
 		cursor: pointer;
-		@include gradient-3(#ff9d3d, 0%, #ff6d0d, 3%, #f0831b, 100%);
+		@include gradient-3(#ff9d3d, 0%, #ffb075, 3%, #ff8f1f, 100%);
 	}
 }
