@@ -9,6 +9,7 @@ class CreateMatches < ActiveRecord::Migration
             t.integer :seller_listing_id
             t.integer :state
             t.string :network
+            t.boolean :friendly, default: false
 
             t.timestamps
         end
