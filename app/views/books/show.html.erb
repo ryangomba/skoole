@@ -1,12 +1,16 @@
-<% content_for :facebook_head_prefix do %>
-	og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# skoole_local: http://ogp.me/ns/fb/skoole_local#
-<% end %>
+<html>
 
-<% content_for :facebook_head do %>
-	<meta property="fb:app_id"      content="321553274523479" /> 
-	<meta property="og:type"        content="skoole_local:book" /> 
-	<meta property="og:url"         content="http://skoole.com/listings" /> 
-	<meta property="og:title"       content="<%= @book.title %>" /> 
-	<meta property="og:description" content="by <%= @book.author %>" /> 
-	<meta property="og:image"       content="<%= @book.thumbnail %>" />
-<% end %>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# skooledev: http://ogp.me/ns/fb/skooledev#">
+    <meta property="fb:app_id"      content="143680292405619" />
+    <meta property="og:type"        content="skooledev:book" />
+    <meta property="og:url"         content="<%= book_url(@book) %>" />
+    <meta property="og:title"       content="<%= @book.title %>" />
+    <meta property="og:description" content="by <%= @book.author %>" />
+    <meta property="og:image"       content="<%= @book.thumbnail %>" />
+</head>
+
+<body>
+</body>
+
+</html>
+
