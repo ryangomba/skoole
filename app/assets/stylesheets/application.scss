@@ -99,11 +99,11 @@ div#account-wrapper {
 		float: right;		
 		margin-left: 12px;
 		font-size: 16px;		
-		
+		 
 		div {
 			float: left;
 			position: relative;
-			padding: 12px 15px;
+			padding: 12px 12px;
 			&.logout-button {
 				padding: 10px 15px 9px 15px;
 				img {
@@ -111,6 +111,18 @@ div#account-wrapper {
 				}
 				&:hover img {
 					opacity: 0.9;
+				}
+			}
+			&.fb-pic-button {
+				padding: 0px;			
+				img {
+					opacity: 0.9;
+					width: 40px;
+					margin-bottom: -2px;
+					@include border-radius(2px);
+				}
+				&:hover img {
+					opacity: 1;
 				}
 			}
 			&:hover {

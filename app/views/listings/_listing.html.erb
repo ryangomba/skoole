@@ -5,8 +5,10 @@
 		<div class="attributes"><%= @listing.type == 'BuyListing' ? 'Up to' : 'For' %> $<%= @listing.price %>.00, in <%= @listing.condition_name %> condition</div>
 		<div class="status"><%= image_tag('reload.png') %>
 			<% if @listing.pending == true %>
+				<%= image_tag('matched.png') %>
 				Matched
 			<% else %>
+				<%= image_tag('reload.png') %>
 				Searching for matches...
 			<% end %>
 		</div>
