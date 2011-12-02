@@ -42,11 +42,25 @@ class Listing < ActiveRecord::Base
     end
     
     def fetch_matches
-        return Listing.where("book_id = ? AND pending = ? AND network = ? AND user_id != ?
+
+        @acceptable_listings = Listing.where("book_id = ? AND pending = ? AND network = ? AND user_id != ?
             AND type = ? AND price #{self.comparator} ? AND condition #{self.comparator} ?",
             self.book_id, false, self.network, self.user_id,
             "#{self.other_type_name}Listing", self.price, self.condition
         ).oldest
+        
+        @match = self.user.find_friend_match(@acceptable_listings)
+        if @match.nil?
+            is_friend = false
+            puts "No friend match"
+            return @acceptable_listings.first, is_friend
+        else
+            is_friend = true
+            puts "Friend match found"
+            puts @match
+            return @match, is_friend
+        end
+         
     end
     
     ##### CHECK FOR MATCHES
@@ -64,11 +78,15 @@ class Listing < ActiveRecord::Base
         if self.type == 'BuyListing'
             buyer = self.user
             buyer_listing = self
-            seller_listing = self.fetch_matches.first
+            match_result = self.fetch_matches
+            seller_listing = match_result[0]
+            is_friend = match_result[1]
         else
             seller = self.user
             seller_listing = self
-            buyer_listing = self.fetch_matches.first
+            match_result = self.fetch_matches
+            buyer_listing = match_result[0]
+            is_friend = match_result[1]
         end
         
         # unless we found a match, just quit
@@ -89,8 +107,13 @@ class Listing < ActiveRecord::Base
             seller_number_id: seller.new_number().id,
             seller_listing_id: seller_listing.id,
             network: self.network,
+            friendly: is_friend,
             state: 0
         )
+        
+        if m.friendly
+            puts "Friendly match! Awww..."
+        end
 
         # try to save the match
         if !m.save() 

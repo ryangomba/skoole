@@ -22,8 +22,10 @@ class Match < ActiveRecord::Base
     
     # confirm with the buyer
     def confirm_with_buyer
+        
         puts 'Creating buyer confirmation message'
         seller_name = self.seller.first_name
+        if self.friendly then seller_name = "your friend #{self.seller.full_name}" end
         book_title = self.seller_listing.book.title.titleize
         price = self.seller_listing.price
         msg = self.messages.create(
@@ -39,6 +41,7 @@ class Match < ActiveRecord::Base
     def confirm_with_seller
         puts 'Creating seller confirmation message'
         buyer_name = self.buyer.first_name
+        if self.friendly then buyer_name = "your friend #{self.buyer.full_name}" end
         book_title = self.seller_listing.book.title.titleize
         price = self.seller_listing.price
         
@@ -115,7 +118,7 @@ class Match < ActiveRecord::Base
             puts "Received message from buyer re: confirmation"
             if yesno
                 puts "Buyer wants to buy! We'll check with the seller..."
-                self.confirm_with_seller
+                self.confirm_with_seller*()
                 self.state = 1
                 self.save
             else
