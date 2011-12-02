@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
             render nothing: true and return
         end
         
-        Message.process_incoming(from, to, msg)       
+        Message.process_incoming(from, to, msg, 'sms')
         render nothing: true
     end
     
@@ -35,20 +35,20 @@ class MessagesController < ApplicationController
         to = params[:To].gsub(/\D/, '')
         msg = params[:Body]
         
-        Message.process_incoming_sms(from, to, msg)       
+        Message.process_incoming(from, to, msg, 'sms')
         render nothing: true
     end
     
     def twilio_voice
         incoming_from = params[:Caller].gsub(/\D/, '')
         incoming_to = params[:Called].gsub(/\D/, '')
-        response = Message.process_incoming_voice(incoming_from, incoming_to)
+        response = Message.process_incoming(incoming_from, incoming_to, nil, 'voice')
         if response.nil?
             render :file => 'twilio/invalid.xml', :content_type => Mime::XML and return
         else
             @from, @to = response
             render :file => 'twilio/voice.xml', :content_type => Mime::XML and return
-        else
+        end
     end
 
 end
