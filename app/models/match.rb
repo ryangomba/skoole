@@ -175,8 +175,8 @@ class Match < ActiveRecord::Base
         return m
     end
     
-    def action(user)
-        if user.id = self.seller_id then return 'sold' end
+    def role(user)
+        if user.id == self.seller_id then return 'sold' end
         return 'bought'
     end
     
