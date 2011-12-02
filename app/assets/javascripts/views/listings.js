@@ -8,6 +8,10 @@ $(document).ready(function() {
         $('.overlay').fadeOut('fast');
     });
 
+	$(document).delegate(".overlay .exit", "click", function() {
+        $('.overlay').fadeOut('fast');
+    });
+
 })
 
 function update_counts() {
