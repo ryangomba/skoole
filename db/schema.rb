@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20111128233307) do
     t.integer  "seller_listing_id"
     t.integer  "state"
     t.string   "network"
+    t.boolean  "friendly",          :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

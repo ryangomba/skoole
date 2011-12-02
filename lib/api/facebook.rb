@@ -15,4 +15,11 @@ class Facebook
         }).inspect
     end
     
+    def self.user_friends(f_id, token)
+        puts "/#{f_id}/friends"
+        response = get("/#{f_id}/friends", query: {
+            access_token: token
+        })
+        return response["data"]
+    end
 end
