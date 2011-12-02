@@ -19,6 +19,7 @@ Skoole::Application.routes.draw do
     
     resources :users
     match 'matches' => 'users#show'
+    match 'poll_listings' => 'listings#poll'
 
     # CALLBACKS
     

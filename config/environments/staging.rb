@@ -34,6 +34,7 @@ Skoole::Application.configure do
         SkooleSettings.queuing = false
         SkooleSettings.sms_service = 'Twilio'
         SkooleSettings.email_service = 'Sendgrid'
-    end
+        SkooleSettings.polling = false 
+   end
 
 end

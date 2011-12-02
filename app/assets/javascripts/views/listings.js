@@ -1,9 +1,9 @@
 window.setInterval(poll, 2000);
 
 function poll() {
-    if ($('#lists-container').length > 0) {
+    if (polling == true && $('#lists-container').length > 0) {
 	$.ajax({
-	    url: '/listings',
+	    url: '/poll_listings',
 		type: 'get',
 		dataType: 'script'
 	})
