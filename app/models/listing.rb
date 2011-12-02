@@ -1,3 +1,5 @@
+require 'api/facebook'
+
 class Listing < ActiveRecord::Base
     scope :oldest, order('created_at ASC')
     
@@ -57,7 +59,12 @@ class Listing < ActiveRecord::Base
     
     def perform
         puts "Looking for a match now..."
+        self.post_now
         self.match_now
+    end
+    
+    def post_now
+        Facebook.listed(self)
     end
     
     def match_now        
