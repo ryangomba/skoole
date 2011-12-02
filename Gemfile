@@ -37,6 +37,7 @@ gem 'therubyracer'
 
 group :development do
     gem 'sqlite3'
+    gem 'heroku'
 end
 
 ##### PRODUCTION #####
