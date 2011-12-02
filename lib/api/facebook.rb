@@ -49,14 +49,25 @@ class Facebook
     
     def self.matched(user, match)
         puts "Posting the match to facebook"
-        puts post("/#{user.f_id}/#{APP_NAMESPACE}:#{match.action(user)}", query: {
-            book: "#{SkooleSettings.host_url}/books/#{match.book_id}",
-            classmate: "a classmate",
-            friend: nil,
+        if match.friendly
+            puts 'friendly'
+            school = "#{user.school.name} classmate"
+            friend = "http://www.facebook.com/#{match.other_user(user).f_username}"
+        else
+            school = "a #{user.school.name} classmate"
+            friend = nil
+        end
+        puts "friend (#{match.other_user(user).f_username}): #{friend}"
+        r = post("/#{user.f_id}/#{APP_NAMESPACE}:#{match.role(user)}", query: {
+            book: "#{SkooleSettings.host_url}/books/#{match.seller_listing.book_id}",
+            school: school,
+            user: friend,
             price: match.price,
             savings: match.savings,
-            access_token: listing.user.f_token
-        }).inspect
+            access_token: user.f_token
+        })
+        puts r.inspect
+        puts r.request.inspect
     end
     
 end

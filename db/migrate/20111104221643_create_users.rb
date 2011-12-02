@@ -15,6 +15,7 @@ class CreateUsers < ActiveRecord::Migration
             
             t.string :f_id
             t.string :f_token
+            t.string :f_username
 
             t.timestamps
         end

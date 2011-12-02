@@ -135,8 +135,8 @@ class Listing < ActiveRecord::Base
         if buyer_listing.save && seller_listing.save
             puts 'MATCH FOUND!'
             m.first_message
-            Facebook.matched(buyer, self)
-            Facebook.macthed(seller, self)
+            Facebook.matched(buyer, m)
+            Facebook.matched(seller, m)
         else
             puts "Error marking listings as pending: #{buyer_listing.errors.inspect}, #{seller_listing.errors.inspect}"
         end

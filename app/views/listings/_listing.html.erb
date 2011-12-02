@@ -2,7 +2,7 @@
 	<%= image_tag @listing.book.thumbnail, class: 'thumbnail' %>
 	<div class="info">
 		<h2><%= @listing.book.title.titleize %></h2>
-		<div class="attributes">Up to $<%= @listing.price %>.00, in <%= @listing.condition_name %> condition</div>
+		<div class="attributes"><%= @listing.type == 'BuyListing' ? 'Up to' : 'For' %> $<%= @listing.price %>.00, in <%= @listing.condition_name %> condition</div>
 		<div class="status"><%= image_tag('reload.png') %>
 			<% if @listing.pending == true %>
 				Matched
