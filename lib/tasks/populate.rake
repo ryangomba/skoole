@@ -25,14 +25,25 @@ namespace :populate do
 	end
 	
 	desc "Populate database with a few users"
-	task :users =>:environment do
+	task :users => :environment do
 	    User.create(
-	        :name => 'Ryan Gomba',
-	        :email => 'ryan@ryangomba.com',
-	        :sms => '18457026112',
-	        :provider => 'facebook',
-	        :uid => '779018113'
+	        name: 'Ryan Gomba',
+	        email: 'ryan@ryangomba.com',
+	        sms: '18457026112',
+	        provider: 'facebook',
+	        uid: '779018113'
 	    )
+    end
+    
+    desc "Populate database with a book"
+    task :books => :environment do
+        Book.create(
+            isbn: '9780061857638',
+            title: 'Lost Memory of Skin',
+            author: 'Russell Banks',
+            thumbnail: 'http://bks8.books.google.com/books?id=Lut88YAqmkUC&printsec=frontcover&img=1&zoom=5&source=gbs_api',
+            published: Time.new(2011,9,27).to_date
+        )
     end
 	
 end

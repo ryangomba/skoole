@@ -35,7 +35,7 @@ gem 'therubyracer'
 
 ##### DEVELOPMENT #####
 
-group :development, :staging do
+group :development do
     gem 'sqlite3'
     gem 'heroku'
 end

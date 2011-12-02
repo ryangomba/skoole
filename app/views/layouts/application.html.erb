@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head prefix="<%= yield :facebook_head_prefix %>">
 	<title>Skoole</title>
 	<meta name="robots" content="noindex">
+	<%= yield :facebook_head %>
     <script src='http://connect.facebook.net/en_US/all.js'></script>
 	<%= javascript_include_tag "application", "env/#{Rails.env}", :cache => "cache/all" %>
 	<%= stylesheet_link_tag "application", :cache => "cache/all" %>
