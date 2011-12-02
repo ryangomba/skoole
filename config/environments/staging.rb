@@ -31,10 +31,10 @@ Skoole::Application.configure do
 
     config.after_initialize do
         SkooleSettings.host_url = 'http://buzzruns.com'
-        SkooleSettings.queuing = false
+        SkooleSettings.queuing = true
         SkooleSettings.sms_service = 'Twilio'
         SkooleSettings.email_service = 'Sendgrid'
-        SkooleSettings.polling = false 
+        SkooleSettings.polling = true
    end
 
 end
