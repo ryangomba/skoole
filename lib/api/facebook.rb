@@ -29,15 +29,15 @@ class Facebook
             access_token: token
         }).inspect
     end
- 
-    def self.user_friends(f_id, token)
+    d
+ef self.user_friends(f_id, token)
         puts "/#{f_id}/friends"
         response = get("/#{f_id}/friends", query: {
             access_token: token
         })
         return response["data"]
     end
-   
+    
     def self.listed(listing)
         puts "Posting the listing to facebook"
         puts post("/#{listing.user.f_id}/#{APP_NAMESPACE}:#{listing.type_name.downcase}", query: {
@@ -51,6 +51,8 @@ class Facebook
         puts "Posting the match to facebook"
         puts post("/#{user.f_id}/#{APP_NAMESPACE}:#{match.action(user)}", query: {
             book: "#{SkooleSettings.host_url}/books/#{match.book_id}",
+            classmate: "a classmate",
+            friend: nil,
             price: match.price,
             savings: match.savings,
             access_token: listing.user.f_token
