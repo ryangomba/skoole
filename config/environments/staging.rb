@@ -30,7 +30,7 @@ Skoole::Application.configure do
     config.assets.debug = true
 
     config.after_initialize do
-        SkooleSettings.host_url = 'http://localhost:3000'
+        SkooleSettings.host_url = 'http://buzzruns.com'
         SkooleSettings.queuing = false
         SkooleSettings.sms_service = 'Twilio'
         SkooleSettings.email_service = 'Sendgrid'

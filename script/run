@@ -1,1 +1,1 @@
-rvmsudo rails server -p 80
+rvmsudo rails server -p 80 -e staging
