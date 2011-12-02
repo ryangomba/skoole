@@ -21,10 +21,10 @@ Skoole::Application.routes.draw do
 
     # CALLBACKS
     
-    match 'twilio/sms' => 'twilio#sms'
-    match 'twilio/voice' => 'twilio#voice'
+    match 'twilio/sms' => 'messages#twilio_sms'
+    match 'twilio/voice' => 'messages#twilio_voice'
     
-    match 'sms_in' => 'messages#sms_in'
-    match 'email_in' => 'messages#email_in'
+    match 'sms_in' => 'messages#nexmo_sms'
+    match 'email_in' => 'messages#sendgrid_email'
 
 end

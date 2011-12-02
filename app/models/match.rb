@@ -105,7 +105,7 @@ class Match < ActiveRecord::Base
     
     ##### MESSAGE LOGIC
     
-    def respond(sender, msg)
+    def respond_to_sms(sender, msg)
         
         yesno = msg.downcase[0].chr == 'y'
 
@@ -152,6 +152,14 @@ class Match < ActiveRecord::Base
             # TODO should send an error message
             puts "Message unexpected (state didn't match)"
             
+        end
+        
+    end
+    
+    def respond_to_voice(sender, msg)
+        
+        if self.state == 2 && recipient = self.other_user(sender)
+            return number_for_user_id(recipient), recipient.sms
         end
         
     end
