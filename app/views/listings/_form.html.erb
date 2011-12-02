@@ -9,8 +9,10 @@
 		<%= form_for listing, url: listings_path, remote: true, :html => { class: "new_listing_form"} do |f| %>
 
 		<div class="field-box isbn-field">
-			<%= text_field_tag :isbn, value = 'ISBN', class: 'empty' %>
+			<input autocomplete="off" class="isbn-text-field empty" id="<%= "#{listing.type_name.downcase}-isbn" %>" name="isbn" type="text" value="ISBN">
 		</div>
+		
+		<ul id="matched-books" style="display: none;"></ul>
 
 		<div class="field-box price-field">
 			<%= f.label :price, '$' %>

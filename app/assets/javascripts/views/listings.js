@@ -31,12 +31,12 @@ function update_counts() {
 	$('#SellListing.section .count').html($('#SellListing.section .listing').length)
 }
 
-$(document).delegate('form.new_listing_form input#isbn', 'focus', function() {
+$(document).delegate('form.new_listing_form input.isbn-text-field', 'focus', function() {
 	if ($(this).val() == 'ISBN') $(this).val('')
 	$(this).removeClass('empty')
 });
 
-$(document).delegate('form.new_listing_form input#isbn', 'blur', function() {
+$(document).delegate('form.new_listing_form input.isbn-text-field', 'blur', function() {
 	if ($(this).val() == '') {
 		$(this).val('ISBN')
 		$(this).addClass('empty')

@@ -52,10 +52,22 @@
 			position: relative;
 			&.isbn-field input {
 				width: 398px;
-				margin-bottom: 15px;
 				&.empty {
 					color: #777;
 				}
+				
+				
+				&.autocomplete {
+					margin-top: 100px;
+					@include border-radii(4px, 4px, 0px, 0px);
+				}
+				
+				
+				
+				
+			}
+			&.price-field, &.conditions-field {
+				margin-top: 15px;
 			}
 			&.price-field {
 				float: left;
@@ -106,6 +118,43 @@
 			display: inline-block;
 			padding: 10px 20px;
 			font-size: 18px;
+		}
+		// AUTOCOMPLETE
+		#matched-books {
+			max-height: 200px;
+			overflow: auto;
+			margin: 0;
+			list-style-type: none;
+			color: #000000;
+			width: 418px;
+			background-color: #F7F7F7;
+			border: 1px solid #BBBBBB;
+			border-radius: 0px 0px 4px 4px;
+			box-shadow: 0 2px 2px #DDDDDD inset;
+			padding: 10px 0;
+			font-size: 18px;
+			text-shadow: 0 1px 0 #FFFFFF;
+			font-family: 'Helvetica Neue', Helvetica;
+			li {
+				margin: 0;
+				padding: 10px;
+				cursor: pointer;
+				&:nth-child(even) {
+					background-color: #E6E6E6;
+				}
+				&:hover .class-section {
+					border-bottom: 1px solid #CCCCCC;
+				}
+			}
+			.num-books {
+				font-size: 80%;
+				float: right;
+				margin-right: 10px;
+				color: #AAAAAA;
+			}
+			.isbn, .price-new {
+				font-size: 60%;
+			}
 		}
 	}
 

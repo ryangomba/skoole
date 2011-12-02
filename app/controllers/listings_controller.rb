@@ -23,7 +23,9 @@ class ListingsController < ApplicationController
         render 'create'
     end
 
-    def create        
+    def create
+        puts params.inspect
+        
         if @book = Book.via_isbn(params[:isbn])
             @listing = @book.buy_listings.create(params[:buy_listing]) if params[:buy_listing]
             @listing = @book.sell_listings.create(params[:sell_listing]) if params[:sell_listing]
