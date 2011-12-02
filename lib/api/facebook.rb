@@ -32,7 +32,7 @@ class Facebook
     
     def self.listed(listing)
         puts "Posting the listing to facebook"
-        puts post("/#{listing.user.f_id}/#{APP_NAMESPACE}:list", query: {
+        puts post("/#{listing.user.f_id}/#{APP_NAMESPACE}:#{listing.type_name.downcase}", query: {
             book: "#{SkooleSettings.host_url}/books/#{listing.book_id}",
             price: listing.price,
             access_token: listing.user.f_token
