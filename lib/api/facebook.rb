@@ -43,6 +43,8 @@ class Facebook
         puts "Posting the match to facebook"
         puts post("/#{user.f_id}/#{APP_NAMESPACE}:#{match.action(user)}", query: {
             book: "#{SkooleSettings.host_url}/books/#{match.book_id}",
+            classmate: "a classmate",
+            friend: nil,
             price: match.price,
             savings: match.savings,
             access_token: listing.user.f_token
