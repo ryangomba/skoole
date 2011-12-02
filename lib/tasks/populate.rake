@@ -47,7 +47,7 @@ namespace :populate do
     end
     
     desc "Populate database with schools"
-    task :books => :environment do
+    task :schools => :environment do
         School.create(
             name: "Georgia Tech",
             url: 'http://gatech.edu',

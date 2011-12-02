@@ -41,7 +41,7 @@ class Message < ActiveRecord::Base
         if kind == 'sms'
             puts "RECEIVED SMS from #{from} to #{to}: \"#{msg}\""
         else
-            puts "RECEIVED SMS from #{from} to #{to}: \"#{msg}\""
+            puts "RECEIVED voice call from #{from} to #{to}: \"#{msg}\""
         end
         
         sender = User.find_by_sms(from)

@@ -6,14 +6,14 @@ ryan:
     network: gatech
     sms: 18457026112
     f_id: 779018113
-    f_token: AAACCrSzKQXMBANZCzNT67cZC1nN11ZCRncsDQhuqbFfLYULYN9bzyfCZBkVvCLjF9D8yO6uib32LIvhhCMwXmpjxeBFMO5kZD
+    f_token: AAACCrSzKQXMBABg1qXxV4QxXRuByarVChCLPIeGHm2TfPyYWNo1MKjZAgSLzQTyXx92gG8Y93GiCnKmZAzHfQ8ZB79xgFkZD
     
 george:
-    first_name: George
-    last_name: Gomba
-    image: http://graph.facebook.com/100003129847741/picture?type=square
-    email: boo@gatech.edu
+    first_name: Doug
+    last_name: Black
+    image: http://graph.facebook.com/1402050291/picture?type=square
+    email: dougblack@gatech.edu
     network: gatech
-    sms: 18457026112
-    f_id: 100003129847741
-    f_token: AAACCrSzKQXMBADV27TBAEC5rx3NJI0KEbG2nZCYkE5uck9MBMYSIhkZCZCS1fKFYI368SKrAZAku6ggf9VFL8yl4bHL1TtAbJX60xSmRYAZDZD
+    sms: 14159350827
+    f_id: 1402050291
+    f_token: AAACCrSzKQXMBAOoVMot1TUY1dNHhuZB1QnZAlo2zuhllqdNanxLhR1sZCP5OrUMuSyng6h80bi2WKgMTRM2Vc5bIDv3ZCfsZD

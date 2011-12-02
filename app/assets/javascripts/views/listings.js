@@ -1,3 +1,15 @@
+window.setInterval(poll, 2000);
+
+function poll() {
+    if ($('#lists-container').length > 0) {
+	$.ajax({
+	    url: '/listings',
+		type: 'get',
+		dataType: 'script'
+	})
+    }
+}
+
 $(document).ready(function() {
 	
     $(document).delegate(".add", "click", function() {

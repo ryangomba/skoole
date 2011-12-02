@@ -4,7 +4,7 @@ class MatchListingsTest < ActionDispatch::IntegrationTest
     fixtures :users, :listings, :books, :numbers
 
     def teardown
-        Delayed::Worker.new.work_off
+        if SkooleSettings.queuing then Delayed::Worker.new.work_off end
     end
 
     test "match_buy_listing" do
