@@ -172,6 +172,11 @@ class Match < ActiveRecord::Base
         return m
     end
     
+    def action(user)
+        if user.id = self.seller_id then return 'sold' end
+        return 'bought'
+    end
+    
     def other_user(user)
         if user.id == self.buyer.id
             return self.seller
@@ -184,6 +189,14 @@ class Match < ActiveRecord::Base
     def number_for_user_id(user_id)
         if user_id == self.buyer_id then return self.buyer_number end
         return self.seller_number
+    end
+    
+    def price
+        return self.seller_listing.price
+    end
+    
+    def savings
+        10
     end
     
 end
