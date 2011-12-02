@@ -17,8 +17,8 @@ class ListingsController < ApplicationController
     def poll
         time = Time.now
         @polling = true
-        @listing = Listing.last
-        if @listing.created_at < session[:last_request] then @listing = nil end
+        @listing = @current_user.listings.last
+        if @listing && @listing.created_at < session[:last_request] then @listing = nil end
         session[:last_request] = time
         render 'create'
     end
