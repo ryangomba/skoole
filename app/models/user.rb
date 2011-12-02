@@ -66,6 +66,10 @@ class User < ActiveRecord::Base
         "#{self.first_name} #{self.last_name}"
     end
     
+    def school
+        School.find_by_domain(self.network)
+    end
+    
     ##### MESSAGING #####
     
     def new_number

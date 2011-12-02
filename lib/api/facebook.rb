@@ -50,7 +50,8 @@ class Facebook
     def self.matched(user, match)
         puts "Posting the match to facebook"
         if match.friendly
-            classmate = ""
+            puts 'friendly'
+            classmate = nil
             friend = "http://graph.facebook.com/#{match.other_user(user).f_id}"
         else
             classmate = "a classmate"
@@ -59,6 +60,7 @@ class Facebook
         r = post("/#{user.f_id}/#{APP_NAMESPACE}:#{match.role(user)}", query: {
             book: "#{SkooleSettings.host_url}/books/#{match.seller_listing.book_id}",
             classmate: classmate,
+            school: user.school.name,
             user: friend,
             price: match.price,
             savings: match.savings,
