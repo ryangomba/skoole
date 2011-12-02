@@ -51,16 +51,16 @@ class Facebook
         puts "Posting the match to facebook"
         if match.friendly
             puts 'friendly'
-            classmate = nil
-            friend = "http://graph.facebook.com/#{match.other_user(user).f_id}"
+            school = "#{user.school.name} classmate"
+            friend = "http://www.facebook.com/#{match.other_user(user).f_username}"
         else
-            classmate = "a classmate"
+            school = "a #{user.school.name} classmate"
             friend = nil
         end
+        puts "friend (#{match.other_user(user).f_username}): #{friend}"
         r = post("/#{user.f_id}/#{APP_NAMESPACE}:#{match.role(user)}", query: {
             book: "#{SkooleSettings.host_url}/books/#{match.seller_listing.book_id}",
-            classmate: classmate,
-            school: user.school.name,
+            school: school,
             user: friend,
             price: match.price,
             savings: match.savings,

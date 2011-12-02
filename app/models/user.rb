@@ -33,10 +33,12 @@ class User < ActiveRecord::Base
     end
     
     def self.create_with_facebook(fb)
+        puts fb['extra']['raw_info'].inspect
         user = find_by_f_id(fb["uid"])
         user ? user : create(
             f_id: fb["uid"],
             f_token: fb["credentials"]["token"],
+            f_username: fb["extra"]['raw_info']["username"],
             first_name: fb["info"]["first_name"],
             last_name: fb["info"]["last_name"],
             email: fb["info"]["email"],

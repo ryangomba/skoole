@@ -1,6 +1,6 @@
 class CreateSchools < ActiveRecord::Migration
     def change
-        create_table :dispatches do |t|
+        create_table :schools do |t|
             t.string :url
             t.string :domain
             t.string :name
