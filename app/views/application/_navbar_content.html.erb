@@ -13,6 +13,10 @@
 
 <% elsif @current_user %>
 
+<a class="nav-item fb-pic" href="facebook.com/#{@current_user.f_id}">
+	<div class="fb-pic-button"><%= image_tag(@current_user.image) %></div>
+</a>
+
 <a class="nav-item users-authorized" href="/authorized" data-method="get" data-remote="true">
 	<div><%= @current_user.ready ? 'Coming Soon' : 'Get Started' %></div>
 </a>
