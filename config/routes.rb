@@ -12,6 +12,7 @@ Skoole::Application.routes.draw do
 
     root to: 'site#welcome'
     
+    resources :books
     resources :listings
     resources :buy_listings, :controller => :listings, :listing_type => 'BuyListing'
     resources :sell_listings, :controller => :listings, :listing_type => 'SellListing'
