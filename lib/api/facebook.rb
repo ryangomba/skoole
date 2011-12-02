@@ -29,7 +29,15 @@ class Facebook
             access_token: token
         }).inspect
     end
-    
+ 
+    def self.user_friends(f_id, token)
+        puts "/#{f_id}/friends"
+        response = get("/#{f_id}/friends", query: {
+            access_token: token
+        })
+        return response["data"]
+    end
+   
     def self.listed(listing)
         puts "Posting the listing to facebook"
         puts post("/#{listing.user.f_id}/#{APP_NAMESPACE}:#{listing.type_name.downcase}", query: {

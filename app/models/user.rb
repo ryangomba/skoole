@@ -44,6 +44,22 @@ class User < ActiveRecord::Base
         )
     end
     
+    def find_friend_match(listings)
+        
+        puts "Searching through friends for matches..."
+        friend_array = Facebook.user_friends(self.f_id, self.f_token)
+        listings.each do |listing|
+            puts listing.user.f_id
+            friend_array.each do |friend|
+                if listing.user.f_id == friend["id"]
+                    puts "Friend match found!!"
+                    return listing
+                end
+            end
+        end
+        return nil
+    end
+    
     ##### HELPERS #####
     
     def full_name
