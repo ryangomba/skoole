@@ -47,6 +47,7 @@ class MessagesController < ApplicationController
             render :file => 'twilio/invalid.xml', :content_type => Mime::XML and return
         else
             @from, @to = response
+            puts "Sending voice call from #{@from} to #{@to}"
             render :file => 'twilio/voice.xml', :content_type => Mime::XML and return
         end
     end

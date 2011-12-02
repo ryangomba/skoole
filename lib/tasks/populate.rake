@@ -45,5 +45,14 @@ namespace :populate do
             published: Time.new(2011,9,27).to_date
         )
     end
+    
+    desc "Populate database with schools"
+    task :schools => :environment do
+        School.create(
+            name: "Georgia Tech",
+            url: 'http://gatech.edu',
+            domain: 'gatech'
+        )
+    end
 	
 end

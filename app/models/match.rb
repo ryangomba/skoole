@@ -118,7 +118,7 @@ class Match < ActiveRecord::Base
             puts "Received message from buyer re: confirmation"
             if yesno
                 puts "Buyer wants to buy! We'll check with the seller..."
-                self.confirm_with_seller*()
+                self.confirm_with_seller
                 self.state = 1
                 self.save
             else
@@ -162,7 +162,8 @@ class Match < ActiveRecord::Base
     def respond_to_voice(sender, msg)
         
         if self.state == 2 && recipient = self.other_user(sender)
-            return number_for_user_id(recipient), recipient.sms
+            puts "sender is #{sender.first_name} and recipient is #{recipient.first_name}"
+            return number_for_user_id(recipient).number, recipient.sms
         end
         
     end
@@ -175,8 +176,8 @@ class Match < ActiveRecord::Base
         return m
     end
     
-    def action(user)
-        if user.id = self.seller_id then return 'sold' end
+    def role(user)
+        if user.id == self.seller_id then return 'sold' end
         return 'bought'
     end
     
