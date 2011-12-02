@@ -12,7 +12,7 @@
 			<input autocomplete="off" class="isbn-text-field empty" id="<%= "#{listing.type_name.downcase}-isbn" %>" name="isbn" type="text" value="ISBN">
 		</div>
 		
-		<ul id="matched-books" style="display: none;"></ul>
+		<ul id="<%= "#{listing.type_name.downcase}-matched-books" %>" style="display: none;"></ul>
 
 		<div class="field-box price-field">
 			<%= f.label :price, '$' %>
