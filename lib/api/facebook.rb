@@ -29,8 +29,8 @@ class Facebook
             access_token: token
         }).inspect
     end
-    d
-ef self.user_friends(f_id, token)
+    
+    def self.user_friends(f_id, token)
         puts "/#{f_id}/friends"
         response = get("/#{f_id}/friends", query: {
             access_token: token
