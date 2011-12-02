@@ -176,7 +176,7 @@ DEPENDENCIES
   pg
   rails (= 3.1.0)
   rspec
-  sass-rails (~> 3.1.0)
+  sass-rails
   sqlite3
   therubyracer
   thin
