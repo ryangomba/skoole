@@ -34,6 +34,7 @@ class Facebook
         puts "Posting the listing to facebook"
         puts post("/#{listing.user.f_id}/#{APP_NAMESPACE}:list", query: {
             book: "#{SkooleSettings.host_url}/books/#{listing.book_id}",
+            price: listing.price,
             access_token: listing.user.f_token
         }).inspect
     end
