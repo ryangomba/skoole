@@ -1,0 +1,1 @@
+rake jobs:work RAILS_ENV=staging
