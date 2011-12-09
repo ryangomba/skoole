@@ -24,8 +24,6 @@ $(document).ready(function() {
         $('.overlay').fadeOut('fast')
     });
 
-	$('input.isbn-text-field').val(LISTING_PROMPT_TEXT)
-
 	$(document).delegate('form.new_listing_form input.isbn-text-field', 'focus', function() {
 		if ($(this).val() == LISTING_PROMPT_TEXT) $(this).val('')
 		$(this).removeClass('empty')
@@ -39,6 +37,10 @@ $(document).ready(function() {
 	});
 
 })
+
+function clear_forms() {
+	$('input.isbn-text-field').val(LISTING_PROMPT_TEXT)
+}
 
 function update_counts() {
 	$('#BuyListing.section .count').html($('#BuyListing.section .listing').length)
