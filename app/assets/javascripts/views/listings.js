@@ -17,12 +17,26 @@ $(document).ready(function() {
     });
 
     $(document).delegate('.overlay form', 'submit', function() {
-        $('.overlay').fadeOut('fast');
+        $('.overlay').fadeOut('fast')
     });
 
 	$(document).delegate(".overlay .exit", "click", function() {
-        $('.overlay').fadeOut('fast');
+        $('.overlay').fadeOut('fast')
     });
+
+	$('input.isbn-text-field').val(LISTING_PROMPT_TEXT)
+
+	$(document).delegate('form.new_listing_form input.isbn-text-field', 'focus', function() {
+		if ($(this).val() == LISTING_PROMPT_TEXT) $(this).val('')
+		$(this).removeClass('empty')
+	});
+
+	$(document).delegate('form.new_listing_form input.isbn-text-field', 'blur', function() {
+		if ($(this).val() == '') {
+			$(this).val(LISTING_PROMPT_TEXT)
+			$(this).addClass('empty')
+		}
+	});
 
 })
 
@@ -30,15 +44,3 @@ function update_counts() {
 	$('#BuyListing.section .count').html($('#BuyListing.section .listing').length)
 	$('#SellListing.section .count').html($('#SellListing.section .listing').length)
 }
-
-$(document).delegate('form.new_listing_form input.isbn-text-field', 'focus', function() {
-	if ($(this).val() == 'ISBN') $(this).val('')
-	$(this).removeClass('empty')
-});
-
-$(document).delegate('form.new_listing_form input.isbn-text-field', 'blur', function() {
-	if ($(this).val() == '') {
-		$(this).val('ISBN')
-		$(this).addClass('empty')
-	}
-});
