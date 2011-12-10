@@ -100,6 +100,10 @@ div#account-wrapper {
 		margin-left: 12px;
 		font-size: 16px;		
 		 
+		&.fb-pic:hover {
+			cursor: default;
+		}
+		
 		div {
 			float: left;
 			position: relative;
@@ -114,15 +118,14 @@ div#account-wrapper {
 				}
 			}
 			&.fb-pic-button {
-				padding: 0px;			
+				padding: 0px;
+				height: 40px;
+				width: 40px;			
 				img {
-					opacity: 0.9;
+					opacity: 1;
 					width: 40px;
 					margin-bottom: -2px;
 					@include border-radius(2px);
-				}
-				&:hover img {
-					opacity: 1;
 				}
 			}
 			&:hover {

@@ -6,6 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree ./vars
 //= require_tree ./views
 
 $(document).ready(function() {

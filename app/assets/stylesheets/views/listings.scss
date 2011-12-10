@@ -52,10 +52,22 @@
 			position: relative;
 			&.isbn-field input {
 				width: 398px;
-				margin-bottom: 15px;
 				&.empty {
 					color: #777;
 				}
+				
+				
+				&.autocomplete {
+					@include border-radii(4px, 4px, 0px, 0px);
+					border-bottom: 0px;
+				}
+				
+				
+				
+				
+			}
+			&.price-field, &.conditions-field {
+				margin-top: 20px;
 			}
 			&.price-field {
 				float: left;
@@ -75,6 +87,7 @@
 			&.conditions-field {
 				float: right;
 				select {
+					color: #666;
 					width: 220px;
 					-webkit-appearance: none;
 					padding: 10px;
@@ -106,6 +119,70 @@
 			display: inline-block;
 			padding: 10px 20px;
 			font-size: 18px;
+		}
+		// AUTOCOMPLETE
+		#buy-matched-books,
+		#sell-matched-books {
+			max-height: 210px;
+			overflow: auto;
+			margin: 0;
+			list-style-type: none;
+			width: 418px;
+			background-color: #f8f8f8;
+			border: 1px solid #BBBBBB;
+			border-radius: 0px 0px 4px 4px;
+			padding: 0px;
+			font-size: 18px;
+			text-shadow: 0px 1px 0px #fff;
+			font-family: 'Helvetica Neue', Helvetica;
+			li {
+				margin: 0;
+				padding: 12px 10px;
+				cursor: pointer;
+				color: #999;
+				&:hover {
+					background-color: #dfdfdf;
+					color: #222;
+				}
+				&:nth-child(even) {
+					background-color: #e9e9e9;
+					&:hover {
+						background-color: #ddd;
+						color: #222;
+					}
+				}
+				-webkit-transition-property: color, background;
+				-webkit-transition-duration: 300ms, 300ms;
+			}
+			.num-books {
+				font-size: 80%;
+				float: right;
+				margin-right: 10px;
+				color: #AAAAAA;
+				&:hover {
+					color: #222;
+				}
+				-webkit-transition-property: color, background;
+				-webkit-transition-duration: 300ms, 300ms;
+			}
+			li.selected-book-info {
+				padding: 20px 10px;
+				background-color: #fcfcfc;
+				@include border-radii(0px, 0px, 2px, 2px);
+			}
+			p.title {
+				font-size: 20px;
+				color: #444;
+				margin-bottom: 8px;
+			}
+			p.prices {
+				font-size: 16px;
+				color: #666;
+				span {
+					font-weight: bold;
+					color: #444;
+				}
+			}
 		}
 	}
 
