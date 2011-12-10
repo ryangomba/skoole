@@ -3,7 +3,7 @@
 	<div class="info">
 		<h2><%= @listing.book.title.titleize %></h2>
 		<div class="attributes"><%= @listing.type == 'BuyListing' ? 'Up to' : 'For' %> $<%= @listing.price %>.00, in <%= @listing.condition_name %> condition</div>
-		<div class="status"><%= image_tag('reload.png') %>
+		<div class="status">
 			<% if @listing.pending == true %>
 				<%= image_tag('matched.png') %>
 				Matched

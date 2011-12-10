@@ -1,1 +1,2 @@
+rake jobs:work RAILS_ENV=staging &
 rvmsudo rails server -p 80 -e staging
