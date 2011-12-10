@@ -3,7 +3,7 @@ import urllib
 import time
 
 h = httplib2.Http(".cache")
-callback_url = "http://dev.skoole.com/pop"
+callback_url = "http://dev.skoole.com:1337/pop"
 localhost = "http://localhost:3000"
 
 def poll():
