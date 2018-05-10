@@ -1,7 +1,0 @@
-$('#tabs').html('<%= escape_javascript(render "application/navbar_content")%>')
-var page = '<%= "#{params[:controller]}-#{params[:action]}" %>'
-$('a.nav-item').each(function() {
-	if ($(this).hasClass(page)) $(this).addClass('selected')
-	else $(this).removeClass('selected')
-})
-getLoginStatus()

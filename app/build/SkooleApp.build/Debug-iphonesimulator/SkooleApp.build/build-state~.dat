@@ -1,0 +1,793 @@
+TSkooleApp
+v4
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Info.plist SkooleApp-Info.plist
+cCpResource Resources/Icon@2x.png build/Debug-iphonesimulator/Demo.app/Icon@2x.png
+cCopyPlistFile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitInfo.plist Libraries/ScannerKit/Resources/ScannerKitInfo.plist
+cCpResource Resources/Icon.png build/Debug-iphonesimulator/Demo.app/Icon.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitBackIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitLaser.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaser.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaser@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitLogo.png build/Debug-iphonesimulator/Demo.app/ScannerKitLogo.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitLogo@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitOverlay.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow@2x.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable.png
+cCpResource Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable@2x.png
+cCpResource Resources/bg.png build/Debug-iphonesimulator/Demo.app/bg.png
+cCopyStringsFile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/en.lproj/Localizable.strings Libraries/ScannerKit/Resources/en.lproj/Localizable.strings
+cCpResource Resources/bg@2x.png build/Debug-iphonesimulator/Demo.app/bg@2x.png
+cCompileXIB /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.xib
+cProcessPCH /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch.pth SkooleApp-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/main.o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/DemoViewController.o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/DemoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/AppDelegate.o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/MainViewController.o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo normal i386
+cGenerateDSYMFile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app.dSYM /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo
+cTouch /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+c000000004EA9FD110000000000000110
+t1319763217
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000004E7806CF000000000018D430
+t1316488911
+s1627184
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004E72F1F200000000002F4210
+t1316155890
+s3097104
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004E72F1CC0000000000245480
+t1316155852
+s2380928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c000000004E780641000000000006B1C0
+t1316488769
+s438720
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c000000004E72F588000000000001EA80
+t1316156808
+s125568
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004E72F2960000000000353830
+t1316156054
+s3487792
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004E72F28F0000000000001534
+t1316156047
+s5428
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004E72F69C00000000001A9D20
+t1316157084
+s1744160
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004E72F177000000000006C8A0
+t1316155767
+s444576
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004E78066A0000000000000BCB
+t1316488810
+s3019
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004E7806AB00000000008F7390
+t1316488875
+s9401232
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/lib/libiconv.dylib
+c000000004E72EDC700000000000FCF50
+t1316154823
+s1036112
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/AppDelegate.m
+c000000004ED8BE210000000000000842
+t1322827297
+s2114
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/DemoViewController.m
+c000000004ED8BD8900000000000022AE
+t1322827145
+s8878
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.m
+c000000004ED8BE550000000000000478
+t1322827349
+s1144
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.xib
+c000000004ED8BE55000000000000143A
+t1322827349
+s5178
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png
+c000000004EB02CC20000000000000547
+t1320168642
+s1351
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png
+c000000004EB02CC2000000000000064E
+t1320168642
+s1614
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitBackIcon.png
+c000000004EB02CC2000000000000010D
+t1320168642
+s269
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png
+c000000004EB02CC200000000000001DC
+t1320168642
+s476
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png
+c000000004EB02CC20000000000000A91
+t1320168642
+s2705
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png
+c000000004EB02CC20000000000000BEE
+t1320168642
+s3054
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png
+c000000004EB02CC20000000000000103
+t1320168642
+s259
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png
+c000000004EB02CC200000000000001D2
+t1320168642
+s466
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png
+c000000004EB02CC2000000000000054F
+t1320168642
+s1359
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png
+c000000004EB02CC200000000000006A6
+t1320168642
+s1702
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitInfo.plist
+c000000004EB02CC20000000000000266
+t1320168642
+s614
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLaser.png
+c000000004EB02CC2000000000000044E
+t1320168642
+s1102
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png
+c000000004EB02CC20000000000000463
+t1320168642
+s1123
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png
+c000000004EB02CC20000000000000545
+t1320168642
+s1349
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png
+c000000004EB02CC2000000000000068E
+t1320168642
+s1678
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLogo.png
+c000000004EB02CC20000000000000997
+t1320168642
+s2455
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png
+c000000004EB02CC200000000000010F0
+t1320168642
+s4336
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitOverlay.png
+c000000004EB02CC20000000000000D72
+t1320168642
+s3442
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png
+c000000004EB02CC2000000000000162F
+t1320168642
+s5679
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png
+c000000004EB02CC200000000000007A1
+t1320168642
+s1953
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png
+c000000004EB02CC20000000000000B13
+t1320168642
+s2835
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/en.lproj/Localizable.strings
+c000000004EB02CC2000000000000021C
+t1320168642
+s540
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/libScannerKit.a
+c000000004EB02CC20000000001301A44
+t1320168642
+s19929668
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Resources/Icon.png
+c000000004EB02CC20000000000000E9E
+t1320168642
+s3742
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Resources/Icon@2x.png
+c000000004EB02CC200000000000020DB
+t1320168642
+s8411
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Resources/bg.png
+c000000004ED8BB100000000000015163
+t1322826512
+s86371
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Resources/bg@2x.png
+c000000004ED8BAF8000000000002D77A
+t1322826488
+s186234
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/SkooleApp-Prefix.pch
+c000000004EB02CC200000000000000B1
+t1320168642
+s177
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app.dSYM
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Icon.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Icon@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Info.plist
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/MainViewController.nib
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/PkgInfo
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitInfo.plist
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLaser.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLaser@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLogo.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLogo@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/bg.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/bg@2x.png
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/Demo.LinkFileList
+c000000004ED8BE790000000000000237
+t1322827385
+s567
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/DemoViewController.o
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/MainViewController.o
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/main.m
+c000000004EB02CC2000000000000016F
+t1320168642
+s367
+
+N/var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch.pth
+t2
+s0
+
+NSkooleApp-Info.plist
+c000000004ED8BE6D0000000000000481
+t1322827373
+s1153
+
+CBuild AST from /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/AppDelegate.m
+r0
+
+CBuild AST from /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/DemoViewController.m
+r0
+
+CBuild AST from /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.m
+r0
+
+CBuild AST from /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies6de250f9f588b441^e96366f9f588b441^---0#1#0#--18"Check dependencies36"263E9520-3A74-4B94-AB2C-0AA3610359C1-
+
+CCompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/AppDelegate.o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344520185.839849
+e344520185.903817
+r1
+xCompileC
+xbuild/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/AppDelegate.o
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/AppDelegate.mb421d7f9f588b441^2a6fe7f9f588b441^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/AppDelegate.m0000000000000000^2794"CompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/AppDelegate.o Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-generated-files.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-own-target-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-project-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/include -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources/i386 -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp -include /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch -MMD -MT dependencies -MF /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/AppDelegate.d -c /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/AppDelegate.m -o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/AppDelegate.o36"E40F51E8-FF6C-42FD-AFE4-BA2FC41BF391-
+
+CCompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/DemoViewController.o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/DemoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344520185.839828
+e344520185.933650
+r1
+xCompileC
+xbuild/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/DemoViewController.o
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/DemoViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/DemoViewController.m5514d7f9f588b441^7102eff9f588b441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/DemoViewController.m0000000000000000^2829"CompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/DemoViewController.o Classes/DemoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-generated-files.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-own-target-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-project-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/include -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources/i386 -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp -include /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch -MMD -MT dependencies -MF /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/DemoViewController.d -c /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/DemoViewController.m -o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/DemoViewController.o36"B6DCC2AF-3069-42C3-8639-CF8E38673DBC-
+
+CCompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/MainViewController.o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344520185.839863
+e344520185.903748
+r1
+xCompileC
+xbuild/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/MainViewController.o
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.m091ad7f9f588b441^255de7f9f588b441^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.m0000000000000000^2829"CompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/MainViewController.o Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-generated-files.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-own-target-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-project-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/include -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources/i386 -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp -include /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch -MMD -MT dependencies -MF /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/MainViewController.d -c /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.m -o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/MainViewController.o36"74EEEF3D-110F-4C15-8EE7-1B345237B3AF-
+
+CCompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/main.o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344520185.839799
+e344520185.896357
+r1
+xCompileC
+xbuild/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/main.o
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/main.mcf13d7f9f588b441^9677e5f9f588b441^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/main.m0000000000000000^2743"CompileC build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/main.o main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-generated-files.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-own-target-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-project-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/include -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources/i386 -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp -include /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch -MMD -MT dependencies -MF /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/main.d -c /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/main.m -o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/main.o36"42357E55-DE12-460A-954C-8B1584D66FF3-
+
+CCompileXIB /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.xib
+s344520185.442695
+e344520185.482734
+r1
+xCompileXIB
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compiling /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.xib946c71f9f588b441^64947bf9f588b441^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.xib0000000000000000^712"CompileXIB Classes/MainViewController.xib    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/MainViewController.nib /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Classes/MainViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"EDA71647-D589-4BEF-85E1-047BDA81A86D-
+
+CCopyPlistFile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitInfo.plist Libraries/ScannerKit/Resources/ScannerKitInfo.plist
+s344520185.419812
+e344520185.427568
+r1
+xCopyPlistFile
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitInfo.plist
+xLibraries/ScannerKit/Resources/ScannerKitInfo.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy Libraries/ScannerKit/Resources/ScannerKitInfo.plist8ba66bf9f588b441^29756df9f588b441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitInfo.plist0000000000000000^495"CopyPlistFile build/Debug-iphonesimulator/Demo.app/ScannerKitInfo.plist Libraries/ScannerKit/Resources/ScannerKitInfo.plist    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyPlist --convert binary1 --outdir /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app -- Libraries/ScannerKit/Resources/ScannerKitInfo.plist36"338CE9FC-D25D-4EEE-83C2-91C28649A986-
+
+CCopyStringsFile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/en.lproj/Localizable.strings Libraries/ScannerKit/Resources/en.lproj/Localizable.strings
+s344520185.440194
+e344520185.453633
+r1
+xCopyStringsFile
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/en.lproj/Localizable.strings
+xLibraries/ScannerKit/Resources/en.lproj/Localizable.strings
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy Libraries/ScannerKit/Resources/en.lproj/Localizable.stringsa1bf70f9f588b441^572274f9f588b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/en.lproj/Localizable.strings0000000000000000^571"CopyStringsFile build/Debug-iphonesimulator/Demo.app/en.lproj/Localizable.strings Libraries/ScannerKit/Resources/en.lproj/Localizable.strings    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/en.lproj -- Libraries/ScannerKit/Resources/en.lproj/Localizable.strings36"D7D60166-6BF8-4509-B025-385394D364D4-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner.png
+s344520185.419841
+e344520185.424792
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitActivitySpinner.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner.png7fa56bf9f588b441^b1bf6cf9f588b441^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner.png00f434e0deffdf42^625"CpResource Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"200C3BEB-1676-4F68-87A6-7DDF00A441C6-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner@2x.png
+s344520185.419856
+e344520185.423310
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner@2x.pngc6a46bf9f588b441^ea5d6cf9f588b441^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner@2x.png00f434e0deffdf42^640"CpResource "Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitActivitySpinner@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"9CC0E8C1-AD6D-4915-98D1-D41FC5584781-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitBackIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon.png
+s344520185.419858
+e344520185.423422
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitBackIcon.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon.pngcaa36bf9f588b441^f9656cf9f588b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon.png00f434e0deffdf42^604"CpResource Libraries/ScannerKit/Resources/ScannerKitBackIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitBackIcon.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"3F7B0E2A-621F-449A-BC03-247E7BFF2826-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon@2x.png
+s344520185.420302
+e344520185.429335
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon@2x.pngf4a96bf9f588b441^7de96df9f588b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon@2x.png00f434e0deffdf42^619"CpResource "Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitBackIcon@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"EC02F76C-402B-4E5D-B786-EE87B929784C-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon.png
+s344520185.420574
+e344520185.430451
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitEmptyIcon.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon.png7bbd6bf9f588b441^6e326ef9f588b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon.png00f434e0deffdf42^607"CpResource Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"ECC6F16F-7536-4711-8252-B355DB59DD8E-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon@2x.png
+s344520185.424480
+e344520185.431331
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon@2x.png91b76cf9f588b441^096c6ef9f588b441^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon@2x.png00f434e0deffdf42^622"CpResource "Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitEmptyIcon@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"DDC84F31-1572-425F-AA32-D460F1820090-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon.png
+s344520185.424494
+e344520185.432358
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitForwardIcon.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon.png3dbb6cf9f588b441^abaf6ef9f588b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon.png00f434e0deffdf42^613"CpResource Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"8EB28849-88F6-482A-9041-626D3BAF8BE0-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon@2x.png
+s344520185.425951
+e344520185.433795
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon@2x.pngb51b6df9f588b441^1b0e6ff9f588b441^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon@2x.png00f434e0deffdf42^628"CpResource "Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitForwardIcon@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"836D2726-676E-4FFD-885C-7F2DB3B4ADCC-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon.png
+s344520185.427542
+e344520185.435280
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon.pnged826df9f588b441^936e6ff9f588b441^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon.png00f434e0deffdf42^631"CpResource Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"58592216-23F2-4B45-AD7B-183369C91EC6-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon@2x.png
+s344520185.428687
+e344520185.435769
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon@2x.pngd5cd6df9f588b441^b08e6ff9f588b441^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon@2x.png00f434e0deffdf42^646"CpResource "Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitHoldStillHandIcon@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"4E7C22C9-2901-4AE4-AA46-3D99BCB2EE8D-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitLaser.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaser.png
+s344520185.428681
+e344520185.437130
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitLaser.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitLaser.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitLaser.png25cf6df9f588b441^c0e76ff9f588b441^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLaser.png00f434e0deffdf42^595"CpResource Libraries/ScannerKit/Resources/ScannerKitLaser.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaser.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLaser.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"A2E334C6-6726-4643-B4FD-45C5ADD09CF1-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaser@2x.png
+s344520185.430488
+e344520185.438101
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitLaser@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitLaser@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitLaser@2x.pngcb476ef9f588b441^742770f9f588b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLaser@2x.png00f434e0deffdf42^610"CpResource "Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitLaser@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"8EF5B5FF-119C-4527-B818-DA89E4058D1F-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow.png
+s344520185.436434
+e344520185.443404
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitLaserGlow.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow.png7ec86ff9f588b441^f98371f9f588b441^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow.png00f434e0deffdf42^607"CpResource Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"86B4AC22-8025-4BA9-A6BF-DA63816FFE41-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow@2x.png
+s344520185.436445
+e344520185.444493
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow@2x.pnga7ca6ff9f588b441^8eca71f9f588b441^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow@2x.png00f434e0deffdf42^622"CpResource "Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitLaserGlow@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"643F57FF-5AD6-411E-9255-610D69D7B266-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitLogo.png build/Debug-iphonesimulator/Demo.app/ScannerKitLogo.png
+s344520185.431584
+e344520185.439088
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitLogo.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitLogo.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitLogo.pngca896ef9f588b441^886870f9f588b441^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLogo.png00f434e0deffdf42^592"CpResource Libraries/ScannerKit/Resources/ScannerKitLogo.png build/Debug-iphonesimulator/Demo.app/ScannerKitLogo.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLogo.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"C2146BC7-B678-4C83-922B-65D6C99BF813-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitLogo@2x.png
+s344520185.431609
+e344520185.439996
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitLogo@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitLogo@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitLogo@2x.png79906ef9f588b441^a5a370f9f588b441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitLogo@2x.png00f434e0deffdf42^607"CpResource "Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitLogo@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"F045B54B-4C25-4D84-A048-458CAF367B11-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitOverlay.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay.png
+s344520185.433522
+e344520185.441545
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitOverlay.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitOverlay.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay.pngb30a6ff9f588b441^070971f9f588b441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay.png00f434e0deffdf42^601"CpResource Libraries/ScannerKit/Resources/ScannerKitOverlay.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitOverlay.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"66E5A6A0-A5BD-4EAE-A04D-0E970C0CCE67-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay@2x.png
+s344520185.434993
+e344520185.442441
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitOverlay@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitOverlay@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay@2x.png5a686ff9f588b441^aa4471f9f588b441^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay@2x.png00f434e0deffdf42^616"CpResource "Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitOverlay@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"6D3215E9-4C18-4F6F-A313-73BFF277D0E4-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable.png
+s344520185.438265
+e344520185.445912
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable.png5b4470f9f588b441^d02772f9f588b441^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable.png00f434e0deffdf42^634"CpResource Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"36FCC710-31B9-4922-A163-8FCFD84CAD48-
+
+CCpResource Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable@2x.png
+s344520185.438279
+e344520185.447107
+r1
+xCpResource
+xLibraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Copy build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable@2x.png744670f9f588b441^cd7572f9f588b441^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable@2x.png00f434e0deffdf42^649"CpResource "Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png" "build/Debug-iphonesimulator/Demo.app/ScannerKitOverlayStretchable@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"6D0E234E-6B92-4D6E-A71E-111D0CEE88F7-
+
+CCpResource Resources/Icon.png build/Debug-iphonesimulator/Demo.app/Icon.png
+s344520185.419825
+e344520185.426258
+r1
+xCpResource
+xResources/Icon.png
+xbuild/Debug-iphonesimulator/Demo.app/Icon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy build/Debug-iphonesimulator/Demo.app/Icon.pngd3a56bf9f588b441^9f206df9f588b441^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Icon.png00f434e0deffdf42^520"CpResource Resources/Icon.png build/Debug-iphonesimulator/Demo.app/Icon.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Resources/Icon.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"02478624-0C4C-4D9F-8A65-8D07D073AC33-
+
+CCpResource Resources/Icon@2x.png build/Debug-iphonesimulator/Demo.app/Icon@2x.png
+s344520185.419810
+e344520185.427984
+r1
+xCpResource
+xResources/Icon@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/Icon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy build/Debug-iphonesimulator/Demo.app/Icon@2x.png82a86bf9f588b441^f3906df9f588b441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Icon@2x.png00f434e0deffdf42^535"CpResource "Resources/Icon@2x.png" "build/Debug-iphonesimulator/Demo.app/Icon@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Resources/Icon@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"F84A5A77-F003-43C3-A4C6-7BEB05D9E784-
+
+CCpResource Resources/bg.png build/Debug-iphonesimulator/Demo.app/bg.png
+s344520185.440195
+e344520185.451582
+r1
+xCpResource
+xResources/bg.png
+xbuild/Debug-iphonesimulator/Demo.app/bg.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/Debug-iphonesimulator/Demo.app/bg.png38bc70f9f588b441^11ab73f9f588b441^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/bg.png00f434e0deffdf42^514"CpResource Resources/bg.png build/Debug-iphonesimulator/Demo.app/bg.png    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Resources/bg.png /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"BCF8A47C-79FA-4E46-AF77-3C08063F8158-
+
+CCpResource Resources/bg@2x.png build/Debug-iphonesimulator/Demo.app/bg@2x.png
+s344520185.442671
+e344520185.464362
+r1
+xCpResource
+xResources/bg@2x.png
+xbuild/Debug-iphonesimulator/Demo.app/bg@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/Debug-iphonesimulator/Demo.app/bg@2x.pngb66471f9f588b441^a0e076f9f588b441^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/bg@2x.png00f434e0deffdf42^529"CpResource "Resources/bg@2x.png" "build/Debug-iphonesimulator/Demo.app/bg@2x.png"    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Resources/bg@2x.png" /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"373D4EE8-D49C-4CAF-88FF-4369172383E2-
+
+CGenerateDSYMFile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app.dSYM /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo
+s344520186.113859
+e344520186.337109
+r1
+xGenerateDSYMFile
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app.dSYM
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Generating /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app.dSYM86391dfaf588b441^2b4d56faf588b441^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app.dSYM00f434e0deffdf42^496"GenerateDSYMFile build/Debug-iphonesimulator/Demo.app.dSYM build/Debug-iphonesimulator/Demo.app/Demo    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo -o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app.dSYM36"43EE4DAA-BCE8-472D-846C-C366576D60C1-
+
+CLd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo normal i386
+s344520185.949896
+e344520186.107313
+r1
+xLd
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo
+xnormal
+xi386
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Link /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo9a42f3f9f588b441^577c1bfaf588b441^---0#0#0#--1355"Ld build/Debug-iphonesimulator/Demo.app/Demo normal i386    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -L/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator -L/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/Libraries/ScannerKit -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp -filelist /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Objects-normal/i386/Demo.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -all_load -lstdc++ -Xlinker -no_implicit_dylibs -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -framework Foundation -framework UIKit -framework CoreGraphics -framework AVFoundation -framework CoreMedia -framework SystemConfiguration -framework CoreVideo -liconv -framework AudioToolbox -framework QuartzCore -lScannerKit -o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Demo36"E97EB5DB-0882-4E9C-AD57-9AAABDD0106B-
+
+CProcessInfoPlistFile /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Info.plist SkooleApp-Info.plist
+s344520185.408953
+e344520185.412279
+r1
+xProcessInfoPlistFile
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Info.plist
+xSkooleApp-Info.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Process SkooleApp-Info.plist2ec668f9f588b441^698d69f9f588b441^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/SkooleApp-Info.plist0000000000000000^586"ProcessInfoPlistFile build/Debug-iphonesimulator/Demo.app/Info.plist SkooleApp-Info.plist    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility SkooleApp-Info.plist -genpkginfo /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app/Info.plist36"543B78E3-6CB1-4492-98C0-C6FC4E605EF6-
+
+CProcessPCH /Users/Ryan/Library/Developer/Xcode/DerivedData/SkooleApp-cmdplptpqnamyxhlefiafyzqbgbu/Index/PrecompiledHeaders/SkooleApp-Prefix-fbtlzuxtvtvcxmccdcsceykbznlr_ast/SkooleApp-Prefix.pch.pth SkooleApp-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch.pth SkooleApp-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344520185.490836
+e344520185.832347
+r1
+xProcessPCH
+x/var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch.pth
+xSkooleApp-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile SkooleApp-Prefix.pchc1c67df9f588b441^e414d5f9f588b441^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/SkooleApp-Prefix.pch0000000000000000^2750"ProcessPCH /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch.pth SkooleApp-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-generated-files.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-own-target-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/Demo-project-headers.hmap -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/include -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources/i386 -I/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/SkooleApp.build/Debug-iphonesimulator/SkooleApp.build/DerivedSources -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator -F/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp -c /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/SkooleApp-Prefix.pch -o /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/SkooleApp-Prefix-goxufgjdqxamhmdqrixidxhitqpi/SkooleApp-Prefix.pch.d36"BD64B12E-7C32-4A96-A522-B29E752F7084-
+
+CTouch /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app
+s344520186.345059
+e344520186.349328
+r1
+xTouch
+x/Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Touch /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app3d6258faf588b441^376e59faf588b441^---0#0#0#--332"Touch build/Debug-iphonesimulator/Demo.app    cd /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Ryan/Dropbox/Projects/Skoole/SkooleApp/build/Debug-iphonesimulator/Demo.app36"9CB656A0-BA8B-4432-A444-2F39561FACCF-
+

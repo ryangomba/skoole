@@ -1,0 +1,17 @@
+#import <Foundation/Foundation.h>
+#import "SKCode.h"
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+/** URL QR Code Object
+ 
+ An SKCode object represnting a URL QR Code.
+ */
+@interface SKURLQRCode : SKCode {
+	NSURL *_URL;	
+}
+
+/** The URL of the code. */
+@property (nonatomic, retain) NSURL *URL;
+
+@end

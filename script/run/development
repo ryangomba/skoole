@@ -1,3 +1,0 @@
-python script/helpers/callbacks.py &
-rake jobs:work &
-rails s

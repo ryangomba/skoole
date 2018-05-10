@@ -1,0 +1,797 @@
+TDemo
+v4
+r1
+cCheck dependencies
+cCpResource /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist build/Debug-iphoneos/Demo.app/ResourceRules.plist
+cProcessInfoPlistFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Info.plist Demo-Info.plist
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon@2x.png Resources/Icon@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon.png Resources/Icon.png
+cCopyPlistFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitInfo.plist Libraries/ScannerKit/Resources/ScannerKitInfo.plist
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner.png Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner@2x.png Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon.png Libraries/ScannerKit/Resources/ScannerKitBackIcon.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon.png Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon.png Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon.png Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser.png Libraries/ScannerKit/Resources/ScannerKitLaser.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser@2x.png Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo.png Libraries/ScannerKit/Resources/ScannerKitLogo.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo@2x.png Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay.png Libraries/ScannerKit/Resources/ScannerKitOverlay.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay@2x.png Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow.png Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow@2x.png Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable.png Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png
+cCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable@2x.png Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png
+cCopyStringsFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/de.lproj/Localizable.strings Libraries/ScannerKit/Resources/de.lproj/Localizable.strings
+cCopyStringsFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/en.lproj/Localizable.strings Libraries/ScannerKit/Resources/en.lproj/Localizable.strings
+cProcessPCH /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch.pth Demo_Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/AppDelegate.o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/main.o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/DemoViewController.o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/DemoViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo normal armv7
+cGenerateDSYMFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app.dSYM /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo
+cProcessProductPackaging "/Users/Ryan/Library/MobileDevice/Provisioning Profiles/B661C8DC-FD9B-48D3-93B7-8B6ADE4AE4F8.mobileprovision" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/embedded.mobileprovision
+cProcessProductPackaging "/Users/Ryan/Library/MobileDevice/Provisioning Profiles/B661C8DC-FD9B-48D3-93B7-8B6ADE4AE4F8.mobileprovision" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/embedded.mobileprovision
+cTouch /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent
+cCodeSign /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk
+c000000004E7840290000000000000110
+t1316503593
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist
+c000000004E5C595800000000000001A7
+t1314675032
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist
+c000000004E5C595800000000000001E5
+t1314675032
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000004E7807DB000000000015F8A0
+t1316489179
+s1439904
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004E72F36E00000000005AF640
+t1316156270
+s5961280
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004E72F28700000000003AB0A0
+t1316156039
+s3846304
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+c000000004E78069100000000000748C0
+t1316488849
+s477376
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c000000004E72F744000000000001A9B0
+t1316157252
+s108976
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004E72F3440000000000529540
+t1316156228
+s5412160
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004E72F3370000000000001534
+t1316156215
+s5428
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004E72F8910000000000173260
+t1316157585
+s1520224
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000004E72F29300000000000C33E0
+t1316156051
+s799712
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004E7808770000000000000BCB
+t1316489335
+s3019
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004E7808C7000000000078BE50
+t1316489415
+s7913040
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/lib/libiconv.dylib
+c000000004E72EB4400000000001FCA40
+t1316154180
+s2083392
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/AppDelegate.m
+c000000004EB02CC20000000000000311
+t1320168642
+s785
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/DemoViewController.m
+c000000004EB02CC200000000000022B0
+t1320168642
+s8880
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Demo_Prefix.pch
+c000000004EB02CC200000000000000B1
+t1320168642
+s177
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png
+c000000004EB02CC20000000000000547
+t1320168642
+s1351
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png
+c000000004EB02CC2000000000000064E
+t1320168642
+s1614
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitBackIcon.png
+c000000004EB02CC2000000000000010D
+t1320168642
+s269
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png
+c000000004EB02CC200000000000001DC
+t1320168642
+s476
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png
+c000000004EB02CC20000000000000A91
+t1320168642
+s2705
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png
+c000000004EB02CC20000000000000BEE
+t1320168642
+s3054
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png
+c000000004EB02CC20000000000000103
+t1320168642
+s259
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png
+c000000004EB02CC200000000000001D2
+t1320168642
+s466
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png
+c000000004EB02CC2000000000000054F
+t1320168642
+s1359
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png
+c000000004EB02CC200000000000006A6
+t1320168642
+s1702
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitInfo.plist
+c000000004EB02CC20000000000000266
+t1320168642
+s614
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaser.png
+c000000004EB02CC2000000000000044E
+t1320168642
+s1102
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png
+c000000004EB02CC20000000000000463
+t1320168642
+s1123
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png
+c000000004EB02CC20000000000000545
+t1320168642
+s1349
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png
+c000000004EB02CC2000000000000068E
+t1320168642
+s1678
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLogo.png
+c000000004EB02CC20000000000000997
+t1320168642
+s2455
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png
+c000000004EB02CC200000000000010F0
+t1320168642
+s4336
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlay.png
+c000000004EB02CC20000000000000D72
+t1320168642
+s3442
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png
+c000000004EB02CC2000000000000162F
+t1320168642
+s5679
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png
+c000000004EB02CC200000000000007A1
+t1320168642
+s1953
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png
+c000000004EB02CC20000000000000B13
+t1320168642
+s2835
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/de.lproj/Localizable.strings
+c000000004EB02CC20000000000000254
+t1320168642
+s596
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/en.lproj/Localizable.strings
+c000000004EB02CC2000000000000021C
+t1320168642
+s540
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/libScannerKit.a
+c000000004EB02CC20000000001301A44
+t1320168642
+s19929668
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Resources/Icon.png
+c000000004EB02CC20000000000000E9E
+t1320168642
+s3742
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Resources/Icon@2x.png
+c000000004EB02CC200000000000020DB
+t1320168642
+s8411
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app.dSYM
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Info.plist
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/PkgInfo
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ResourceRules.plist
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitInfo.plist
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable@2x.png
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/de.lproj/Localizable.strings
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/embedded.mobileprovision
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/en.lproj/Localizable.strings
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/AppDelegate.o
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/Demo.LinkFileList
+c000000004ED8B22F0000000000000171
+t1322824239
+s369
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/DemoViewController.o
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/main.o
+t2
+s0
+
+N/Users/Ryan/Downloads/ScannerKit-Latest/Demo/main.m
+c000000004EB02CC2000000000000016F
+t1320168642
+s367
+
+N/Users/Ryan/Library/MobileDevice/Provisioning Profiles/B661C8DC-FD9B-48D3-93B7-8B6ADE4AE4F8.mobileprovision
+c000000004ED8B21900000000000021B5
+t1322824217
+s8629
+
+N/var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch.pth
+t2
+s0
+
+NDemo-Info.plist
+c000000004ED8B22E0000000000000405
+t1322824238
+s1029
+
+CBuild AST from /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/AppDelegate.m
+r0
+
+CBuild AST from /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/DemoViewController.m
+r0
+
+CBuild AST from /Users/Ryan/Downloads/ScannerKit-Latest/Demo/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7fd94dafe988b441^a6f15bafe988b441^---0#1#0#--18"Check dependencies36"05AB186C-4DE9-4B0F-B38C-C14AB1A96BBD-
+
+CCodeSign /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app
+s344517040.380892
+e344517040.598844
+r1
+xCodeSign
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"CodeSign build/Debug-iphoneos/Demo.appb79661b0e988b441^c24e99b0e988b441^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/0000000000000000^701"CodeSign build/Debug-iphoneos/Demo.app    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv CODESIGN_ALLOCATE /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign --force --sign "iPhone Developer: Ryan Gomba (KHX7N6LTR4)" --resource-rules=/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ResourceRules.plist --entitlements /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app36"7FDBA9FD-3D8C-44FD-B3DB-F259BB5E85A2-
+
+CCompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/AppDelegate.o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344517039.813499
+e344517039.884587
+r1
+xCompileC
+xbuild/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/AppDelegate.o
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/AppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/AppDelegate.m715ad0afe988b441^b074e2afe988b441^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/AppDelegate.m0000000000000000^2480"CompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/AppDelegate.o Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=4.0 -iquote /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-generated-files.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-own-target-headers.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-project-headers.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/include -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/DerivedSources/armv7 -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/DerivedSources -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo -include /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch -MMD -MT dependencies -MF /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/AppDelegate.d -c /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/AppDelegate.m -o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/AppDelegate.o36"80EF9B58-EC1B-4144-B5F4-46576D20ECAA-
+
+CCompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/DemoViewController.o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/DemoViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344517039.813512
+e344517039.910589
+r1
+xCompileC
+xbuild/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/DemoViewController.o
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/DemoViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/DemoViewController.md157d0afe988b441^081ce9afe988b441^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/DemoViewController.m0000000000000000^2515"CompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/DemoViewController.o Classes/DemoViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=4.0 -iquote /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-generated-files.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-own-target-headers.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-project-headers.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/include -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/DerivedSources/armv7 -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/DerivedSources -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo -include /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch -MMD -MT dependencies -MF /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/DemoViewController.d -c /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Classes/DemoViewController.m -o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/DemoViewController.o36"07F45A3B-B6E7-4B83-BD94-5145992ECBBF-
+
+CCompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/main.o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344517039.813498
+e344517039.873270
+r1
+xCompileC
+xbuild/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/main.o
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Compile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/main.md55ed0afe988b441^f38edfafe988b441^---0#0#0#-19%DVTDocumentLocation2@67"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/main.m0000000000000000^2429"CompileC build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/main.o main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=4.0 -iquote /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-generated-files.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-own-target-headers.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-project-headers.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/include -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/DerivedSources/armv7 -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/DerivedSources -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo -include /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch -MMD -MT dependencies -MF /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/main.d -c /Users/Ryan/Downloads/ScannerKit-Latest/Demo/main.m -o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/main.o36"819CB095-7A89-48D1-8B4B-793B2575ABA8-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon.png Resources/Icon.png
+s344517039.389861
+e344517039.435552
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon.png
+xResources/Icon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"CopyPNGFile build/Debug-iphoneos/Demo.app/Icon.png Resources/Icon.png92ea63afe988b441^78806fafe988b441^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Resources/Icon.png0000000000000000^557"CopyPNGFile build/Debug-iphoneos/Demo.app/Icon.png Resources/Icon.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Resources/Icon.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon.png36"4A298861-EA5F-46BA-8594-13FCACD569A7-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon@2x.png Resources/Icon@2x.png
+s344517039.389856
+e344517039.449868
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon@2x.png
+xResources/Icon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"CopyPNGFile build/Debug-iphoneos/Demo.app/Icon@2x.png Resources/Icon@2x.png78ec63afe988b441^282a73afe988b441^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Resources/Icon@2x.png0000000000000000^577"CopyPNGFile "build/Debug-iphoneos/Demo.app/Icon@2x.png" "Resources/Icon@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Resources/Icon@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Icon@2x.png"36"A0033451-0F59-4448-9B7F-C196FF72CF8C-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner.png Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png
+s344517039.390342
+e344517039.431416
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner.png
+xLibraries/ScannerKit/Resources/ScannerKitActivitySpinner.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection132"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner.png Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png33fc63afe988b441^5f7b6eafe988b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png0000000000000000^683"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner.png Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner.png36"C805EAD5-809C-4846-B9B9-84A325B3552F-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner@2x.png Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png
+s344517039.390359
+e344517039.431015
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner@2x.png Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.pngb1fa63afe988b441^9f596eafe988b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png0000000000000000^703"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner@2x.png" "Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitActivitySpinner@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitActivitySpinner@2x.png"36"414D7D3F-D151-4060-8F58-771D71500A31-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon.png Libraries/ScannerKit/Resources/ScannerKitBackIcon.png
+s344517039.391580
+e344517039.431220
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon.png
+xLibraries/ScannerKit/Resources/ScannerKitBackIcon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitBackIcon.png Libraries/ScannerKit/Resources/ScannerKitBackIcon.png884964afe988b441^4f776eafe988b441^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitBackIcon.png0000000000000000^655"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitBackIcon.png Libraries/ScannerKit/Resources/ScannerKitBackIcon.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitBackIcon.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon.png36"74296B8A-2AE3-49F8-9728-071D67034955-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png
+s344517039.391637
+e344517039.434318
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitBackIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.pngf94e64afe988b441^6e316fafe988b441^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png0000000000000000^675"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitBackIcon@2x.png" "Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitBackIcon@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitBackIcon@2x.png"36"FEDA4F6C-9C42-4478-B155-D87625788D4B-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon.png Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png
+s344517039.391639
+e344517039.439426
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon.png
+xLibraries/ScannerKit/Resources/ScannerKitEmptyIcon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon.png Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png1e4e64afe988b441^4a7e70afe988b441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png0000000000000000^659"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon.png Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon.png36"D4AC7FB6-DF8C-435C-87EA-5CD8632C6D62-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png
+s344517039.395320
+e344517039.464749
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png104165afe988b441^dbf976afe988b441^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png0000000000000000^679"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon@2x.png" "Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitEmptyIcon@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitEmptyIcon@2x.png"36"97B21262-AFC2-4C3B-BB77-C60EA401D33A-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon.png Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png
+s344517039.432306
+e344517039.460867
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon.png
+xLibraries/ScannerKit/Resources/ScannerKitForwardIcon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon.png Libraries/ScannerKit/Resources/ScannerKitForwardIcon.pngc2bd6eafe988b441^40fb75afe988b441^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png0000000000000000^667"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon.png Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitForwardIcon.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon.png36"45974FB2-1B9B-4A31-9CE6-A50B7033F212-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png
+s344517039.432322
+e344517039.461940
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png7fc16eafe988b441^704176afe988b441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png0000000000000000^687"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon@2x.png" "Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitForwardIcon@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitForwardIcon@2x.png"36"BB20F7E5-86E5-4027-852E-C174C9126F8C-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon.png Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png
+s344517039.432312
+e344517039.461584
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon.png
+xLibraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon.png Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png5ebd6eafe988b441^5e2a76afe988b441^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png0000000000000000^691"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon.png Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon.png36"665D1B96-23DE-42C4-8025-257B21E2E2FD-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png
+s344517039.435523
+e344517039.466503
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection142"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon@2x.png Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png3a926fafe988b441^376c77afe988b441^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png0000000000000000^711"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon@2x.png" "Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitHoldStillHandIcon@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitHoldStillHandIcon@2x.png"36"06F0C4AD-630D-4EF4-8E47-DB8A3C9F361E-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser.png Libraries/ScannerKit/Resources/ScannerKitLaser.png
+s344517039.436728
+e344517039.464020
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser.png
+xLibraries/ScannerKit/Resources/ScannerKitLaser.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLaser.png Libraries/ScannerKit/Resources/ScannerKitLaser.png51da6fafe988b441^d1c976afe988b441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaser.png0000000000000000^643"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLaser.png Libraries/ScannerKit/Resources/ScannerKitLaser.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaser.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser.png36"1BC1E23E-51F0-4DB1-8876-D8767AB1FCF4-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser@2x.png Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png
+s344517039.440605
+e344517039.471549
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitLaser@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLaser@2x.png Libraries/ScannerKit/Resources/ScannerKitLaser@2x.pngb0e270afe988b441^5fb778afe988b441^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png0000000000000000^663"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitLaser@2x.png" "Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaser@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaser@2x.png"36"225E9B9F-611E-4193-A05D-3F4EF0B44500-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow.png Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png
+s344517039.465213
+e344517039.496108
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow.png
+xLibraries/ScannerKit/Resources/ScannerKitLaserGlow.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow.png Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png662f77afe988b441^b7097fafe988b441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png0000000000000000^659"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow.png Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaserGlow.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow.png36"8C01195A-039A-4075-BB52-55C66974AD01-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow@2x.png Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png
+s344517039.465263
+e344517039.504377
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow@2x.png Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.pngc32d77afe988b441^eb1e81afe988b441^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png0000000000000000^679"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow@2x.png" "Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLaserGlow@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLaserGlow@2x.png"36"B5FE7BCC-973A-487F-8DFB-52A7F5CD5D0B-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo.png Libraries/ScannerKit/Resources/ScannerKitLogo.png
+s344517039.451288
+e344517039.492367
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo.png
+xLibraries/ScannerKit/Resources/ScannerKitLogo.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLogo.png Libraries/ScannerKit/Resources/ScannerKitLogo.png569b73afe988b441^170c7eafe988b441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLogo.png0000000000000000^639"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLogo.png Libraries/ScannerKit/Resources/ScannerKitLogo.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLogo.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo.png36"539DC2BC-A65C-4685-A8B2-2816BBE6EE71-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo@2x.png Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png
+s344517039.462109
+e344517039.507647
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitLogo@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitLogo@2x.png Libraries/ScannerKit/Resources/ScannerKitLogo@2x.pngae6176afe988b441^01f681afe988b441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png0000000000000000^659"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitLogo@2x.png" "Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitLogo@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitLogo@2x.png"36"8CEFB2AE-6A28-487D-9A49-25C0D5377B94-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay.png Libraries/ScannerKit/Resources/ScannerKitOverlay.png
+s344517039.462115
+e344517039.520782
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay.png
+xLibraries/ScannerKit/Resources/ScannerKitOverlay.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitOverlay.png Libraries/ScannerKit/Resources/ScannerKitOverlay.png0f5f76afe988b441^3b5285afe988b441^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlay.png0000000000000000^651"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitOverlay.png Libraries/ScannerKit/Resources/ScannerKitOverlay.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlay.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay.png36"6EEAC3B1-F981-4BB7-8CEB-4CA3126CF88F-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay@2x.png Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png
+s344517039.462164
+e344517039.575060
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitOverlay@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitOverlay@2x.png Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png6f6476afe988b441^f33993afe988b441^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png0000000000000000^671"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitOverlay@2x.png" "Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlay@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlay@2x.png"36"A0221C33-A019-499A-8E53-C90837F7F55F-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable.png Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png
+s344517039.467805
+e344517039.509348
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable.png
+xLibraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable.png Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png13d577afe988b441^066582afe988b441^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png0000000000000000^695"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable.png Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable.png /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable.png36"F8554526-B424-4F59-ABFE-0B6B52EB6587-
+
+CCopyPNGFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable@2x.png Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png
+s344517039.472879
+e344517039.528278
+r1
+xCopyPNGFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable@2x.png
+xLibraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"CopyPNGFile build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable@2x.png Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png802779afe988b441^6c3d87afe988b441^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png0000000000000000^715"CopyPNGFile "build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable@2x.png" "Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png"    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/PrivatePlugIns/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitOverlayStretchable@2x.png" "/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitOverlayStretchable@2x.png"36"B5A95AF1-3818-4F6D-B565-CBC08BC77092-
+
+CCopyPlistFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitInfo.plist Libraries/ScannerKit/Resources/ScannerKitInfo.plist
+s344517039.389866
+e344517039.394077
+r1
+xCopyPlistFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ScannerKitInfo.plist
+xLibraries/ScannerKit/Resources/ScannerKitInfo.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy Libraries/ScannerKit/Resources/ScannerKitInfo.plistcee063afe988b441^19e264afe988b441^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/ScannerKitInfo.plist0000000000000000^472"CopyPlistFile build/Debug-iphoneos/Demo.app/ScannerKitInfo.plist Libraries/ScannerKit/Resources/ScannerKitInfo.plist    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyPlist --convert binary1 --outdir /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app -- Libraries/ScannerKit/Resources/ScannerKitInfo.plist36"4B1765A5-0EA0-4AA5-8EA7-EBB465C51159-
+
+CCopyStringsFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/de.lproj/Localizable.strings Libraries/ScannerKit/Resources/de.lproj/Localizable.strings
+s344517039.493587
+e344517039.496979
+r1
+xCopyStringsFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/de.lproj/Localizable.strings
+xLibraries/ScannerKit/Resources/de.lproj/Localizable.strings
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy Libraries/ScannerKit/Resources/de.lproj/Localizable.strings32727eafe988b441^583a7fafe988b441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/de.lproj/Localizable.strings0000000000000000^548"CopyStringsFile build/Debug-iphoneos/Demo.app/de.lproj/Localizable.strings Libraries/ScannerKit/Resources/de.lproj/Localizable.strings    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/de.lproj -- Libraries/ScannerKit/Resources/de.lproj/Localizable.strings36"D93F6529-83B2-40A3-92D7-73F427EF68D4-
+
+CCopyStringsFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/en.lproj/Localizable.strings Libraries/ScannerKit/Resources/en.lproj/Localizable.strings
+s344517039.497239
+e344517039.499852
+r1
+xCopyStringsFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/en.lproj/Localizable.strings
+xLibraries/ScannerKit/Resources/en.lproj/Localizable.strings
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy Libraries/ScannerKit/Resources/en.lproj/Localizable.stringse6577fafe988b441^90f67fafe988b441^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit/Resources/en.lproj/Localizable.strings0000000000000000^548"CopyStringsFile build/Debug-iphoneos/Demo.app/en.lproj/Localizable.strings Libraries/ScannerKit/Resources/en.lproj/Localizable.strings    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/en.lproj -- Libraries/ScannerKit/Resources/en.lproj/Localizable.strings36"22271451-16D8-4026-9E16-0C60A8C2CCF1-
+
+CCpResource /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist build/Debug-iphoneos/Demo.app/ResourceRules.plist
+s344517039.377068
+e344517039.381444
+r1
+xCpResource
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist
+xbuild/Debug-iphoneos/Demo.app/ResourceRules.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/Debug-iphoneos/Demo.app/ResourceRules.plist2db360afe988b441^67b461afe988b441^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ResourceRules.plist00f434e0deffdf42^604"CpResource /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist build/Debug-iphoneos/Demo.app/ResourceRules.plist    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/ResourceRules.plist /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app36"76020A6E-5A85-4449-8F40-95D2E88B2C93-
+
+CGenerateDSYMFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app.dSYM /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo
+s344517040.101548
+e344517040.325607
+r1
+xGenerateDSYMFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app.dSYM
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Generating /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app.dSYM670d1ab0e988b441^4f5b53b0e988b441^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app.dSYM00f434e0deffdf42^458"GenerateDSYMFile build/Debug-iphoneos/Demo.app.dSYM build/Debug-iphoneos/Demo.app/Demo    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo -o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app.dSYM36"15147833-559E-498C-99B8-244023F16928-
+
+CLd /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo normal armv7
+s344517039.917459
+e344517040.093937
+r1
+xLd
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo
+xnormal
+xarmv7
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Link /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo4df3eaafe988b441^b70c18b0e988b441^---0#0#0#--1184"Ld build/Debug-iphoneos/Demo.app/Demo normal armv7    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv IPHONEOS_DEPLOYMENT_TARGET 4.0    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -L/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos -L/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Libraries/ScannerKit -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo -filelist /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Objects-normal/armv7/Demo.LinkFileList -dead_strip -all_load -lstdc++ -miphoneos-version-min=4.0 -framework Foundation -framework UIKit -framework CoreGraphics -framework AVFoundation -framework CoreMedia -framework SystemConfiguration -framework CoreVideo -liconv -framework AudioToolbox -framework QuartzCore -lScannerKit -o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Demo36"E98FB0FD-A22C-41B3-967F-8523CB661272-
+
+CProcessInfoPlistFile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Info.plist Demo-Info.plist
+s344517039.377084
+e344517039.381448
+r1
+xProcessInfoPlistFile
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Info.plist
+xDemo-Info.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection23"Process Demo-Info.plist92b360afe988b441^93a661afe988b441^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Demo-Info.plist0000000000000000^652"ProcessInfoPlistFile build/Debug-iphoneos/Demo.app/Info.plist Demo-Info.plist    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Demo-Info.plist -genpkginfo /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/ResourceRules.plist -o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/Info.plist36"BB252AD1-7DF5-4466-8DC7-0FB88C7692B7-
+
+CProcessPCH /Users/Ryan/Library/Developer/Xcode/DerivedData/Demo-cssvhkbciahrsxgesehbiyhgivzu/Index/PrecompiledHeaders/Demo_Prefix-cteauflithxwknhkrxuyloyssbap_ast/Demo_Prefix.pch.pth Demo_Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch.pth Demo_Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s344517039.583195
+e344517039.805924
+r1
+xProcessPCH
+x/var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch.pth
+xDemo_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection26"Precompile Demo_Prefix.pcha26195afe988b441^f850ceafe988b441^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/Demo_Prefix.pch0000000000000000^2456"ProcessPCH /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch.pth Demo_Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/clang -x objective-c-header -arch armv7 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -mthumb "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -miphoneos-version-min=4.0 -iquote /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-generated-files.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-own-target-headers.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-all-target-headers.hmap -iquote /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo-project-headers.hmap -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/include -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/DerivedSources/armv7 -I/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/DerivedSources -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos -F/Users/Ryan/Downloads/ScannerKit-Latest/Demo -c /Users/Ryan/Downloads/ScannerKit-Latest/Demo/Demo_Prefix.pch -o /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/bw/p9tbsy0575db_7m1dw_qjj480000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Demo_Prefix-fjeupwriuejgjkcrugqhncdiwkmu/Demo_Prefix.pch.d36"1B4257D4-A45D-464E-98AE-DBB928309D04-
+
+CProcessProductPackaging "/Users/Ryan/Library/MobileDevice/Provisioning Profiles/B661C8DC-FD9B-48D3-93B7-8B6ADE4AE4F8.mobileprovision" /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/embedded.mobileprovision
+s344517040.345235
+e344517040.348078
+r1
+xProcessProductPackaging
+x/Users/Ryan/Library/MobileDevice/Provisioning Profiles/B661C8DC-FD9B-48D3-93B7-8B6ADE4AE4F8.mobileprovision
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/embedded.mobileprovision
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection188"ProcessProductPackaging "/Users/Ryan/Library/MobileDevice/Provisioning Profiles/B661C8DC-FD9B-48D3-93B7-8B6ADE4AE4F8.mobileprovision" build/Debug-iphoneos/Demo.app/embedded.mobileprovision617158b0e988b441^022959b0e988b441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/embedded.mobileprovision0000000000000000^614"ProcessProductPackaging "/Users/Ryan/Library/MobileDevice/Provisioning Profiles/B661C8DC-FD9B-48D3-93B7-8B6ADE4AE4F8.mobileprovision" build/Debug-iphoneos/Demo.app/embedded.mobileprovision    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility "/Users/Ryan/Library/MobileDevice/Provisioning Profiles/B661C8DC-FD9B-48D3-93B7-8B6ADE4AE4F8.mobileprovision" -o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app/embedded.mobileprovision36"F51535D3-B8D6-4B8F-9249-A7CAD1C6BBBE-
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent
+s344517040.368812
+e344517040.372248
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection166"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent14795eb0e988b441^944b5fb0e988b441^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent00f434e0deffdf42^596"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/Entitlements.plist -entitlements -format xml -o /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Demo.build/Debug-iphoneos/Demo.build/Demo.xcent36"C42FE9C5-B4E8-4176-A4FD-6145437C85D5-
+
+CTouch /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app
+s344517040.356728
+e344517040.360798
+r1
+xTouch
+x/Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Touch /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.appa25f5bb0e988b441^ea5d5cb0e988b441^---0#0#0#--309"Touch build/Debug-iphoneos/Demo.app    cd /Users/Ryan/Downloads/ScannerKit-Latest/Demo    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Ryan/Downloads/ScannerKit-Latest/Demo/build/Debug-iphoneos/Demo.app36"C8393249-67E5-453A-8C73-B5755C2A4526-
+

@@ -1,1 +1,0 @@
-var LISTING_PROMPT_TEXT = 'ISBN or course number'

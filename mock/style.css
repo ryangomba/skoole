@@ -1,0 +1,272 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+	min-height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/* GLOBAL */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #fff;
+	background-image: url(images/bgnoise.gif);
+	height: 100%;
+	position: relative;
+	color: #444;
+	font-size: 16px;
+}
+#wrapper {
+    background-color: rgba(0,0,0,0.05);
+    height: 100%;
+}
+.page {
+	margin: auto;
+	width: 940px;
+}
+.clear {
+    clear: both;
+}
+
+/* HEADER */
+
+#header {
+	background-image: url(images/header-bg.png);
+	color: #fff;
+}
+#nav {
+	height: 40px;
+	border-bottom: solid 1px rgba(0,0,0,0.4);
+	padding: 22px;
+	background-color: rgba(0,0,0,0.1);
+}
+#nav .page h1 {
+	float: left;
+	font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, sans-serif;
+	text-shadow: 0px 1px 0px #000;
+	font-size: 40px;
+}
+#nav .page h1 span.subtitle {
+    opacity: 0.7;
+    font-size: 24px;
+}
+#nav .page div {
+	float: right;
+	padding: 10px 20px;
+	border: solid 1px rgba(255,255,255,0.1);
+	//margin-left: 10px;
+	//border-radius: 6px;
+	text-shadow: 0px 1px 0px #000;
+	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0.05))); /* Chrome,Safari4+ */
+	box-shadow: inset 0px -1px 0px rgba(0,0,0,0.2);
+}
+#nav .page div.left {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+#nav .page div.right {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+#nav .page div.unicode {
+    font-size: 30px;
+    padding-top: 0px;
+    padding-bottom: 6px;
+}
+#nav .page div:hover {
+    cursor: pointer;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.25)), color-stop(100%,rgba(255,255,255,0.1))); /* Chrome,Safari4+ */
+}
+#nav .page div:active {
+    box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.0)), color-stop(100%,rgba(255,255,255,0.1))); /* Chrome,Safari4+ */
+}
+#nav .page div.selected {
+    background: none;
+	background-color: rgba(0,0,0,0.2);
+	box-shadow: inset 0px 2px 3px rgba(0,0,0,0.3);
+	border: solid 1px rgba(0,0,0,0.1);
+	border-left: none;
+}
+
+
+
+#about {
+	border-top: solid 1px rgba(255,255,255,0.2);
+	padding: 60px 0px;
+	text-shadow: 0px 1px 0px #000;
+}
+#about h1 {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+#about p {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 10px;
+    color: #e5ffff;
+}
+#about .left {
+    float: left;
+    width: 580px;
+}
+#about .right {
+    float: right;
+    width: 320px;
+}
+
+
+#sub-about {
+    border-top: solid 1px #222;
+    box-shadow: 0px -5px 5px rgba(0,0,0,0.1);
+    padding: 40px 0px;
+    background-image: url(images/bgnoise.gif);
+    text-align: center;
+}
+#sub-about h2 {
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 0px 2px 0px #fff;
+}
+
+
+#content {
+    border-top: solid 1px #666;
+    box-shadow: 0px -5px 5px rgba(0,0,0,0.05);
+    padding: 30px 0px 55px 0px;
+    background-image: url(images/bgnoise.gif);
+    
+    //background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,rgba(0,0,0,0.0)));
+}
+#content h2 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#content h2 span.light {
+    font-weight: normal;
+    color: #bbb;
+}
+#content .step {
+    width: 270px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 65px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    text-shadow: 0px 1px 0px #fff;
+}
+#content .step:last-child {
+    margin-right: 0px;
+}
+
+
+
+#footer {
+    padding: 30px 0px;
+    border-top: solid 1px #ccc;
+    box-shadow: 0px -1px 2px rgba(0,0,0,0.1);
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    text-shadow: 0px 1px 0px #fff;
+}
+
+
+/* BUTTONS */
+
+.button {
+    float: left;
+    position: relative;
+    border-radius: 6px;
+    border: solid 1px #894c0c;
+    background-color: #f0730b;
+    text-shadow: 0px 1px 0px #000;
+    width: 320px;
+}
+.button-top {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: solid 1px #894c0c;
+    
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdcaa6), color-stop(3%,#ff8d2d), color-stop(100%,#f0730b)); /* Chrome,Safari4+ */
+}
+.button-top:hover {
+    cursor: pointer;
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdcaa6), color-stop(3%,#ff9d3d), color-stop(100%,#ff831b)); /* Chrome,Safari4+ */
+}
+/*.button-top:active {
+    cursor: pointer;
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9d3d), color-stop(3%,#ff6d0d), color-stop(100%,#f0831b));
+}*/
+.button-top img {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+.button-bottom {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px 13px 20px;
+    border-top: solid 1px #f89145;
+    background-color: #f69c46;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.button-bottom:hover {
+    cursor: pointer;
+    background-color: #ffa850;
+}

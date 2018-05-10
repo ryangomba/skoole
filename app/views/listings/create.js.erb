@@ -1,6 +1,0 @@
-<% if @listing %>
-$('<%= escape_javascript(render "listing")%>').hide().appendTo('#<%= @listing.type %> .list').fadeIn();
-update_counts()
-<% elsif @polling == false %>
-alert('Book could not be found')
-<% end %>

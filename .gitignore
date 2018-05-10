@@ -1,13 +1,2 @@
-*~
-*.log
-*.cache
-.bundle
 .DS_Store
-.pyc
-.backup
 
-db/*.sqlite3
-log/*.log
-db/automation/performances/logs/*.json
-tmp/
-.sass-cache/
