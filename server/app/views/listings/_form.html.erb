@@ -1,0 +1,36 @@
+<div class="overlay"><div id="book-form" class="lightbox">
+
+	<div class="lightbox-title">
+		<div class="exit">X</div>
+		<h2>Add a Book to <%= listing.type_name %></h2>
+	</div>
+	
+	<div class="lightbox-content">
+		<%= form_for listing, url: listings_path, remote: true, :html => { class: "new_listing_form"} do |f| %>
+
+		<div class="field-box isbn-field">
+			<input autocomplete="off" class="isbn-text-field empty" id="<%= "#{listing.type_name.downcase}-isbn" %>" name="isbn" type="text" value="">
+		</div>
+		
+		<ul id="<%= "#{listing.type_name.downcase}-matched-books" %>" style="display: none;"></ul>
+
+		<div class="field-box price-field">
+			<%= f.label :price, '$' %>
+			<%= f.number_field :price %>
+		</div>
+		
+		<div class="field-box conditions-field">
+			<div class="arrow-down"></div>
+			<%= f.select :condition, options_for_select(Listing.form_conditions) %>
+		</div>
+
+		<div class="clear"></div>
+		<%= f.hidden_field :user_id, value: @current_user.id %>
+		<%= f.hidden_field :network, value: @current_user.network %>
+		<%= f.submit 'List' %>
+
+		<% end %>
+		<div class="clear"></div>
+	</div>
+	
+</div></div>

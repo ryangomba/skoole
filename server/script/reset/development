@@ -1,0 +1,5 @@
+rake db:drop
+rake db:migrate
+rake populate:numbers
+rake populate:books
+rake populate:schools

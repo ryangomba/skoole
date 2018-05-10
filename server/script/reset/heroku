@@ -1,0 +1,6 @@
+heroku pg:reset SHARED_DATABASE
+heroku run rake db:migrate
+heroku run rake populate:numbers
+heroku run rake populate:books
+heroku run rake populate:schools
+heroku restart

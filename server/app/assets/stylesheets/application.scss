@@ -1,0 +1,245 @@
+/*
+ * Application CSS
+ *= require_self
+ *= require_tree ./views
+*/
+
+@import 'base.scss';
+@import 'helpers.scss';
+
+/* GLOBAL */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+	height: 100%;
+	position: relative;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	background-color: $background;
+	background-image: url(bg.png);
+	background-position: 0px -10px;
+	background-repeat: repeat-x;
+	font-size: 16px;
+	color: #444;
+}
+
+/* WRAPPERS */
+
+div#wrapper {
+	min-height: 100%;
+}
+div#main {
+	overflow: auto;
+	padding-bottom: 80px;
+}
+div.page {
+	margin: auto;
+	width: 940px;
+}
+
+/* LOGIN */
+
+div.overlay {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	div.lightbox {
+		margin: auto;
+		margin-top: 114px;
+		background-color: #fff;
+	}
+	//cursor: pointer;
+}
+
+/* ACCOUNT */
+
+div#account-wrapper {
+	display: none;
+	position: absolute;
+	z-index: 998;
+	top: 70px;
+	left: 0px;
+	width: 100%;
+	div#account-box {
+		float: right;
+		background-color: rgba(0, 0, 0, 0.8);
+		@include border-radius(6px);
+		padding: 20px;
+		width: 280px;
+		height: 160px;
+	}
+}
+
+/* NAVBAR */
+
+#nav {
+	height: 40px;
+	padding: 27px;
+	color: #fff;
+	h1 {
+		float: left;
+		font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, sans-serif;
+		text-shadow: 0px -1px 0px #000;
+		font-size: 40px;
+		span.subtitle {
+		    opacity: 0.7;
+		    font-size: 24px;
+		}
+	}
+	a.nav-item {
+		@extend .clear-button;
+		
+		float: right;		
+		margin-left: 12px;
+		font-size: 16px;		
+		 
+		&.fb-pic:hover {
+			cursor: default;
+		}
+		
+		div {
+			float: left;
+			position: relative;
+			padding: 12px 12px;
+			&.logout-button {
+				padding: 10px 15px 9px 15px;
+				img {
+					opacity: 0.7;
+				}
+				&:hover img {
+					opacity: 0.9;
+				}
+			}
+			&.fb-pic-button {
+				padding: 0px;
+				height: 40px;
+				width: 40px;			
+				img {
+					opacity: 1;
+					width: 40px;
+					margin-bottom: -2px;
+					@include border-radius(2px);
+				}
+			}
+			&:hover {
+				color: $light-blue;
+			}
+		}
+		div.image-wrapper {
+			border-right: solid 1px rgba(255, 255, 255, 0.1);
+			padding: 0px;
+		}
+		div.image {
+			width: 40px;
+			height: 42px;
+			border-right: solid 1px rgba(0, 0, 0, 0.3);
+			padding: 0px;
+			img {
+				position: absolute;
+				top: 10px;
+				left: 16px;
+			}
+		}
+	}
+}
+
+/* SHARED */
+
+div.header {
+	//background-image: url('blue-bg.png');
+}
+div.main-content {
+	width: 1040px;
+	margin: auto;
+	overflow: visible;
+	height: 180px;
+	//background-image: url('white-bg.gif');
+	//@include drop-shadow(0px, -1px, 2px, rgba(0, 0, 0, 0.2));
+	position: relative;
+	top: -62px;
+	div.page {
+		padding: 50px 0px;
+	}
+	h1 {
+		font-weight: bold;
+		font-size: 26px;
+		margin-bottom: 20px;
+	}
+}
+div#left-content {
+	float: left;
+	width: 580px;
+	margin-bottom: 10px;
+}
+div#right-content {
+	float: right;
+	width: 320px;
+}
+
+/* FOOTER */
+
+#footer {
+	position: relative;
+	margin-top: -81px;
+	clear: both;
+    padding: 30px 0px;
+	height: 20px;
+    border-top: solid 1px #ccc;
+	background-color: #eee;
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    text-shadow: 0px 1px 0px #fff;
+}
+
+/* ELEMENTS */
+
+.button {
+    float: left;
+    position: relative;
+    border-radius: 6px;
+    border: solid 1px #894c0c;
+    background-color: #f0730b;
+    text-shadow: 0px -1px 0px #000;
+    width: 320px;
+	.top {
+    	font-size: 24px;
+    	font-weight: bold;
+    	padding: 15px 20px;
+    	border-bottom: solid 1px #894c0c;
+    	@include border-radii(6px, 6px, 0px, 0px);
+		@include gradient-3(#fdcaa6, 0%, #ff8d2d, 3%, #f0730b, 100%);
+		&:hover {
+			cursor: pointer;
+			@include gradient-3(#fdcaa6, 0%, #ff9d3d, 3%, #ff831b, 100%);
+		}
+		&:active {
+		    cursor: pointer;
+			@include gradient-3(#ff9d3d, 0%, #ff6d0d, 3%, #f0831b, 100%);
+		}
+		img {
+			position: absolute;
+		    top: 12px;
+		    right: 20px;
+		}
+	}
+	.bottom {
+		font-size: 15px;
+	    font-weight: bold;
+	    padding: 10px 20px 13px 20px;
+	    border-top: solid 1px #f89145;
+	    background-color: #f69c46;
+		@include border-radii(0px, 0px, 6px, 6px);
+		&:hover {
+			cursor: pointer;
+		    background-color: #ffa850;
+		}
+	}	
+}

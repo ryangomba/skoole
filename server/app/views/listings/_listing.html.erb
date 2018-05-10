@@ -1,0 +1,20 @@
+<div class="listing" id="listing-<%= @listing.id %>">
+	<%= image_tag @listing.book.thumbnail, class: 'thumbnail' %>
+	<div class="info">
+		<h2><%= @listing.book.title.titleize %></h2>
+		<div class="attributes"><%= @listing.type == 'BuyListing' ? 'Up to' : 'For' %> $<%= @listing.price %>.00, in <%= @listing.condition_name %> condition</div>
+		<div class="status">
+			<% if @listing.pending == true %>
+				<%= image_tag('matched.png') %>
+				Matched
+			<% else %>
+				<%= image_tag('reload.png') %>
+				Searching for matches...
+			<% end %>
+		</div>
+		<div class="edit-book"><%= image_tag('edit-22.png') %></div>
+		<%= link_to(@listing, url_options = { method: :delete, remote: true, confirm: 'Are you sure you want to remove this book from your list? Pending matches will be canceled.', class: 'destroy' }) do %>
+			<%= image_tag('trash-22.png') %>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,4 @@
+document.location.hash = 'signup'
+<%= render 'application/navbar' %>
+$('#main').html('<%= escape_javascript(render "signup")%>')
+init_signup_fields()

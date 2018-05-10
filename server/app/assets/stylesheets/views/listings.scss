@@ -1,0 +1,307 @@
+/*
+* Listings page styles
+*/
+
+@import 'helpers.scss';
+
+#bin.listings {
+
+	#new-book.overlay {
+		cursor: auto;
+	}
+
+	/* FORM */
+
+	#book-form {
+		width: 500px;
+		position: relative;
+		@include border-radius(5px);
+		div.lightbox-title {
+			@include gradient-3($light-blue, 0%, $blue, 1%, $dark-blue, 100%);
+			background-repeat: repeat-x;
+			@include border-radii(4px, 4px, 0px, 0px);
+			padding: 30px 40px;
+			color: #fff;
+			text-shadow: 0px -1px 0px #000;
+			font-size: 24px;
+			div.exit {
+				float: right;
+				color: $light-blue;
+				&:hover {
+					color: #fff;
+					cursor: pointer;
+				}
+		}
+
+		}
+		div.lightbox-content {
+			border-top: solid 0px #fff;
+			padding: 40px;
+		}
+		input, select {
+			font-size: 18px;
+		}
+		input {
+			padding: 10px;
+			border: solid 1px #bbb;
+			background-color: #f7f7f7;
+			@include border-radius(4px);
+			@include inner-shadow(0px,2px,2px,#ddd);
+		}
+		div.field-box {
+			position: relative;
+			&.isbn-field input {
+				width: 398px;
+				&.empty {
+					color: #777;
+				}
+				
+				
+				&.autocomplete {
+					@include border-radii(4px, 4px, 0px, 0px);
+					border-bottom: 0px;
+				}
+				
+				
+				
+				
+			}
+			&.price-field, &.conditions-field {
+				margin-top: 20px;
+			}
+			&.price-field {
+				float: left;
+				input {
+					width: 140px;
+					border: solid 1px #bbb;
+					padding-left: 25px;
+				}
+				label {
+					position: absolute;
+					font-size: 18px;
+					top: 12px;
+					left: 10px;
+					color: #777;
+				}
+			}
+			&.conditions-field {
+				float: right;
+				select {
+					color: #666;
+					width: 220px;
+					-webkit-appearance: none;
+					padding: 10px;
+					border: solid 1px #bbb;
+					background-color: #f7f7f7;
+					@include border-radius(4px);
+					&:hover {
+						cursor: pointer;
+					}
+				}
+				.arrow-down {
+					position: absolute;
+					top: 19px;
+					right: 14px;
+					width: 0;
+					height: 0;
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-top: 8px solid #aaa;
+					pointer-events: none;
+				}
+			}
+
+		}
+		input[type=submit] {
+			@extend .orange-button;
+			margin-top: 30px;
+			float: right;
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 18px;
+		}
+		// AUTOCOMPLETE
+		#buy-matched-books,
+		#sell-matched-books {
+			max-height: 210px;
+			overflow: auto;
+			margin: 0;
+			list-style-type: none;
+			width: 418px;
+			background-color: #f8f8f8;
+			border: 1px solid #BBBBBB;
+			border-radius: 0px 0px 4px 4px;
+			padding: 0px;
+			font-size: 18px;
+			text-shadow: 0px 1px 0px #fff;
+			font-family: 'Helvetica Neue', Helvetica;
+			li {
+				margin: 0;
+				padding: 12px 10px;
+				cursor: pointer;
+				color: #999;
+				&:hover {
+					background-color: #dfdfdf;
+					color: #222;
+				}
+				&:nth-child(even) {
+					background-color: #e9e9e9;
+					&:hover {
+						background-color: #ddd;
+						color: #222;
+					}
+				}
+				-webkit-transition-property: color, background;
+				-webkit-transition-duration: 300ms, 300ms;
+			}
+			.num-books {
+				font-size: 80%;
+				float: right;
+				margin-right: 10px;
+				color: #AAAAAA;
+				&:hover {
+					color: #222;
+				}
+				-webkit-transition-property: color, background;
+				-webkit-transition-duration: 300ms, 300ms;
+			}
+			li.selected-book-info {
+				padding: 20px 10px;
+				background-color: #fcfcfc;
+				@include border-radii(0px, 0px, 2px, 2px);
+			}
+			p.title {
+				font-size: 20px;
+				color: #444;
+				margin-bottom: 8px;
+			}
+			p.prices {
+				font-size: 16px;
+				color: #666;
+				span {
+					font-weight: bold;
+					color: #444;
+				}
+			}
+		}
+	}
+
+	/* TAGLINE */
+
+	#about {
+		color: #fff;
+		padding: 50px 0px 60px 0px;
+		text-shadow: 0px -1px 0px #000;
+		h1 {
+			font-size: 36px;
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 23px;
+			margin-bottom: 10px;
+			color: #e5ffff;
+		}
+	}
+
+	/* LISTS */
+
+	div#lists-container {
+		height: 405px;
+		@include drop-shadow(0px, 0px, 10px, rgba(0, 0, 0, 0.25));
+		div#lists {
+			height: 500px;
+			text-shadow: 0px 1px 0px #fff;
+			background-color: #fff;
+			@include gradient-2(#fff, 0.5, $background, 1.0);
+			div.section {
+				width: 450px;
+				&:first-child { float: left; }
+				&:last-child { float: right; }
+				div.add {
+					float: right;
+					font-size: 42px;
+					line-height: 18px;
+					color: $light-orange;
+					font-weight: bold;
+					padding-right: 20px;
+					&:hover {
+						cursor: pointer;
+						color: $orange;
+					}
+				}
+				div.list {
+					div.listing {
+						position: relative;
+						top: -1px;
+						height: 110px;
+						border-top: dotted 1px #ccc;
+						border-bottom: dotted 1px #ccc;
+						&:nth-child(odd) {
+							background-color: rgba(0, 0, 0, 0.03);
+						}
+						img.thumbnail {
+							position: absolute;
+							top: 17px;
+							left: 12px;
+							height: 70px;
+							max-width: 50px;
+							padding: 1px;
+							border: solid 1px #ddd;
+						}
+						div.info {
+							position: absolute;
+							width: 350px;
+							top: 18px;
+							left: 80px;
+							h2 {
+								font-weight: bold;
+								font-size: 18px;
+								margin-bottom: 12px;
+							}
+							div {
+								&.attributes {
+									margin-bottom: 8px;
+									color: #666;
+								}
+								&.status {
+									img {
+										height: 16px;
+										position: relative;
+										top: 3px;
+										margin-right: 5px;
+									}
+									font-size: 12px;
+									font-style: italic;
+									color: #999;
+								}
+							}
+						}
+						div.edit-book,
+						a.destroy {
+							position: absolute;
+							bottom: -2px;
+							opacity: 0.25;
+							img {
+								height: 20px;
+							}
+							&:hover {
+								cursor: pointer;
+								opacity: 0.5;
+							}
+							-webkit-transition-property: opacity;
+							-webkit-transition-duration: 300ms;
+						}
+						div.edit-book {
+							right: 30px;
+						}
+						a.destroy {
+							right: 2px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
